@@ -1,0 +1,25 @@
+.forma > label {
+
+display: inline-block;
+width: 150px;
+text-align: left;
+
+}
+
+.forma > input {
+    margin: 5px;
+}
+
+.sadrzaj{
+    margin: 0 auto;
+    margin-top: 2%;
+}
+
+.forma{
+    text-align: center;
+}
+
+#unos {
+   margin-top: 10px;
+   width: 40%;
+}
