@@ -19,7 +19,7 @@
         padding-top: 10%;
         padding-left: 3%;
         padding-right: 3%;
-        min-width: 400px;
+        min-width: 320px;
     }
     
     #lista {
@@ -70,7 +70,7 @@
         background-color: dodgerblue;
         margin-top: 5px;
         padding: 5%;
-        min-width: 400px;
+        min-width: 320px;
     }
     
     #headerSprat{
