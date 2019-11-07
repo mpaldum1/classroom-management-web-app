@@ -10,37 +10,39 @@
     }
     .frame{
         margin: 0 auto;
-        width: 45%;
+        width: 50%;
     }
     
     .meni {
         box-sizing: border-box;
-        background-color:dodgerblue;
+        background-color:lightskyblue;
         padding-top: 10%;
         padding-left: 3%;
         padding-right: 3%;
-        min-width: 320px;
+        min-width: 200px;
+        height: 100px;
     }
     
     #lista {
         list-style-type: none;
-        display: flex;
+        overflow: hidden;
+        vertical-align:bottom;
     }
     
     #lista li {
         margin: 5px;
         font-family: sans-serif;
         font-size: 16px;
+        float: left;
     }
     
     .logo {
-        box-sizing: border-box;
         background-color: orangered;
+        margin: 0 auto;
         width: 80px;
         height: 80px;
-        position: absolute;
-        left: 47%;
-        top: 0px;
+        position: relative;
+        bottom: 130px;
     }
     
     .tabela th,
@@ -67,10 +69,10 @@
     }
     
     .sadrzaj {
-        background-color: dodgerblue;
+        background-color: lightskyblue;
         margin-top: 5px;
         padding: 5%;
-        min-width: 320px;
+        min-width: 200px;
     }
     
     #headerSprat{

@@ -1,0 +1,105 @@
+.forma label {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.sadrzaj{
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    text-align: center;
+    overflow: auto;
+    background-color: lightskyblue;
+}
+
+.kalendar{
+    margin: 0 auto;
+    margin-top: 20px;   
+    width: 70%;
+}
+.danSedmice, .datum{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+   
+}
+
+.danSedmice{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.danSedmice div{
+    border: solid 1px cadetblue;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.datum {
+    margin: 10px;
+   
+}
+.datum > div{
+   
+    border-collapse: collapse;
+    min-height: 30px;
+
+
+    margin: 5px;
+    background-color: white;
+   
+}
+.datum div div {
+    border: solid 2px cadetblue;
+    border-collapse: collapse;
+}
+
+.datum div:first-child {
+    grid-column: 5;
+  }
+
+.zauzeta{
+  background-color: orangered;
+  height: 40%;
+  position: relative;
+  bottom: 0;
+
+}
+.slobodna{
+background-color: rgb(33, 224, 33);
+height: 40%;
+position: relative;
+bottom: 0;  
+
+
+}
+
+.kalendar{
+    border: solid 2px cadetblue;
+}
+.mjesec{
+    text-align: left;
+    margin: 15px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.prethodni{
+float: left;
+margin: 10px;
+padding: 10px;
+
+}
+
+.sljedeci{
+    float: right;
+    margin: 10px;
+    padding: 10px;
+   
+}
+
+.prethodni button, .sljedeci button{
+    font-size: 16px;
+    border: solid cadetblue;
+    padding-left:20px;
+    padding-right:20px;
+    background-color: orchid;
+}
