@@ -1,26 +1,49 @@
+#lista :nth-child(2) a {
+    text-decoration: underline;
+}
+
+#lista :nth-child(3) a {
+    text-decoration: none;
+}
+
 .forma > label {
 
 display: inline-block;
-width: 150px;
+width: 120px;
 text-align: left;
 
 }
 
 .forma > input {
     margin: 5px;
+    margin-left: 0px ;
 }
 
 .sadrzaj{
     margin: 0 auto;
     margin-top: 2%;
-    min-width: 320px;
 }
 
-.forma{
-    text-align: center;
-}
 
 #unos {
    margin-top: 10px;
-   width: 40%;
+   position: absolute;
+   background-color: royalblue;
+   width: 300px;
+   color: white;
+
+}
+
+.frame{
+    width: 330px;
+}
+
+
+@media (max-width: 600px) {
+
+    .forma label {
+        display: block;
+    }
+    
+
 }

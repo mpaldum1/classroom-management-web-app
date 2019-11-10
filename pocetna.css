@@ -1,25 +1,42 @@
+#lista :nth-child(2) a {
+    text-decoration: underline;
+}
+
+#lista :nth-child(1) a {
+    text-decoration: none;
+}
 
 .galerija {
     display: grid;
     padding: 0;
     margin: 0;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 0;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 220px));
+    gap: 5px        ;
 }
 
-.sadrzaj {
-    background-color: lightskyblue;
-    margin-top: 0;
-    padding: 0;
+.galerija  img {    
+    width: 220px;
+    height: 220px;
+}
+
+.frame {
+    width: 90%;
     min-width: 200px;
+    max-width: 760px;
 }
 
-.galerija  img {
-    width: 200px;
-    height: 200px;
+@media (max-width: 600px) {
+.galerija{
+    grid-template-columns: repeat(1, minmax(220px, 220px));
 }
 
-.galerija > img :hover {
-        filter: blur(4px);
-      }
+.frame{
+    width: 30%;
+}
 
+.galerija  img {    
+    width: 175px;
+    height: 175px;
+ }
+  
+}
