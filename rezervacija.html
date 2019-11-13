@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="bs">
 
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="sale.css">
     <link rel="stylesheet" href="rezervacija.css">
 
-    <title>
+    <title>rezervacija
     </title>
 </head>
 
@@ -15,11 +15,11 @@
     <div class="frame">
         <div class="meni">
             <ul id="lista">
-                <li> <a href="url"> Početna </a></li>
-                <li> <a href="url"> Sale </a> </li>
-                <li> <a href="url"> Unos </a> </li>
-                <li> <a href="url"> Rezervacije</a> </li>
-                <li> <a href="url"> Osobe</a> </li>
+                <li> <a href="pocetna.html" >Početna </a></li>
+                <li> <a href="sale.html" > Sale </a> </li>
+                <li> <a href="unos.html" > Unos </a> </li>
+                <li> <a href="rezervacija.html" > Rezervacije</a> </li>
+                <li> <a href="url" > Osobe</a> </li>
             </ul>
             <div class="logo">
                 <img id="slikaLogo" src="logo.jpg" alt="logo">
@@ -30,20 +30,18 @@
 
             <form class="forma">
                 <label for="sala">Sala</label>
-                <select name="sala">
+                <select name="sala" id="sala">
                     <option value="0-01">0-01</option>
                     <option value="EE1">EE1</option>
                 </select>
                 <label for="periodicna">Periodična</label>
-                <input type="checkbox" name="periodicna"> <br>
+                <input type="checkbox" name="periodicna" id="periodicna"> <br>
                 <label for="pocetak">Početak</label>
-                <input type="time" name="pocetak"> <br>
+                <input type="time" name="pocetak" id="pocetak"> <br>
                 <label for="kraj">Kraj</label>
-                <input type="time" name="kraj">
+                <input type="time" name="kraj" id="kraj">
 
             </form>
-
-            <div class = "container">
             <div class="kalendar">
                 <div class="mjesec"> Novembar</div>
 

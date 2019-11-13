@@ -1,0 +1,48 @@
+@objects
+  frame div.frame
+  meni div.meni
+  lista #lista
+  lista-element-* #lista li a
+  logo div.logo
+  sadrzaj div.sadrzaj
+  naziv input[name='naziv']
+  brojMjesta input[name='brojMjesta']
+  odgovornaOsoba input[name='odgovornaOsoba']
+  sprat input[name='sprat']
+  unos input[name='unos']
+ 
+
+= Header section =
+  frame:
+    width is 330px
+  meni:
+    contains lista
+  lista:
+    css vertical-align is "bottom"
+  logo:
+    near meni -40px top
+  lista-element-1:
+    text contains "Početna"
+  lista-element-2:
+    text contains "Sale"
+  lista-element-3:
+    text contains "Unos"
+    css text-decoration-line is "none"
+  lista-element-4:
+    text contains "Rezervacije"
+  lista-element-5:
+    text contains "Osobe"
+
+= Main section =
+  sadrzaj:
+    contains naziv,brojMjesta,odgovornaOsoba,sprat,unos
+  naziv:
+    above brojMjesta 0 to 20 px
+  brojMjesta:
+    above odgovornaOsoba 0 to 20 px
+  odgovornaOsoba:
+    above sprat 0 to 20 px
+  sprat:
+    above unos 0 to 20 px
+  
+ 
