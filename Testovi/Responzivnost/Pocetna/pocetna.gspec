@@ -1,0 +1,41 @@
+@objects
+  frame div.frame
+  meni div.meni
+  lista #lista
+  lista-element-* #lista li a
+  logo div.logo
+  sadrzaj div.sadrzaj
+  galerija .galerija
+  slika .galerija img
+ 
+= Header section =
+  meni:
+    contains lista
+  lista:
+    css vertical-align is "bottom"
+  lista-element-1:
+    text contains "Početna"
+    above lista-element-2
+    css text-decoration-line is "none"
+  lista-element-2:
+    text contains "Sale"
+    above lista-element-3
+  lista-element-3:
+    text contains "Unos"
+    above lista-element-4
+  lista-element-4:
+    text contains "Rezervacije"
+    above lista-element-5
+  lista-element-5:
+    text contains "Osobe"
+    
+= Main section =
+  frame:
+    width 20 to480 % of screen/width       
+  slika:
+   width 175px
+   height 175px
+
+
+    
+  

@@ -1,0 +1,55 @@
+@objects
+  frame div.frame
+  meni div.meni
+  lista #lista
+  lista-element-* #lista li a
+  logo div.logo
+  sadrzaj div.sadrzaj
+  galerija .galerija
+  slika .galerija img
+  sala select[name='sala']
+  periodicna input[name='periodicna']
+  pocetak input[name='pocetak']
+  kraj input[name='kraj']
+  forma .forma
+  kalendar .kalendar
+  slobodna .slobodna
+  zauzeta .zauzeta
+
+= = Header section =
+  meni:
+    contains lista
+  lista:
+    css vertical-align is "bottom"
+  lista-element-1:
+    text contains "Početna"
+    above lista-element-2
+  lista-element-2:
+    text contains "Sale"
+    above lista-element-3
+  lista-element-3:
+    text contains "Unos"
+    above lista-element-4
+  lista-element-4:
+    text contains "Rezervacije"
+    css text-decoration-line is "none"
+    above lista-element-5
+  lista-element-5:
+    text contains "Osobe"
+
+= Main section =
+  frame:
+    width 20 to 30 % of screen/width       
+  sadrzaj:
+    contains forma, kalendar
+  sala:
+    above pocetak 
+  pocetak:
+    above kraj 
+  periodicna:
+    above pocetak 
+
+ 
+
+    
+  
