@@ -11,7 +11,7 @@
         "nodes" : [ {
           "name" : "Check layout: unos.gspec included tags: ",
           "status" : "info",
-          "time" : 1573654598627,
+          "time" : 1573661845193,
           "sections" : [ {
             "name" : "Header section",
             "place" : {
@@ -311,10 +311,10 @@
           "screenshot" : "layout-1-screenshot.png",
           "type" : "layout"
         } ],
-        "time" : 1573654596294,
+        "time" : 1573661842652,
         "type" : "node"
       } ],
-      "time" : 1573654591693,
+      "time" : 1573661837935,
       "type" : "node"
     } ]
   }

@@ -1,0 +1,54 @@
+@objects
+  frame div.frame
+  meni div.meni
+  lista #lista
+  lista-element-* #lista li a
+  logo div.logo
+  sadrzaj div.sadrzaj
+  tabela table.tabela
+  headerRedni .headerRedni
+  zauzetaSala .zauzetaSala
+  slobodnaSala .slobodnaSala
+  sala .sala
+  kancelarija .kancelarija
+  empty .empty
+
+ 
+= Header section =
+  frame:
+    width 40 to 60 % of screen/width
+  meni:
+    contains lista
+  lista:
+    css vertical-align is "bottom"
+  logo:
+    near meni -40px top
+  lista-element-1:
+    text contains "Početna"
+  lista-element-2:
+    text contains "Sale"
+    css text-decoration-line is "none"
+  lista-element-3:
+    text contains "Unos"
+  lista-element-4:
+    text contains "Rezervacije"
+  lista-element-5:
+    text contains "Osobe"
+
+= Main section =
+  sadrzaj:
+    contains tabela
+  tabela:
+    inside sadrzaj
+  empty:
+    absent
+  headerRedni:
+    css text-align is "left"
+  slobodnaSala:
+    css background-color is "rgb(173, 255, 47)"
+  zauzetaSala:
+    css background-color is "rgb(255, 69, 0)" 
+  kancelarija:
+    css background-color is "rgb(211, 211, 211)"
+    
+  

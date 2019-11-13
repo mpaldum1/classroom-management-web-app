@@ -8,55 +8,32 @@
         <script src="galen-report.js"></script>
         <script type="text/javascript">
 var REPORT_DATA = {
-  "testId" : "1-unos.gspec",
-  "name" : "unos.gspec",
+  "testId" : "1-pocetna.gspec",
+  "name" : "pocetna.gspec",
   "report" : {
     "nodes" : [ {
       "name" : "Simple check",
       "status" : "info",
       "nodes" : [ {
-        "name" : "check  unos.gspec --url http://localhost/unos.html --size 1024x768 --htmlreport izvjestaji",
+        "name" : "check  pocetna.gspec --url http://localhost/pocetna.html --size 1024x768 --htmlreport izvjestaji",
         "status" : "info",
         "nodes" : [ {
-          "name" : "Check layout: unos.gspec included tags: ",
+          "name" : "Check layout: pocetna.gspec included tags: ",
           "status" : "info",
-          "time" : 1573654598627,
+          "time" : 1573672161480,
           "sections" : [ {
             "name" : "Header section",
             "place" : {
-              "filePath" : "unos.gspec",
-              "lineNumber" : 15
+              "filePath" : "pocetna.gspec",
+              "lineNumber" : 11
             },
             "objects" : [ {
-              "name" : "frame",
-              "specs" : [ {
-                "status" : "info",
-                "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 17
-                },
-                "name" : "width is 330px",
-                "meta" : [ {
-                  "from" : {
-                    "object" : "frame",
-                    "edge" : "left"
-                  },
-                  "to" : {
-                    "object" : "frame",
-                    "edge" : "right"
-                  },
-                  "expectedDistance" : "330px",
-                  "realDistance" : "330px"
-                } ],
-                "highlight" : [ "frame" ]
-              } ]
-            }, {
               "name" : "meni",
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 19
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 13
                 },
                 "name" : "contains lista",
                 "highlight" : [ "meni", "lista" ]
@@ -66,8 +43,8 @@ var REPORT_DATA = {
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 21
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 15
                 },
                 "name" : "css vertical-align is \"bottom\"",
                 "highlight" : [ "lista" ]
@@ -77,8 +54,8 @@ var REPORT_DATA = {
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 23
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 17
                 },
                 "name" : "near meni -40px top",
                 "meta" : [ {
@@ -100,10 +77,18 @@ var REPORT_DATA = {
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 25
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 19
                 },
                 "name" : "text contains \"PoÄ?etna\"",
+                "highlight" : [ "lista-element-1" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "css text-decoration-line is \"none\"",
                 "highlight" : [ "lista-element-1" ]
               } ]
             }, {
@@ -111,8 +96,8 @@ var REPORT_DATA = {
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 27
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 22
                 },
                 "name" : "text contains \"Sale\"",
                 "highlight" : [ "lista-element-2" ]
@@ -122,18 +107,10 @@ var REPORT_DATA = {
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 29
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 24
                 },
                 "name" : "text contains \"Unos\"",
-                "highlight" : [ "lista-element-3" ]
-              }, {
-                "status" : "info",
-                "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 30
-                },
-                "name" : "css text-decoration-line is \"none\"",
                 "highlight" : [ "lista-element-3" ]
               } ]
             }, {
@@ -141,8 +118,8 @@ var REPORT_DATA = {
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 32
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 26
                 },
                 "name" : "text contains \"Rezervacije\"",
                 "highlight" : [ "lista-element-4" ]
@@ -152,8 +129,8 @@ var REPORT_DATA = {
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 34
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 28
                 },
                 "name" : "text contains \"Osobe\"",
                 "highlight" : [ "lista-element-5" ]
@@ -162,168 +139,116 @@ var REPORT_DATA = {
           }, {
             "name" : "Main section",
             "place" : {
-              "filePath" : "unos.gspec",
-              "lineNumber" : 36
+              "filePath" : "pocetna.gspec",
+              "lineNumber" : 30
             },
             "objects" : [ {
-              "name" : "sadrzaj",
+              "name" : "frame",
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 38
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 32
                 },
-                "name" : "contains naziv,brojMjesta,odgovornaOsoba,sprat,unos",
-                "highlight" : [ "sadrzaj", "naziv", "brojMjesta", "odgovornaOsoba", "sprat", "unos" ]
-              } ]
-            }, {
-              "name" : "naziv",
-              "specs" : [ {
-                "status" : "info",
-                "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 40
-                },
-                "name" : "above brojMjesta 0 to 20 px",
+                "name" : "width 70 to 80 % of screen/width",
                 "meta" : [ {
                   "from" : {
-                    "object" : "naziv",
-                    "edge" : "bottom"
+                    "object" : "frame",
+                    "edge" : "left"
                   },
                   "to" : {
-                    "object" : "brojMjesta",
-                    "edge" : "top"
+                    "object" : "frame",
+                    "edge" : "right"
                   },
-                  "expectedDistance" : "0 to 20px",
-                  "realDistance" : "10px"
+                  "expectedDistance" : "70 to 80% [697 to 796px]",
+                  "realDistance" : "76% [760px]"
                 } ],
-                "highlight" : [ "naziv", "brojMjesta" ]
+                "highlight" : [ "frame" ]
               } ]
             }, {
-              "name" : "brojMjesta",
+              "name" : "slika",
               "specs" : [ {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 42
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 34
                 },
-                "name" : "above odgovornaOsoba 0 to 20 px",
+                "name" : "width 220px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "brojMjesta",
-                    "edge" : "bottom"
+                    "object" : "slika",
+                    "edge" : "left"
                   },
                   "to" : {
-                    "object" : "odgovornaOsoba",
-                    "edge" : "top"
+                    "object" : "slika",
+                    "edge" : "right"
                   },
-                  "expectedDistance" : "0 to 20px",
-                  "realDistance" : "11px"
+                  "expectedDistance" : "220px",
+                  "realDistance" : "220px"
                 } ],
-                "highlight" : [ "brojMjesta", "odgovornaOsoba" ]
-              } ]
-            }, {
-              "name" : "odgovornaOsoba",
-              "specs" : [ {
+                "highlight" : [ "slika" ]
+              }, {
                 "status" : "info",
                 "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 44
+                  "filePath" : "pocetna.gspec",
+                  "lineNumber" : 35
                 },
-                "name" : "above sprat 0 to 20 px",
+                "name" : "height 220 px",
                 "meta" : [ {
                   "from" : {
-                    "object" : "odgovornaOsoba",
-                    "edge" : "bottom"
-                  },
-                  "to" : {
-                    "object" : "sprat",
+                    "object" : "slika",
                     "edge" : "top"
                   },
-                  "expectedDistance" : "0 to 20px",
-                  "realDistance" : "10px"
-                } ],
-                "highlight" : [ "odgovornaOsoba", "sprat" ]
-              } ]
-            }, {
-              "name" : "sprat",
-              "specs" : [ {
-                "status" : "info",
-                "place" : {
-                  "filePath" : "unos.gspec",
-                  "lineNumber" : 46
-                },
-                "name" : "above unos 0 to 20 px",
-                "meta" : [ {
-                  "from" : {
-                    "object" : "sprat",
+                  "to" : {
+                    "object" : "slika",
                     "edge" : "bottom"
                   },
-                  "to" : {
-                    "object" : "unos",
-                    "edge" : "top"
-                  },
-                  "expectedDistance" : "0 to 20px",
-                  "realDistance" : "16px"
+                  "expectedDistance" : "220px",
+                  "realDistance" : "220px"
                 } ],
-                "highlight" : [ "sprat", "unos" ]
+                "highlight" : [ "slika" ]
               } ]
             } ]
           } ],
           "objects" : {
             "meni" : {
-              "area" : [ 341, 75, 330, 80 ]
+              "area" : [ 118, 74, 760, 80 ]
             },
             "lista" : {
-              "area" : [ 357, 125, 276, 26 ]
-            },
-            "sprat" : {
-              "area" : [ 481, 266, 141, 17 ]
-            },
-            "naziv" : {
-              "area" : [ 481, 184, 141, 17 ]
-            },
-            "unos" : {
-              "area" : [ 357, 299, 300, 19 ]
-            },
-            "sadrzaj" : {
-              "area" : [ 341, 162, 330, 161 ]
-            },
-            "odgovornaOsoba" : {
-              "area" : [ 481, 239, 141, 17 ]
+              "area" : [ 156, 123, 276, 26 ]
             },
             "lista-element-5" : {
-              "area" : [ 588, 130, 41, 16 ]
+              "area" : [ 386, 128, 41, 16 ]
+            },
+            "slika" : {
+              "area" : [ 156, 197, 220, 220 ]
             },
             "lista-element-4" : {
-              "area" : [ 504, 130, 73, 16 ]
+              "area" : [ 303, 128, 73, 16 ]
             },
             "lista-element-3" : {
-              "area" : [ 462, 130, 32, 16 ]
+              "area" : [ 260, 128, 32, 16 ]
             },
             "logo" : {
-              "area" : [ 489, 35, 80, 80 ]
-            },
-            "brojMjesta" : {
-              "area" : [ 481, 211, 147, 17 ]
+              "area" : [ 460, 34, 80, 80 ]
             },
             "lista-element-2" : {
-              "area" : [ 424, 130, 28, 16 ]
+              "area" : [ 222, 128, 28, 16 ]
             },
             "lista-element-1" : {
-              "area" : [ 362, 130, 51, 16 ]
+              "area" : [ 161, 128, 51, 16 ]
             },
             "frame" : {
-              "area" : [ 341, 75, 330, 248 ]
+              "area" : [ 118, 74, 760, 1056 ]
             }
           },
           "screenshot" : "layout-1-screenshot.png",
           "type" : "layout"
         } ],
-        "time" : 1573654596294,
+        "time" : 1573672159453,
         "type" : "node"
       } ],
-      "time" : 1573654591693,
+      "time" : 1573672154894,
       "type" : "node"
     } ]
   }

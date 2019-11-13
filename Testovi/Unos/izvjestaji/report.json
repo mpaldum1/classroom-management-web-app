@@ -1,8 +1,8 @@
 {
   "tests" : [ {
     "name" : "unos.gspec",
-    "startedAt" : 1573654591689,
-    "endedAt" : 1573654599511,
+    "startedAt" : 1573661837924,
+    "endedAt" : 1573661846192,
     "failed" : false,
     "statistic" : {
       "passed" : 15,
@@ -11,7 +11,7 @@
       "total" : 15
     },
     "testId" : "1-unos.gspec",
-    "duration" : 7822,
+    "duration" : 8268,
     "failed" : false
   } ]
 }
