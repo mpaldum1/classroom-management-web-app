@@ -1,0 +1,267 @@
+{
+  "testId" : "1-mobilepocetna.gspec",
+  "name" : "mobilePocetna.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  mobilePocetna.gspec --size 599x800 --url file:///Users/makfisic/Desktop/WT%20Spirala%201/pocetna.html --htmlreport Galen1200x800",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: mobilePocetna.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573321239531,
+          "sections" : [ {
+            "name" : "Main section",
+            "place" : {
+              "filePath" : "mobilePocetna.gspec",
+              "lineNumber" : 10
+            },
+            "objects" : [ {
+              "name" : "meni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 12
+                },
+                "name" : "above sadrzaj",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "meni", "sadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 13
+                },
+                "name" : "inside glavniDiv",
+                "meta" : [ ],
+                "highlight" : [ "meni", "glavniDiv" ]
+              } ]
+            }, {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "inside meni",
+                "meta" : [ ],
+                "highlight" : [ "logo", "meni" ]
+              } ]
+            }, {
+              "name" : "sliba",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 17
+                },
+                "name" : "width 60px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sliba",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "sliba",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "60px",
+                  "realDistance" : "60px"
+                } ],
+                "highlight" : [ "sliba" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "height 60px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sliba",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sliba",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "60px",
+                  "realDistance" : "60px"
+                } ],
+                "highlight" : [ "sliba" ]
+              } ]
+            }, {
+              "name" : "sadrzaj",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "below meni",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "sadrzaj", "meni" ]
+              } ]
+            }, {
+              "name" : "slika",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "inside slike",
+                "meta" : [ ],
+                "highlight" : [ "slika", "slike" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "height 200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "200px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slika" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "width 200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "200px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slika" ]
+              } ]
+            }, {
+              "name" : "slike",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "css display is \"flex\"",
+                "highlight" : [ "slike" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "css flex-direction is \"row\"",
+                "highlight" : [ "slike" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "centered horizontally inside glavniDiv",
+                "highlight" : [ "slike", "glavniDiv" ]
+              } ]
+            }, {
+              "name" : "listaLinkova",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "css display is \"flex\"",
+                "highlight" : [ "listaLinkova" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilePocetna.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "css flex-direction is \"column\"",
+                "highlight" : [ "listaLinkova" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "meni" : {
+              "area" : [ 0, 0, 599, 275 ]
+            },
+            "slika" : {
+              "area" : [ 199, 370, 200, 200 ]
+            },
+            "glavniDiv" : {
+              "area" : [ 0, 0, 599, 2570 ]
+            },
+            "listaLinkova" : {
+              "area" : [ 259, 120, 80, 125 ]
+            },
+            "sliba" : {
+              "area" : [ 269, 30, 60, 60 ]
+            },
+            "logo" : {
+              "area" : [ 0, 0, 599, 60 ]
+            },
+            "slike" : {
+              "area" : [ 164, 280, 270, 2290 ]
+            },
+            "sadrzaj" : {
+              "area" : [ 0, 280, 599, 2290 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1573321237729,
+        "type" : "node"
+      } ],
+      "time" : 1573321232848,
+      "type" : "node"
+    } ]
+  }
+}

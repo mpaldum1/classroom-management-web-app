@@ -1,0 +1,114 @@
+@objects
+	meni	.meni
+	logo  .logo
+	lista   ul
+	elementLIste-* ul li
+    sadrzaj   .sadrzaj
+	html    html
+    body    body
+    a       a
+    slika .slika1
+    slike-* .slika2
+    f footer
+= Skeleton =
+    html, body, sadrzaj, f, slike-8, slike-9, slike-10:
+        centered horizontally inside screen 1px
+
+    slike-8:
+        above slike-9 15px
+        below sadrzaj
+
+    slike-10:
+        below slike-9 15px
+        inside screen 15px bottom, >= 0px left right
+
+    f:
+        above slike-9 30px
+        below sadrzaj 0px
+        inside screen 8px left right
+
+    html:
+        inside screen 0px top left right
+
+    slike-8, slike-9:
+        inside screen >= 0px left right
+
+    body:
+        inside screen 30px top, 8px left right
+
+    html, body:
+        above f
+
+    sadrzaj:
+        inside screen 8px left right, >= 0px top
+
+= html elements =
+    slika:
+        centered horizontally inside html 1px
+        height 50px
+        inside html 5px top
+        width 70px
+
+= body elements =
+    lista:
+        centered horizontally inside meni 1px
+        inside meni 50px top, 0px left right bottom
+
+    meni:
+        above slike-1 25px
+        inside body 0px top left right
+
+    slike-3:
+        below slike-2 15px
+        inside body 5px bottom, >= 0px left right
+
+    a:
+        inside elementLIste-2 0px top left bottom
+        width 27px
+
+    elementLIste-1:
+        above elementLIste-2 0px
+        inside lista 40px left, 0px top right
+
+    elementLIste-1, elementLIste-2, a, elementLIste-3, elementLIste-4, elementLIste-5:
+        height 18px
+
+    elementLIste-2, elementLIste-3, elementLIste-4:
+        inside lista 40px left, 0px right
+
+    slike-1, slike-2:
+        inside body >= 0px left right
+
+    elementLIste-3:
+        above elementLIste-4 1px
+        below elementLIste-2 0px
+
+    meni, slike-1, slike-2, slike-3:
+        centered horizontally inside body 1px
+
+    slike-2:
+        below slike-1 15px
+
+    elementLIste-5:
+        below elementLIste-4 0px
+        inside lista 40px left, 1px bottom, 0px right
+
+= sadrzaj elements =
+    slike-4:
+        centered horizontally inside sadrzaj 1px
+        inside sadrzaj 3px bottom
+
+= f elements =
+    slike-6:
+        above slike-7 15px
+        below slike-5 15px
+
+    slike-5:
+        inside f 12px top
+
+    slike-6, slike-7:
+        inside f
+
+    slike-5, slike-6, slike-7:
+        centered horizontally inside f 1px
+

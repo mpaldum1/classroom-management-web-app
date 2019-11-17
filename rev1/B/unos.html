@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<HTML lang="en">
+<HEAD>
+	<TITLE>UNOS</TITLE>
+	<link rel="stylesheet" href="unos.css">
+	<meta charset="utf-8"/>
+</HEAD>
+
+<BODY>
+	<div id="meni">
+		<div id="logo">
+			<img src="Assets/logo.jpg" alt="logo">
+		</div>
+		<ul> 
+			<li><a href="pocetna.html">Pocetna</a></li>
+			<li><a href="sale.html">Sale</a></li>
+			<li><a href="unos.html">Unos</a></li>
+			<li><a href="rezervacija.html">Rezervacije</a></li>
+			<li><a href="osobe.html">Osobe</a></li>
+		</ul>
+	</div>
+	<div id="sadrzaj">
+		<form>
+			<p class="row">
+				<label class="label">Naziv</label>
+				<input type="text" name="naziv" required>
+			</p>
+			<p class="row">
+				<label class="label">Broj Mjesta</label>
+				<input type="number" name="brojMjesta" required>
+			</p>
+			<p class="row">
+				<label class="label">Odgovorna Osoba</label>
+				<input type="email" name="odgovornaOsoba" required>
+			</p>
+			<p class="row">
+				<label class="label">Sprat</label>
+				<input type="text" name="sprat" required>
+			</p>
+			<input type="submit" name="unos" title="Unesi">
+		</form>
+	</div>
+	</BODY>
+</HTML>

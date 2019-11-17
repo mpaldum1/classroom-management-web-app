@@ -1,0 +1,1160 @@
+{
+  "testId" : "1-mobileunos.gspec",
+  "name" : "mobileunos.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Mutation test",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  mobileunos.gspec --url http://localhost/unos.html --size 590x768 --offset 5 --htmlreport Unos590MRep",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: mobileunos.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573673582192,
+          "sections" : [ {
+            "name" : "meni section",
+            "place" : {
+              "filePath" : "mobileunos.gspec",
+              "lineNumber" : 13
+            },
+            "objects" : [ {
+              "name" : "body",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 16
+                },
+                "name" : "css background-color is \"rgba(0, 0, 0, 0)\"",
+                "highlight" : [ "body" ]
+              } ]
+            }, {
+              "name" : "meni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "inside body 0px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "meni", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "above sadrzaj 20px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "20px",
+                  "realDistance" : "20px"
+                } ],
+                "highlight" : [ "meni", "sadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "contains partly logo",
+                "highlight" : [ "meni", "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "contains elementLIste-*",
+                "highlight" : [ "meni", "elementLIste-1", "elementLIste-2", "elementLIste-3", "elementLIste-4", "elementLIste-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "css background-color is \"rgba(100, 149, 237, 1)\"",
+                "highlight" : [ "meni" ]
+              } ]
+            }, {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "width ~ 70px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "68 to 72px",
+                  "realDistance" : "70px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 25
+                },
+                "name" : "height ~ 50px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "48 to 52px",
+                  "realDistance" : "50px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "inside partly meni",
+                "meta" : [ ],
+                "highlight" : [ "logo", "meni" ]
+              } ]
+            }, {
+              "name" : "slika",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "width ~ 70px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "68 to 72px",
+                  "realDistance" : "70px"
+                } ],
+                "highlight" : [ "slika" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "height ~ 50px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "48 to 52px",
+                  "realDistance" : "50px"
+                } ],
+                "highlight" : [ "slika" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "inside logo",
+                "meta" : [ ],
+                "highlight" : [ "slika", "logo" ]
+              } ]
+            }, {
+              "name" : "elementLIste-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "above elementLIste-2  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-1", "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "above elementLIste-2  >-4px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -4px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-1", "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "aligned vertically all elementLIste-2",
+                "highlight" : [ "elementLIste-1", "elementLIste-2" ]
+              } ]
+            }, {
+              "name" : "elementLIste-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "above elementLIste-3  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-2", "elementLIste-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "above elementLIste-3  >-4px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -4px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-2", "elementLIste-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "aligned vertically all elementLIste-3",
+                "highlight" : [ "elementLIste-2", "elementLIste-3" ]
+              } ]
+            }, {
+              "name" : "elementLIste-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "above elementLIste-4  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "1px"
+                } ],
+                "highlight" : [ "elementLIste-3", "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "above elementLIste-4  >-4px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -4px",
+                  "realDistance" : "1px"
+                } ],
+                "highlight" : [ "elementLIste-3", "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "aligned vertically all elementLIste-4",
+                "highlight" : [ "elementLIste-3", "elementLIste-4" ]
+              } ]
+            }, {
+              "name" : "elementLIste-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "above elementLIste-5  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-4", "elementLIste-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "above elementLIste-5  >-4px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -4px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-4", "elementLIste-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "aligned vertically all elementLIste-5",
+                "highlight" : [ "elementLIste-4", "elementLIste-5" ]
+              } ]
+            } ]
+          }, {
+            "name" : "TEST",
+            "place" : {
+              "filePath" : "mobileunos.gspec",
+              "lineNumber" : 38
+            },
+            "objects" : [ {
+              "name" : "labela-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "above labela-2  ~36px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "labela-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "34 to 38px",
+                  "realDistance" : "36px"
+                } ],
+                "highlight" : [ "labela-1", "labela-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "aligned vertically all labela-2",
+                "highlight" : [ "labela-1", "labela-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-1",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "labela-1",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "labela-1" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 44
+                },
+                "name" : "height ~30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "28 to 32px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "labela-1" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "above unos-1 ~ 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "unos-1",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "-2 to 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "labela-1", "unos-1" ]
+              } ]
+            }, {
+              "name" : "labela-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "above labela-3  ~36px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "labela-3",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "34 to 38px",
+                  "realDistance" : "36px"
+                } ],
+                "highlight" : [ "labela-2", "labela-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "aligned vertically all labela-3",
+                "highlight" : [ "labela-2", "labela-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-2",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "labela-2",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "labela-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 44
+                },
+                "name" : "height ~30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "28 to 32px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "labela-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "above unos-2 ~ 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "unos-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "-2 to 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "labela-2", "unos-2" ]
+              } ]
+            }, {
+              "name" : "labela-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "above labela-4  ~36px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "labela-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "34 to 38px",
+                  "realDistance" : "36px"
+                } ],
+                "highlight" : [ "labela-3", "labela-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "aligned vertically all labela-4",
+                "highlight" : [ "labela-3", "labela-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-3",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "labela-3",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "labela-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 44
+                },
+                "name" : "height ~30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "28 to 32px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "labela-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "above unos-3 ~ 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "unos-3",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "-2 to 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "labela-3", "unos-3" ]
+              } ]
+            }, {
+              "name" : "labela-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "above labela-5  ~36px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "labela-5",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "34 to 38px",
+                  "realDistance" : "36px"
+                } ],
+                "highlight" : [ "labela-4", "labela-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "aligned vertically all labela-5",
+                "highlight" : [ "labela-4", "labela-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-4",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "labela-4",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "labela-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 44
+                },
+                "name" : "height ~30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "28 to 32px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "labela-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "above unos-4 ~ 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "unos-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "-2 to 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "labela-4", "unos-4" ]
+              } ]
+            }, {
+              "name" : "unos-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "above unos-2  ~36px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "unos-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "34 to 38px",
+                  "realDistance" : "35px"
+                } ],
+                "highlight" : [ "unos-1", "unos-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "unos-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "28 to 32px",
+                  "realDistance" : "31px"
+                } ],
+                "highlight" : [ "unos-1" ]
+              } ]
+            }, {
+              "name" : "unos-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "above unos-3  ~36px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "unos-3",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "34 to 38px",
+                  "realDistance" : "36px"
+                } ],
+                "highlight" : [ "unos-2", "unos-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "unos-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "28 to 32px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "unos-2" ]
+              } ]
+            }, {
+              "name" : "unos-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "above unos-4  ~36px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "unos-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "34 to 38px",
+                  "realDistance" : "35px"
+                } ],
+                "highlight" : [ "unos-3", "unos-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "unos-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "28 to 32px",
+                  "realDistance" : "31px"
+                } ],
+                "highlight" : [ "unos-3" ]
+              } ]
+            }, {
+              "name" : "unos-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "above unos-5  ~36px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "unos-5",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "34 to 38px",
+                  "realDistance" : "36px"
+                } ],
+                "highlight" : [ "unos-4", "unos-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "unos-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "28 to 32px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "unos-4" ]
+              } ]
+            }, {
+              "name" : "labela-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunos.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "above unos-5 ~ 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-5",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "unos-5",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "-2 to 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "labela-5", "unos-5" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "meni" : {
+              "area" : [ 8, 30, 543, 142 ]
+            },
+            "slika" : {
+              "area" : [ 244, 5, 70, 50 ]
+            },
+            "unos-1" : {
+              "area" : [ 13, 227, 161, 31 ]
+            },
+            "labela-1" : {
+              "area" : [ 13, 197, 200, 30 ]
+            },
+            "labela-2" : {
+              "area" : [ 13, 263, 200, 30 ]
+            },
+            "unos-3" : {
+              "area" : [ 13, 359, 161, 31 ]
+            },
+            "labela-3" : {
+              "area" : [ 13, 329, 200, 30 ]
+            },
+            "unos-2" : {
+              "area" : [ 13, 293, 161, 30 ]
+            },
+            "body" : {
+              "area" : [ 8, 30, 543, 682 ]
+            },
+            "elementLIste-3" : {
+              "area" : [ 48, 116, 503, 18 ]
+            },
+            "labela-4" : {
+              "area" : [ 13, 395, 200, 30 ]
+            },
+            "unos-5" : {
+              "area" : [ 13, 491, 57, 25 ]
+            },
+            "elementLIste-2" : {
+              "area" : [ 48, 98, 503, 18 ]
+            },
+            "labela-5" : {
+              "area" : [ 13, 461, 200, 30 ]
+            },
+            "unos-4" : {
+              "area" : [ 13, 425, 161, 30 ]
+            },
+            "sadrzaj" : {
+              "area" : [ 8, 192, 543, 693 ]
+            },
+            "elementLIste-5" : {
+              "area" : [ 48, 153, 503, 18 ]
+            },
+            "elementLIste-4" : {
+              "area" : [ 48, 135, 503, 18 ]
+            },
+            "elementLIste-1" : {
+              "area" : [ 48, 80, 503, 18 ]
+            },
+            "logo" : {
+              "area" : [ 244, 5, 70, 50 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        }, {
+          "name" : "Mutation testing: mobileunos.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573673582192,
+          "mutationReport" : {
+            "objectMutationStatistics" : {
+              "meni" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slika" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "unos-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "labela-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "labela-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "unos-3" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "labela-3" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "unos-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "body" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-3" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "labela-4" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "unos-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "labela-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "unos-4" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "sadrzaj" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-4" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "logo" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              }
+            },
+            "totalPassed" : 200,
+            "totalFailed" : 0,
+            "totalMutations" : 200,
+            "failedRatio" : 0.0
+          },
+          "type" : "mutation"
+        } ],
+        "time" : 1573673577637,
+        "type" : "node"
+      } ],
+      "time" : 1573673573325,
+      "type" : "node"
+    } ]
+  }
+}

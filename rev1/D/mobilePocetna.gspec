@@ -1,0 +1,45 @@
+@objects
+    meni .meni
+    logo .logo
+    sliba #sliba
+    sadrzaj .sadrzaj
+    glavniDiv .glavniDiv
+    slika .slika
+    slike .slike
+    listaLinkova #listaLinkova
+= Main section =
+    meni:
+        above sadrzaj
+        inside glavniDiv
+    logo:
+        inside meni
+    sliba:
+        width 60px
+        height 60px
+    sadrzaj:
+        below meni
+    slika:
+        inside slike
+        height 200px
+        width 200px
+    slike:
+        css display is "flex"
+        css flex-direction is "row"
+        centered horizontally inside glavniDiv
+    listaLinkova:
+        css display is "flex"
+        css flex-direction is "column"
+
+    
+    
+    
+
+    
+   
+
+
+    
+
+
+            
+            

@@ -1,0 +1,1843 @@
+{
+  "testId" : "1-mobileunostestgenerisani.gspec",
+  "name" : "mobileunostestGenerisani.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Mutation test",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  mobileunostestGenerisani.gspec --url http://localhost/unos.html --size 590x768 --offset 5 --htmlreport Unos590MGep",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: mobileunostestGenerisani.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573674395028,
+          "sections" : [ {
+            "name" : "Skeleton",
+            "place" : {
+              "filePath" : "mobileunostestGenerisani.gspec",
+              "lineNumber" : 13
+            },
+            "objects" : [ {
+              "name" : "html",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "inside screen 0px top left right, >= 1px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "html",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "html",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "html",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "html",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 1px",
+                  "realDistance" : "204px"
+                } ],
+                "highlight" : [ "html", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "centered horizontally inside screen 1px",
+                "highlight" : [ "html", "screen" ]
+              } ]
+            }, {
+              "name" : "body",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "inside screen 30px top, 8px left right, >= 1px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "body",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "30px",
+                  "realDistance" : "30px"
+                }, {
+                  "from" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "8px",
+                  "realDistance" : "8px"
+                }, {
+                  "from" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "8px",
+                  "realDistance" : "8px"
+                }, {
+                  "from" : {
+                    "object" : "body",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 1px",
+                  "realDistance" : "174px"
+                } ],
+                "highlight" : [ "body", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "centered horizontally inside screen 1px",
+                "highlight" : [ "body", "screen" ]
+              } ]
+            }, {
+              "name" : "sadrzaj",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "inside screen 1px bottom, 8px left right, >= 0px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "1px",
+                  "realDistance" : "1px"
+                }, {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "8px",
+                  "realDistance" : "8px"
+                }, {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "8px",
+                  "realDistance" : "8px"
+                }, {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "192px"
+                } ],
+                "highlight" : [ "sadrzaj", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "centered horizontally inside screen 1px",
+                "highlight" : [ "sadrzaj", "screen" ]
+              } ]
+            } ]
+          }, {
+            "name" : "html elements",
+            "place" : {
+              "filePath" : "mobileunostestGenerisani.gspec",
+              "lineNumber" : 26
+            },
+            "objects" : [ {
+              "name" : "slika",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "centered horizontally inside html 1px",
+                "highlight" : [ "slika", "html" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "height 50px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "50px",
+                  "realDistance" : "50px"
+                } ],
+                "highlight" : [ "slika" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "inside html 5px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "html",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "slika", "html" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "width 70px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "70px",
+                  "realDistance" : "70px"
+                } ],
+                "highlight" : [ "slika" ]
+              } ]
+            } ]
+          }, {
+            "name" : "body elements",
+            "place" : {
+              "filePath" : "mobileunostestGenerisani.gspec",
+              "lineNumber" : 33
+            },
+            "objects" : [ {
+              "name" : "lista",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "centered horizontally inside meni 1px",
+                "highlight" : [ "lista", "meni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "inside meni 50px top, 0px left right bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "lista",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "50px",
+                  "realDistance" : "50px"
+                }, {
+                  "from" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "lista",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "lista", "meni" ]
+              } ]
+            }, {
+              "name" : "meni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 39
+                },
+                "name" : "above labela-1 25px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "labela-1",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "25px",
+                  "realDistance" : "25px"
+                } ],
+                "highlight" : [ "meni", "labela-1" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 40
+                },
+                "name" : "centered horizontally inside body 1px",
+                "highlight" : [ "meni", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "inside body 0px top left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "meni", "body" ]
+              } ]
+            }, {
+              "name" : "a",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 44
+                },
+                "name" : "inside elementLIste-1 0px top left bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "a",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "a",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "a",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "a", "elementLIste-1" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 45
+                },
+                "name" : "width 50px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "a",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "a",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "50px",
+                  "realDistance" : "50px"
+                } ],
+                "highlight" : [ "a" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "a",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "a",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "a" ]
+              } ]
+            }, {
+              "name" : "labela-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "inside body 5px left, >= 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-1",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                }, {
+                  "from" : {
+                    "object" : "labela-1",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "338px"
+                } ],
+                "highlight" : [ "labela-1", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "height 30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "30px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "labela-1" ]
+              } ]
+            }, {
+              "name" : "unos-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "inside body 5px left, >= 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-1",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                }, {
+                  "from" : {
+                    "object" : "unos-1",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "377px"
+                } ],
+                "highlight" : [ "unos-1", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 57
+                },
+                "name" : "above labela-2 5px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "labela-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "unos-1", "labela-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 58
+                },
+                "name" : "below labela-1 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "unos-1", "labela-1" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 68
+                },
+                "name" : "height 31px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "unos-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "31px",
+                  "realDistance" : "31px"
+                } ],
+                "highlight" : [ "unos-1" ]
+              } ]
+            }, {
+              "name" : "labela-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "inside body 5px left, >= 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-2",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                }, {
+                  "from" : {
+                    "object" : "labela-2",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "338px"
+                } ],
+                "highlight" : [ "labela-2", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "height 30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "30px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "labela-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "above unos-2 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "unos-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "labela-2", "unos-2" ]
+              } ]
+            }, {
+              "name" : "unos-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "inside body 5px left, >= 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-2",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                }, {
+                  "from" : {
+                    "object" : "unos-2",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "377px"
+                } ],
+                "highlight" : [ "unos-2", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "height 30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "unos-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "30px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "unos-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 71
+                },
+                "name" : "above labela-3 6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "labela-3",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "6px",
+                  "realDistance" : "6px"
+                } ],
+                "highlight" : [ "unos-2", "labela-3" ]
+              } ]
+            }, {
+              "name" : "labela-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "inside body 5px left, >= 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-3",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                }, {
+                  "from" : {
+                    "object" : "labela-3",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "338px"
+                } ],
+                "highlight" : [ "labela-3", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "height 30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "30px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "labela-3" ]
+              } ]
+            }, {
+              "name" : "unos-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "inside body 5px left, >= 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-3",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                }, {
+                  "from" : {
+                    "object" : "unos-3",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "377px"
+                } ],
+                "highlight" : [ "unos-3", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 61
+                },
+                "name" : "above labela-4 5px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "labela-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "unos-3", "labela-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 62
+                },
+                "name" : "below labela-3 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "unos-3", "labela-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 68
+                },
+                "name" : "height 31px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "unos-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "31px",
+                  "realDistance" : "31px"
+                } ],
+                "highlight" : [ "unos-3" ]
+              } ]
+            }, {
+              "name" : "labela-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "inside body 5px left, >= 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-4",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                }, {
+                  "from" : {
+                    "object" : "labela-4",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "338px"
+                } ],
+                "highlight" : [ "labela-4", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "height 30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "30px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "labela-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 83
+                },
+                "name" : "above unos-4 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "unos-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "labela-4", "unos-4" ]
+              } ]
+            }, {
+              "name" : "unos-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "inside body 5px left, >= 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-4",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                }, {
+                  "from" : {
+                    "object" : "unos-4",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "377px"
+                } ],
+                "highlight" : [ "unos-4", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "height 30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "unos-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "30px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "unos-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 86
+                },
+                "name" : "above labela-5 6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "labela-5",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "6px",
+                  "realDistance" : "6px"
+                } ],
+                "highlight" : [ "unos-4", "labela-5" ]
+              } ]
+            }, {
+              "name" : "labela-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "inside body 5px left, >= 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-5",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                }, {
+                  "from" : {
+                    "object" : "labela-5",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "338px"
+                } ],
+                "highlight" : [ "labela-5", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "height 30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "labela-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-5",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "30px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "labela-5" ]
+              } ]
+            }, {
+              "name" : "unos-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "inside body 5px left, >= 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-5",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                }, {
+                  "from" : {
+                    "object" : "unos-5",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "481px"
+                } ],
+                "highlight" : [ "unos-5", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 74
+                },
+                "name" : "below labela-5 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "labela-5",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "unos-5", "labela-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 75
+                },
+                "name" : "height 25px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "unos-5",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "25px",
+                  "realDistance" : "25px"
+                } ],
+                "highlight" : [ "unos-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 76
+                },
+                "name" : "width 57px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "unos-5",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "unos-5",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "57px",
+                  "realDistance" : "57px"
+                } ],
+                "highlight" : [ "unos-5" ]
+              } ]
+            }, {
+              "name" : "elementLIste-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "elementLIste-1" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 93
+                },
+                "name" : "above elementLIste-2 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-1", "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 94
+                },
+                "name" : "inside lista 40px left, 0px top right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "40px",
+                  "realDistance" : "40px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-1", "lista" ]
+              } ]
+            }, {
+              "name" : "elementLIste-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 97
+                },
+                "name" : "inside lista 40px left, 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "40px",
+                  "realDistance" : "40px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-2", "lista" ]
+              } ]
+            }, {
+              "name" : "elementLIste-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "elementLIste-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 79
+                },
+                "name" : "above elementLIste-4 1px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "1px",
+                  "realDistance" : "1px"
+                } ],
+                "highlight" : [ "elementLIste-3", "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 80
+                },
+                "name" : "below elementLIste-2 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-3", "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 97
+                },
+                "name" : "inside lista 40px left, 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "40px",
+                  "realDistance" : "40px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-3", "lista" ]
+              } ]
+            }, {
+              "name" : "elementLIste-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 97
+                },
+                "name" : "inside lista 40px left, 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "40px",
+                  "realDistance" : "40px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-4", "lista" ]
+              } ]
+            }, {
+              "name" : "elementLIste-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "elementLIste-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 89
+                },
+                "name" : "below elementLIste-4 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-5", "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileunostestGenerisani.gspec",
+                  "lineNumber" : 90
+                },
+                "name" : "inside lista 40px left, 1px bottom, 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "40px",
+                  "realDistance" : "40px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "1px",
+                  "realDistance" : "1px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-5", "lista" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "lista" : {
+              "area" : [ 8, 80, 543, 92 ]
+            },
+            "meni" : {
+              "area" : [ 8, 30, 543, 142 ]
+            },
+            "slika" : {
+              "area" : [ 244, 5, 70, 50 ]
+            },
+            "a" : {
+              "area" : [ 48, 80, 50, 18 ]
+            },
+            "unos-1" : {
+              "area" : [ 13, 227, 161, 31 ]
+            },
+            "screen" : {
+              "area" : [ 0, 0, 559, 886 ]
+            },
+            "labela-1" : {
+              "area" : [ 13, 197, 200, 30 ]
+            },
+            "labela-2" : {
+              "area" : [ 13, 263, 200, 30 ]
+            },
+            "unos-3" : {
+              "area" : [ 13, 359, 161, 31 ]
+            },
+            "unos-2" : {
+              "area" : [ 13, 293, 161, 30 ]
+            },
+            "labela-3" : {
+              "area" : [ 13, 329, 200, 30 ]
+            },
+            "body" : {
+              "area" : [ 8, 30, 543, 682 ]
+            },
+            "labela-4" : {
+              "area" : [ 13, 395, 200, 30 ]
+            },
+            "unos-5" : {
+              "area" : [ 13, 491, 57, 25 ]
+            },
+            "elementLIste-3" : {
+              "area" : [ 48, 116, 503, 18 ]
+            },
+            "unos-4" : {
+              "area" : [ 13, 425, 161, 30 ]
+            },
+            "labela-5" : {
+              "area" : [ 13, 461, 200, 30 ]
+            },
+            "elementLIste-2" : {
+              "area" : [ 48, 98, 503, 18 ]
+            },
+            "sadrzaj" : {
+              "area" : [ 8, 192, 543, 693 ]
+            },
+            "elementLIste-5" : {
+              "area" : [ 48, 153, 503, 18 ]
+            },
+            "elementLIste-4" : {
+              "area" : [ 48, 135, 503, 18 ]
+            },
+            "elementLIste-1" : {
+              "area" : [ 48, 80, 503, 18 ]
+            },
+            "html" : {
+              "area" : [ 0, 0, 559, 682 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        }, {
+          "name" : "Mutation testing: mobileunostestGenerisani.gspec included tags: ",
+          "status" : "error",
+          "time" : 1573674395028,
+          "mutationReport" : {
+            "objectMutationStatistics" : {
+              "lista" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meni" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slika" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "a" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "unos-1" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "unos-1: increase width by 5px", "unos-1: decrease width by 5px" ]
+              },
+              "screen" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "labela-1" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "labela-1: increase width by 5px", "labela-1: decrease width by 5px" ]
+              },
+              "labela-2" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "labela-2: increase width by 5px", "labela-2: decrease width by 5px" ]
+              },
+              "unos-3" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "unos-3: increase width by 5px", "unos-3: decrease width by 5px" ]
+              },
+              "unos-2" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "unos-2: increase width by 5px", "unos-2: decrease width by 5px" ]
+              },
+              "labela-3" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "labela-3: increase width by 5px", "labela-3: decrease width by 5px" ]
+              },
+              "body" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "body: increase height by 5px", "body: decrease height by 5px" ]
+              },
+              "labela-4" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "labela-4: increase width by 5px", "labela-4: decrease width by 5px" ]
+              },
+              "unos-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-3" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "unos-4" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "unos-4: increase width by 5px", "unos-4: decrease width by 5px" ]
+              },
+              "labela-5" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "labela-5: increase width by 5px", "labela-5: decrease width by 5px" ]
+              },
+              "elementLIste-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "sadrzaj" : {
+                "passed" : 9,
+                "failed" : 1,
+                "failedMutations" : [ "sadrzaj: move top edge down by 5px" ]
+              },
+              "elementLIste-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-4" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "html" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "html: increase height by 5px", "html: decrease height by 5px" ]
+              }
+            },
+            "totalPassed" : 207,
+            "totalFailed" : 23,
+            "totalMutations" : 230,
+            "failedRatio" : 10.0
+          },
+          "type" : "mutation"
+        } ],
+        "time" : 1573674390069,
+        "type" : "node"
+      } ],
+      "time" : 1573674385762,
+      "type" : "node"
+    } ]
+  }
+}

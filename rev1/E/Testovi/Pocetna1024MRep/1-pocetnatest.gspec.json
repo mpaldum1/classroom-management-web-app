@@ -1,0 +1,1064 @@
+{
+  "testId" : "1-pocetnatest.gspec",
+  "name" : "pocetnatest.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Mutation test",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  pocetnatest.gspec --url http://localhost/pocetna.html --size 1024x768 --offset 5 --htmlreport Pocetna1024MRep",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: pocetnatest.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573674250898,
+          "sections" : [ {
+            "name" : "meni section",
+            "place" : {
+              "filePath" : "pocetnatest.gspec",
+              "lineNumber" : 13
+            },
+            "objects" : [ {
+              "name" : "body",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 16
+                },
+                "name" : "css background-color is \"rgba(0, 0, 0, 0)\"",
+                "highlight" : [ "body" ]
+              } ]
+            }, {
+              "name" : "meni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "inside body 0px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "meni", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "above sadrzaj 19px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "19px",
+                  "realDistance" : "19px"
+                } ],
+                "highlight" : [ "meni", "sadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 20
+                },
+                "name" : "contains partly logo",
+                "highlight" : [ "meni", "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "contains elementLIste-*",
+                "highlight" : [ "meni", "elementLIste-1", "elementLIste-2", "elementLIste-3", "elementLIste-4", "elementLIste-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "css background-color is \"rgba(100, 149, 237, 1)\"",
+                "highlight" : [ "meni" ]
+              } ]
+            }, {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "width ~ 70px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "68 to 72px",
+                  "realDistance" : "70px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 25
+                },
+                "name" : "height ~ 50px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "48 to 52px",
+                  "realDistance" : "50px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "inside partly meni",
+                "meta" : [ ],
+                "highlight" : [ "logo", "meni" ]
+              } ]
+            }, {
+              "name" : "slika",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "width ~ 70px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "68 to 72px",
+                  "realDistance" : "70px"
+                } ],
+                "highlight" : [ "slika" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "height ~ 50px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "48 to 52px",
+                  "realDistance" : "50px"
+                } ],
+                "highlight" : [ "slika" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "inside logo",
+                "meta" : [ ],
+                "highlight" : [ "slika", "logo" ]
+              } ]
+            }, {
+              "name" : "elementLIste-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "left-of elementLIste-2  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "4px"
+                } ],
+                "highlight" : [ "elementLIste-1", "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "left-of elementLIste-2  >2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "> 2px",
+                  "realDistance" : "4px"
+                } ],
+                "highlight" : [ "elementLIste-1", "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "aligned horizontally all elementLIste-2",
+                "highlight" : [ "elementLIste-1", "elementLIste-2" ]
+              } ]
+            }, {
+              "name" : "elementLIste-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "left-of elementLIste-3  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "4px"
+                } ],
+                "highlight" : [ "elementLIste-2", "elementLIste-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "left-of elementLIste-3  >2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "> 2px",
+                  "realDistance" : "4px"
+                } ],
+                "highlight" : [ "elementLIste-2", "elementLIste-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "aligned horizontally all elementLIste-3",
+                "highlight" : [ "elementLIste-2", "elementLIste-3" ]
+              } ]
+            }, {
+              "name" : "elementLIste-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "left-of elementLIste-4  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "3px"
+                } ],
+                "highlight" : [ "elementLIste-3", "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "left-of elementLIste-4  >2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "> 2px",
+                  "realDistance" : "3px"
+                } ],
+                "highlight" : [ "elementLIste-3", "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "aligned horizontally all elementLIste-4",
+                "highlight" : [ "elementLIste-3", "elementLIste-4" ]
+              } ]
+            }, {
+              "name" : "elementLIste-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "left-of elementLIste-5  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "elementLIste-4", "elementLIste-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "left-of elementLIste-5  >2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "> 2px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "elementLIste-4", "elementLIste-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "aligned horizontally all elementLIste-5",
+                "highlight" : [ "elementLIste-4", "elementLIste-5" ]
+              } ]
+            } ]
+          }, {
+            "name" : "test1",
+            "place" : {
+              "filePath" : "pocetnatest.gspec",
+              "lineNumber" : 37
+            },
+            "objects" : [ {
+              "name" : "sadrzaj",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "inside partly body",
+                "meta" : [ ],
+                "highlight" : [ "sadrzaj", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "css background-color is \"rgba(100, 149, 237, 1)\"",
+                "highlight" : [ "sadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "height ~100% of body/height",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sadrzaj",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "98 to 102% [668 to 695px]",
+                  "realDistance" : "102% [702px]"
+                } ],
+                "highlight" : [ "sadrzaj" ]
+              } ]
+            }, {
+              "name" : "slike-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-1" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-1",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slike-1",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-1" ]
+              } ]
+            }, {
+              "name" : "slike-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-2",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slike-2",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-2" ]
+              } ]
+            }, {
+              "name" : "slike-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-3",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slike-3",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-3" ]
+              } ]
+            }, {
+              "name" : "slike-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-4",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slike-4",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-4" ]
+              } ]
+            }, {
+              "name" : "slike-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-5",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-5",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slike-5",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-5" ]
+              } ]
+            }, {
+              "name" : "slike-6",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-6",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-6",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-6" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-6",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slike-6",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-6" ]
+              } ]
+            }, {
+              "name" : "slike-7",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-7",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-7",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-7" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-7",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slike-7",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-7" ]
+              } ]
+            }, {
+              "name" : "slike-8",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-8",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-8",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-8" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-8",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slike-8",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-8" ]
+              } ]
+            }, {
+              "name" : "slike-9",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-9",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-9",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-9" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "width ~200px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-9",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slike-9",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "198 to 202px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-9" ]
+              } ]
+            }, {
+              "name" : "f",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 51
+                },
+                "name" : "css background-color is \"rgba(100, 149, 237, 1)\"",
+                "highlight" : [ "f" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "pocetnatest.gspec",
+                  "lineNumber" : 52
+                },
+                "name" : "width ~ 100% of screen/width",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "f",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "f",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "98 to 102% [974 to 1013px]",
+                  "realDistance" : "98% [978px]"
+                } ],
+                "highlight" : [ "f" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "meni" : {
+              "area" : [ 8, 30, 978, 69 ]
+            },
+            "slike-4" : {
+              "area" : [ 147, 343, 200, 200 ]
+            },
+            "slika" : {
+              "area" : [ 462, 5, 70, 50 ]
+            },
+            "slike-3" : {
+              "area" : [ 647, 128, 200, 200 ]
+            },
+            "slike-6" : {
+              "area" : [ 647, 343, 200, 200 ]
+            },
+            "slike-5" : {
+              "area" : [ 397, 343, 200, 200 ]
+            },
+            "slike-8" : {
+              "area" : [ 397, 558, 200, 200 ]
+            },
+            "slike-7" : {
+              "area" : [ 147, 558, 200, 200 ]
+            },
+            "f" : {
+              "area" : [ 8, 820, 978, 682 ]
+            },
+            "slike-9" : {
+              "area" : [ 647, 558, 200, 200 ]
+            },
+            "body" : {
+              "area" : [ 8, 30, 978, 682 ]
+            },
+            "elementLIste-3" : {
+              "area" : [ 134, 80, 34, 18 ]
+            },
+            "elementLIste-2" : {
+              "area" : [ 102, 80, 28, 18 ]
+            },
+            "sadrzaj" : {
+              "area" : [ 8, 118, 978, 702 ]
+            },
+            "elementLIste-5" : {
+              "area" : [ 251, 80, 41, 18 ]
+            },
+            "elementLIste-4" : {
+              "area" : [ 171, 80, 75, 18 ]
+            },
+            "elementLIste-1" : {
+              "area" : [ 48, 80, 50, 18 ]
+            },
+            "logo" : {
+              "area" : [ 462, 5, 70, 50 ]
+            },
+            "slike-2" : {
+              "area" : [ 397, 128, 200, 200 ]
+            },
+            "slike-1" : {
+              "area" : [ 147, 128, 200, 200 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        }, {
+          "name" : "Mutation testing: pocetnatest.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573674250898,
+          "mutationReport" : {
+            "objectMutationStatistics" : {
+              "meni" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-4" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slika" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-3" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-6" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-8" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-7" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "f" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-9" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "screen" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "body" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-3" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "sadrzaj" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-4" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "logo" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              }
+            },
+            "totalPassed" : 210,
+            "totalFailed" : 0,
+            "totalMutations" : 210,
+            "failedRatio" : 0.0
+          },
+          "type" : "mutation"
+        } ],
+        "time" : 1573674246807,
+        "type" : "node"
+      } ],
+      "time" : 1573674242496,
+      "type" : "node"
+    } ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "mobilerezervacijetestGenerisani.gspec",
+    "startedAt" : 1573674905504,
+    "endedAt" : 1573674921832,
+    "failed" : true,
+    "statistic" : {
+      "passed" : 168,
+      "errors" : 1,
+      "warnings" : 0,
+      "total" : 169
+    },
+    "testId" : "1-mobilerezervacijetestgenerisani.gspec",
+    "duration" : 16328,
+    "failed" : true
+  } ]
+}

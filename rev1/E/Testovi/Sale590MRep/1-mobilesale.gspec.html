@@ -1,0 +1,2293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Galen Test Report</title>
+        <link rel="stylesheet" href="galen-report.css"/>
+        <script src="vue.js"></script>
+        <script src="galen-report.js"></script>
+        <script type="text/javascript">
+var REPORT_DATA = {
+  "testId" : "1-mobilesale.gspec",
+  "name" : "mobilesale.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Mutation test",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  mobilesale.gspec --url http://localhost/sale.html --size 590x768 --offset 5 --htmlreport Sale590MRep",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: mobilesale.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573673029760,
+          "sections" : [ {
+            "name" : "meni section",
+            "place" : {
+              "filePath" : "mobilesale.gspec",
+              "lineNumber" : 24
+            },
+            "objects" : [ {
+              "name" : "body",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "css background-color is \"rgba(0, 0, 0, 0)\"",
+                "highlight" : [ "body" ]
+              } ]
+            }, {
+              "name" : "meni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 29
+                },
+                "name" : "inside body 0px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "meni", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "above sadrzaj 20px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "20px",
+                  "realDistance" : "20px"
+                } ],
+                "highlight" : [ "meni", "sadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "contains partly logo",
+                "highlight" : [ "meni", "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "contains elementLIste-*",
+                "highlight" : [ "meni", "elementLIste-1", "elementLIste-2", "elementLIste-3", "elementLIste-4", "elementLIste-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 33
+                },
+                "name" : "css background-color is \"rgba(100, 149, 237, 1)\"",
+                "highlight" : [ "meni" ]
+              } ]
+            }, {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 35
+                },
+                "name" : "width ~ 70px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "68 to 72px",
+                  "realDistance" : "70px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "height ~ 50px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "logo",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "logo",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "48 to 52px",
+                  "realDistance" : "50px"
+                } ],
+                "highlight" : [ "logo" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "inside partly meni",
+                "meta" : [ ],
+                "highlight" : [ "logo", "meni" ]
+              } ]
+            }, {
+              "name" : "slika",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 39
+                },
+                "name" : "width ~ 70px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "68 to 72px",
+                  "realDistance" : "70px"
+                } ],
+                "highlight" : [ "slika" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 40
+                },
+                "name" : "height ~ 50px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "48 to 52px",
+                  "realDistance" : "50px"
+                } ],
+                "highlight" : [ "slika" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 41
+                },
+                "name" : "inside logo",
+                "meta" : [ ],
+                "highlight" : [ "slika", "logo" ]
+              } ]
+            }, {
+              "name" : "elementLIste-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 45
+                },
+                "name" : "above elementLIste-2  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-1", "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 46
+                },
+                "name" : "above elementLIste-2  >-4px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -4px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-1", "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "aligned vertically all elementLIste-2",
+                "highlight" : [ "elementLIste-1", "elementLIste-2" ]
+              } ]
+            }, {
+              "name" : "elementLIste-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 45
+                },
+                "name" : "above elementLIste-3  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-2", "elementLIste-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 46
+                },
+                "name" : "above elementLIste-3  >-4px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -4px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-2", "elementLIste-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "aligned vertically all elementLIste-3",
+                "highlight" : [ "elementLIste-2", "elementLIste-3" ]
+              } ]
+            }, {
+              "name" : "elementLIste-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 45
+                },
+                "name" : "above elementLIste-4  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "1px"
+                } ],
+                "highlight" : [ "elementLIste-3", "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 46
+                },
+                "name" : "above elementLIste-4  >-4px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -4px",
+                  "realDistance" : "1px"
+                } ],
+                "highlight" : [ "elementLIste-3", "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "aligned vertically all elementLIste-4",
+                "highlight" : [ "elementLIste-3", "elementLIste-4" ]
+              } ]
+            }, {
+              "name" : "elementLIste-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 45
+                },
+                "name" : "above elementLIste-5  <6px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 6px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-4", "elementLIste-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 46
+                },
+                "name" : "above elementLIste-5  >-4px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -4px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-4", "elementLIste-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "aligned vertically all elementLIste-5",
+                "highlight" : [ "elementLIste-4", "elementLIste-5" ]
+              } ]
+            } ]
+          }, {
+            "name" : "test2",
+            "place" : {
+              "filePath" : "mobilesale.gspec",
+              "lineNumber" : 49
+            },
+            "objects" : [ {
+              "name" : "red-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "above red-2 < 2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-1", "red-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "above red-2 > -2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-1", "red-2" ]
+              } ]
+            }, {
+              "name" : "red-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "above red-3 < 2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-3",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-2", "red-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "above red-3 > -2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-2",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-3",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-2", "red-3" ]
+              } ]
+            }, {
+              "name" : "red-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "above red-4 < 2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 2px",
+                  "realDistance" : "-1px"
+                } ],
+                "highlight" : [ "red-3", "red-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "above red-4 > -2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -2px",
+                  "realDistance" : "-1px"
+                } ],
+                "highlight" : [ "red-3", "red-4" ]
+              } ]
+            }, {
+              "name" : "red-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "above red-5 < 2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-5",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-4", "red-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "above red-5 > -2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-5",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-4", "red-5" ]
+              } ]
+            }, {
+              "name" : "red-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "above red-6 < 2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-5",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-6",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 2px",
+                  "realDistance" : "-1px"
+                } ],
+                "highlight" : [ "red-5", "red-6" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "above red-6 > -2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-5",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-6",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -2px",
+                  "realDistance" : "-1px"
+                } ],
+                "highlight" : [ "red-5", "red-6" ]
+              } ]
+            }, {
+              "name" : "red-6",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "above red-7 < 2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-6",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-7",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-6", "red-7" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "above red-7 > -2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-6",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-7",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-6", "red-7" ]
+              } ]
+            }, {
+              "name" : "red-7",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "above red-8 < 2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-7",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-8",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-7", "red-8" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "above red-8 > -2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-7",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-8",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-7", "red-8" ]
+              } ]
+            }, {
+              "name" : "red-8",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "above red-9 < 2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-8",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-9",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 2px",
+                  "realDistance" : "-1px"
+                } ],
+                "highlight" : [ "red-8", "red-9" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "above red-9 > -2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-8",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-9",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -2px",
+                  "realDistance" : "-1px"
+                } ],
+                "highlight" : [ "red-8", "red-9" ]
+              } ]
+            }, {
+              "name" : "red-9",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "above red-10 < 2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-9",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-10",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 2px",
+                  "realDistance" : "1px"
+                } ],
+                "highlight" : [ "red-9", "red-10" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "above red-10 > -2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-9",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-10",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -2px",
+                  "realDistance" : "1px"
+                } ],
+                "highlight" : [ "red-9", "red-10" ]
+              } ]
+            }, {
+              "name" : "red-10",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 53
+                },
+                "name" : "above red-11 < 2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-10",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-11",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "< 2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-10", "red-11" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "above red-11 > -2px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "red-10",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "red-11",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "> -2px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "red-10", "red-11" ]
+              } ]
+            }, {
+              "name" : "sadrzaj",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 56
+                },
+                "name" : "contains tabela",
+                "highlight" : [ "sadrzaj", "tabela" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 57
+                },
+                "name" : "below meni 20px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "20px",
+                  "realDistance" : "20px"
+                } ],
+                "highlight" : [ "sadrzaj", "meni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 58
+                },
+                "name" : "css background-color is \"rgba(100, 149, 237, 1)\"",
+                "highlight" : [ "sadrzaj" ]
+              } ]
+            }, {
+              "name" : "tabela",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 60
+                },
+                "name" : "inside sadrzaj",
+                "meta" : [ ],
+                "highlight" : [ "tabela", "sadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 61
+                },
+                "name" : "contains red-*",
+                "highlight" : [ "tabela", "red-1", "red-2", "red-3", "red-4", "red-5", "red-6", "red-7", "red-8", "red-9", "red-10", "red-11" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 62
+                },
+                "name" : "css background-color is \"rgba(100, 149, 237, 1)\"",
+                "highlight" : [ "tabela" ]
+              } ]
+            }, {
+              "name" : "def-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-1" ]
+              } ]
+            }, {
+              "name" : "def-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-2" ]
+              } ]
+            }, {
+              "name" : "def-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-3" ]
+              } ]
+            }, {
+              "name" : "def-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-4" ]
+              } ]
+            }, {
+              "name" : "def-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-5" ]
+              } ]
+            }, {
+              "name" : "def-6",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-6" ]
+              } ]
+            }, {
+              "name" : "def-7",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-7" ]
+              } ]
+            }, {
+              "name" : "def-8",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-8" ]
+              } ]
+            }, {
+              "name" : "def-9",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-9" ]
+              } ]
+            }, {
+              "name" : "def-10",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-10" ]
+              } ]
+            }, {
+              "name" : "def-11",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-11" ]
+              } ]
+            }, {
+              "name" : "def-12",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-12" ]
+              } ]
+            }, {
+              "name" : "def-13",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-13" ]
+              } ]
+            }, {
+              "name" : "def-14",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-14" ]
+              } ]
+            }, {
+              "name" : "def-15",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-15" ]
+              } ]
+            }, {
+              "name" : "def-16",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-16" ]
+              } ]
+            }, {
+              "name" : "def-17",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-17" ]
+              } ]
+            }, {
+              "name" : "def-18",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-18" ]
+              } ]
+            }, {
+              "name" : "def-19",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-19" ]
+              } ]
+            }, {
+              "name" : "def-20",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-20" ]
+              } ]
+            }, {
+              "name" : "def-21",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-21" ]
+              } ]
+            }, {
+              "name" : "def-22",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-22" ]
+              } ]
+            }, {
+              "name" : "def-23",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-23" ]
+              } ]
+            }, {
+              "name" : "def-24",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-24" ]
+              } ]
+            }, {
+              "name" : "def-25",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-25" ]
+              } ]
+            }, {
+              "name" : "def-26",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-26" ]
+              } ]
+            }, {
+              "name" : "def-27",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-27" ]
+              } ]
+            }, {
+              "name" : "def-28",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-28" ]
+              } ]
+            }, {
+              "name" : "def-29",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-29" ]
+              } ]
+            }, {
+              "name" : "def-30",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-30" ]
+              } ]
+            }, {
+              "name" : "def-31",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-31" ]
+              } ]
+            }, {
+              "name" : "def-32",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-32" ]
+              } ]
+            }, {
+              "name" : "def-33",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-33" ]
+              } ]
+            }, {
+              "name" : "def-34",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-34" ]
+              } ]
+            }, {
+              "name" : "def-35",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-35" ]
+              } ]
+            }, {
+              "name" : "def-36",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-36" ]
+              } ]
+            }, {
+              "name" : "def-37",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-37" ]
+              } ]
+            }, {
+              "name" : "def-38",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-38" ]
+              } ]
+            }, {
+              "name" : "def-39",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 65
+                },
+                "name" : "css background-color is \"rgba(255, 255, 255, 1)\"",
+                "highlight" : [ "def-39" ]
+              } ]
+            }, {
+              "name" : "slobodna-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 69
+                },
+                "name" : "css background-color is \"rgba(173, 255, 47, 1)\"",
+                "highlight" : [ "slobodna-1" ]
+              } ]
+            }, {
+              "name" : "slobodna-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 69
+                },
+                "name" : "css background-color is \"rgba(173, 255, 47, 1)\"",
+                "highlight" : [ "slobodna-2" ]
+              } ]
+            }, {
+              "name" : "zauzeta-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 72
+                },
+                "name" : "css background-color is \"rgba(255, 0, 0, 1)\"",
+                "highlight" : [ "zauzeta-1" ]
+              } ]
+            }, {
+              "name" : "zauzeta-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 72
+                },
+                "name" : "css background-color is \"rgba(255, 0, 0, 1)\"",
+                "highlight" : [ "zauzeta-2" ]
+              } ]
+            }, {
+              "name" : "kancelarija-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 75
+                },
+                "name" : "css background-color is \"rgba(128, 128, 128, 1)\"",
+                "highlight" : [ "kancelarija-1" ]
+              } ]
+            }, {
+              "name" : "kancelarija-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilesale.gspec",
+                  "lineNumber" : 75
+                },
+                "name" : "css background-color is \"rgba(128, 128, 128, 1)\"",
+                "highlight" : [ "kancelarija-2" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "red-1" : {
+              "area" : [ 93, 197, 372, 45 ]
+            },
+            "slika" : {
+              "area" : [ 244, 5, 70, 50 ]
+            },
+            "red-3" : {
+              "area" : [ 93, 287, 372, 66 ]
+            },
+            "red-2" : {
+              "area" : [ 93, 242, 372, 45 ]
+            },
+            "def-10" : {
+              "area" : [ 391, 352, 74, 66 ]
+            },
+            "red-9" : {
+              "area" : [ 93, 680, 372, 66 ]
+            },
+            "def-13" : {
+              "area" : [ 242, 418, 74, 66 ]
+            },
+            "red-8" : {
+              "area" : [ 93, 615, 372, 66 ]
+            },
+            "def-14" : {
+              "area" : [ 316, 418, 74, 66 ]
+            },
+            "def-11" : {
+              "area" : [ 93, 418, 74, 66 ]
+            },
+            "def-12" : {
+              "area" : [ 168, 418, 74, 66 ]
+            },
+            "body" : {
+              "area" : [ 8, 30, 543, 682 ]
+            },
+            "red-5" : {
+              "area" : [ 93, 418, 372, 66 ]
+            },
+            "def-17" : {
+              "area" : [ 242, 483, 74, 66 ]
+            },
+            "red-4" : {
+              "area" : [ 93, 352, 372, 66 ]
+            },
+            "def-18" : {
+              "area" : [ 316, 483, 74, 66 ]
+            },
+            "red-7" : {
+              "area" : [ 93, 549, 372, 66 ]
+            },
+            "def-15" : {
+              "area" : [ 93, 483, 74, 66 ]
+            },
+            "red-6" : {
+              "area" : [ 93, 483, 372, 66 ]
+            },
+            "def-16" : {
+              "area" : [ 168, 483, 74, 66 ]
+            },
+            "tabela" : {
+              "area" : [ 93, 197, 372, 683 ]
+            },
+            "def-19" : {
+              "area" : [ 93, 549, 74, 66 ]
+            },
+            "slobodna-1" : {
+              "area" : [ 391, 418, 74, 66 ]
+            },
+            "logo" : {
+              "area" : [ 244, 5, 70, 50 ]
+            },
+            "red-11" : {
+              "area" : [ 93, 813, 372, 66 ]
+            },
+            "slobodna-2" : {
+              "area" : [ 168, 747, 74, 66 ]
+            },
+            "red-10" : {
+              "area" : [ 93, 747, 372, 66 ]
+            },
+            "zauzeta-1" : {
+              "area" : [ 391, 483, 74, 66 ]
+            },
+            "zauzeta-2" : {
+              "area" : [ 168, 813, 74, 66 ]
+            },
+            "kancelarija-2" : {
+              "area" : [ 168, 680, 74, 66 ]
+            },
+            "kancelarija-1" : {
+              "area" : [ 168, 615, 74, 66 ]
+            },
+            "def-8" : {
+              "area" : [ 242, 352, 74, 66 ]
+            },
+            "def-9" : {
+              "area" : [ 316, 352, 74, 66 ]
+            },
+            "def-31" : {
+              "area" : [ 391, 680, 74, 66 ]
+            },
+            "def-32" : {
+              "area" : [ 93, 747, 74, 66 ]
+            },
+            "def-30" : {
+              "area" : [ 316, 680, 74, 66 ]
+            },
+            "def-35" : {
+              "area" : [ 391, 747, 74, 66 ]
+            },
+            "def-36" : {
+              "area" : [ 93, 813, 74, 66 ]
+            },
+            "def-33" : {
+              "area" : [ 242, 747, 74, 66 ]
+            },
+            "def-34" : {
+              "area" : [ 316, 747, 74, 66 ]
+            },
+            "def-39" : {
+              "area" : [ 391, 813, 74, 66 ]
+            },
+            "def-37" : {
+              "area" : [ 242, 813, 74, 66 ]
+            },
+            "def-38" : {
+              "area" : [ 316, 813, 74, 66 ]
+            },
+            "def-1" : {
+              "area" : [ 93, 287, 74, 66 ]
+            },
+            "def-2" : {
+              "area" : [ 168, 287, 74, 66 ]
+            },
+            "def-3" : {
+              "area" : [ 242, 287, 74, 66 ]
+            },
+            "def-4" : {
+              "area" : [ 316, 287, 74, 66 ]
+            },
+            "def-5" : {
+              "area" : [ 391, 287, 74, 66 ]
+            },
+            "def-6" : {
+              "area" : [ 93, 352, 74, 66 ]
+            },
+            "def-7" : {
+              "area" : [ 168, 352, 74, 66 ]
+            },
+            "meni" : {
+              "area" : [ 8, 30, 543, 142 ]
+            },
+            "def-20" : {
+              "area" : [ 168, 549, 74, 66 ]
+            },
+            "def-21" : {
+              "area" : [ 242, 549, 74, 66 ]
+            },
+            "def-24" : {
+              "area" : [ 93, 615, 74, 66 ]
+            },
+            "def-25" : {
+              "area" : [ 242, 615, 74, 66 ]
+            },
+            "def-22" : {
+              "area" : [ 316, 549, 74, 66 ]
+            },
+            "def-23" : {
+              "area" : [ 391, 549, 74, 66 ]
+            },
+            "elementLIste-3" : {
+              "area" : [ 48, 116, 503, 18 ]
+            },
+            "def-28" : {
+              "area" : [ 93, 680, 74, 66 ]
+            },
+            "elementLIste-2" : {
+              "area" : [ 48, 98, 503, 18 ]
+            },
+            "def-29" : {
+              "area" : [ 242, 680, 74, 66 ]
+            },
+            "sadrzaj" : {
+              "area" : [ 8, 192, 543, 693 ]
+            },
+            "elementLIste-5" : {
+              "area" : [ 48, 153, 503, 18 ]
+            },
+            "def-26" : {
+              "area" : [ 316, 615, 74, 66 ]
+            },
+            "elementLIste-4" : {
+              "area" : [ 48, 135, 503, 18 ]
+            },
+            "def-27" : {
+              "area" : [ 391, 615, 74, 66 ]
+            },
+            "elementLIste-1" : {
+              "area" : [ 48, 80, 503, 18 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        }, {
+          "name" : "Mutation testing: mobilesale.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573673029760,
+          "mutationReport" : {
+            "objectMutationStatistics" : {
+              "red-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slika" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "red-3" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "red-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-10" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "red-9" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-13" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "red-8" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-14" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-11" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-12" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "body" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "red-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-17" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "red-4" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-18" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "red-7" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-15" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "red-6" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-16" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "tabela" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-19" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slobodna-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "logo" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "red-11" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slobodna-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "red-10" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "zauzeta-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "zauzeta-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "kancelarija-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "kancelarija-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-8" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-9" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-31" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-32" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-30" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-35" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-36" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-33" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-34" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-39" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-37" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-38" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-3" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-4" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-6" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-7" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meni" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-20" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-21" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-24" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-25" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-22" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-23" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-3" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-28" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-29" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "sadrzaj" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-26" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-4" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "def-27" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              }
+            },
+            "totalPassed" : 670,
+            "totalFailed" : 0,
+            "totalMutations" : 670,
+            "failedRatio" : 0.0
+          },
+          "type" : "mutation"
+        } ],
+        "time" : 1573673021032,
+        "type" : "node"
+      } ],
+      "time" : 1573673016727,
+      "type" : "node"
+    } ]
+  }
+};
+        </script>
+    </head>
+    <body>
+        <div id="app">
+            <div class="top-menu">
+                <a class="link" href="report.html">Back to Test Overview</a>
+                <span class="link" v-on:click="expandAll()">Expand All</span>
+                <span class="link" v-on:click="collapseAll()">Collapse All</span>
+                <span class="link" v-on:click="expandOnlyErrors()">Expand Errors</span>
+            </div>
+            <div v-for="node in reportData.report.nodes">
+                <report-node v-if="node.type === 'node'" v-bind:node="node"></report-node>
+                <div class="node-text" v-if="node.type === 'text'">
+                    {{node.name}}
+                </div>
+                <layout-report v-if="node.type === 'layout'" v-bind:layout="node"></layout-report>
+                <mutation-report v-if="node.type === 'mutation'" v-bind:report="node"></mutation-report>
+            </div>
+        </div>
+
+        <template id="tpl-report-node">
+            <div class="report-node">
+                <div class="node-line" v-bind:class="['status-' + node.status]">
+                    <span class="node-time">{{node.time | formatTime}}</span>
+                    <span class="node-label"
+                        v-on:click="toggleReportNode(node)"
+                        v-bind:class="['status-' + node.status, node.expanded ? 'expanded': 'collapsed', 'contains-children-' + node.hasChildren]"
+                        >{{node.status}}</span>
+                    <span class="node-title">{{node.name}}</span>
+                    <span class="node-extras-link"
+                        v-if="node.extras"
+                        v-on:click="showNodeExtrasPopup(node.extras)"
+                        >extras</span>
+                </div>
+                <ul class="node-attachments" v-if="node.attachments && node.attachments.length > 0">
+                    <li v-for="attachment in node.attachments">
+                        <a class="icon-sprite-before node-attachment" v-bind:href="attachment">{{attachment}}</a>
+                    </li>
+                </ul>
+                <div class="child-nodes" v-if="node.type === 'node'" v-bind:class="{'child-nodes-expanded': node.expanded}">
+                    <div class="stacktrace" v-if="node.stacktrace">{{node.stacktrace}}</div>
+                    <div v-for="childNode in node.nodes">
+                        <report-node v-if="childNode.type === 'node'" v-bind:node="childNode"></report-node>
+                        <div class="node-text" v-if="childNode.type === 'text'">
+                            {{childNode.name}}
+                        </div>
+                        <layout-report v-if="childNode.type === 'layout'" v-bind:layout="childNode" v-bind:isSubLayout="false"></layout-report>
+                        <mutation-report v-if="childNode.type === 'mutation'" v-bind:report="childNode"></mutation-report>
+                    </div>
+                </div>
+                <div class="extras-popup popup-wrapper" v-if="extrasPopup.show">
+                    <div class="popup-shadow" v-on:click="extrasPopup.show = false"> </div>
+                    <div class="popup-container" style="top: 30px;">
+                        <div class="popup-body">
+                            <table class="extras-table">
+                                <tbody>
+                                    <tr v-for="extrasItem in extrasPopup.extras">
+                                        <td>{{extrasItem.name}}</td>
+                                        <td>
+                                            <div v-if="extrasItem.value.type === 'link'">
+                                                <a class="link" v-bind:href="extrasItem.value.value">{{extrasItem.value.value}}</a>
+                                            </div>
+                                            <div v-else v-if="extrasItem.value.type === 'file'">
+                                                <a class="link" v-bind:href="extrasItem.value.value">{{extrasItem.value.value}}</a>
+                                            </div>
+                                            <div v-else v-if="extrasItem.value.type === 'text'">
+                                                {{extrasItem.value.value}}
+                                            </div>
+                                            <div v-else v-if="extrasItem.value.type === 'image'">
+                                                <a v-bind:href="extrasItem.value.value"><img v-bind:src="extrasItem.value.value"/></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="tpl-mutation-report">
+            <div class="mutation-report">
+                <div class="node-line" v-bind:class="['status-' + report.status]">
+                    <span class="node-time">{{report.time | formatTime }}</span>
+                    <span class="node-label"
+                        v-on:click="toggleReportNode(report)"
+                        v-bind:class="['status-' + report.status, report.expanded ? 'expanded': 'collapsed', 'contains-children-true']"
+                        >MUTATION</span>
+                    <span class="node-title">{{report.name}}</span>
+                </div>
+                <div class="child-nodes" v-bind:class="{'child-nodes-expanded': report.expanded}">
+                    <table class="mutation-table">
+                        <thead>
+                            <tr>
+                                <th v-for="column in tableColumns" v-bind:class="{'sorted-column': sorting.columnField === column.field}">
+                                    <span class="link" v-on:click="sortTable(column)">{{column.name}}</span>
+                                    <span class="sorting-icon"
+                                        v-if="sorting.columnField === column.field"
+                                        v-bind:class="[sorting.order === 1 ? 'sorting-down' : 'sorting-up']"></span>
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="mutation-table-total">
+                                <td> <b>Total</b> </td>
+                                <td class="cell-passed">{{report.mutationReport.totalPassed}}</td>
+                                <td class="cell-failed">{{report.mutationReport.totalFailed}}</td>
+                                <td class="cell-failed">{{report.mutationReport.failedRatio | roundFailedRatio}}%</td>
+                                <td></td>
+                            </tr>
+                            <tr v-for="mutation in mutations">
+                                <td><span class="link" v-on:click="toggleMutationFor(mutation.name)">{{mutation.name}}</span></td>
+                                <td class="cell-passed">{{mutation.passed}}</td>
+                                <td class="cell-failed">{{mutation.failed}}</td>
+                                <td class="cell-failed">{{mutation.failedRatio}}%</td>
+                                <td>
+                                    <div v-if="showFailedMutationsFor === mutation.name">
+                                        All failed mutations:
+                                        <ul>
+                                            <li v-for="mutationText in mutation.failedMutations">{{mutationText}}</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </template>
+
+        <template id="tpl-layout-report">
+            <div class="layout-report">
+                <div class="node-line" v-bind:class="['status-' + layout.status]">
+                    <span class="node-time">{{layout.time | formatTime}}</span>
+                    <span class="node-label"
+                        v-on:click="toggleReportNode(layout)"
+                        v-bind:class="['status-' + layout.status, layout.expanded ? 'expanded': 'collapsed', 'contains-children-' + layout.hasChildren]"
+                        >LAYOUT</span>
+                    <span class="node-title">{{layout.name}}</span>
+                </div>
+                <div class="node-horizontal-menu">
+                    <span class="link" v-on:click="showFailureMap()">Failure Map</span> |
+                    <span class="link" v-on:click="showHeatMap()">Heat Map</span>
+                </div>
+
+                <div class="child-nodes" v-bind:class="{'child-nodes-expanded': layout.expanded}">
+                    <layout-section v-for="section in layout.sections" v-bind:section="section" v-bind:bus="bus" v-bind:layout="layout" @spec-clicked="specClicked"></layout-section>
+                </div>
+
+                <screenshot-popup v-if="screenshotPopup.shown"
+                    v-bind:screenshot="screenshotPopup.screenshotFile"
+                    v-bind:highlight="screenshotPopup.highlightAreas"
+                    v-bind:guides="screenshotPopup.metaGuides"
+                    v-bind:spec="screenshotPopup.spec"
+                    @close="screenshotPopup.shown = false"
+                    ></screenshot-popup>
+            </div>
+        </template>
+
+        <template id="tpl-layout-section">
+            <div class="layout-section" v-bind:class="{'has-failure': section.hasFailure}">
+                <div class="title icon-sprite-before"
+                    v-on:click="toggleReportNode(section)"
+                    v-bind:title="section.place ? section.place.filePath + ':' + section.place.lineNumber : ''"
+                    >{{section.name}}</div>
+                <div class="child-nodes" v-bind:class="{'child-nodes-expanded': section.expanded}">
+                    <layout-section v-for="subSection in section.sections" v-bind:section="subSection" v-bind:bus="bus" v-bind:layout="layout"></layout-section>
+                    <object-node v-for="object in section.objects" v-bind:object="object" v-bind:bus="bus" v-bind:layout="layout"></object-node>
+                </div>
+            </div>
+        </template>
+
+        <template id="tpl-object-node">
+            <div class="layout-object" v-bind:class="{'has-failure': object.hasFailure}">
+                <div class="title icon-sprite-before"
+                    v-on:click="toggleReportNode(object)"
+                    >{{object.name}}:</div>
+                <div class="child-nodes" v-bind:class="{'child-nodes-expanded': object.expanded}">
+                    <layout-spec v-for="spec in object.specs" v-bind:spec="spec" v-bind:bus="bus" v-bind:layout="layout"></layout-spec>
+
+                    <layout-spec-group v-if="object.specGroups"
+                        v-for="specGroup in object.specGroups"
+                        v-bind:specgroup="specGroup"
+                        v-bind:bus="bus"
+                        v-bind:layout="layout"
+                        ></layout-spec-group>
+                </div>
+            </div>
+        </template>
+
+        <template id="tpl-spec-group">
+            <div class="layout-section" v-bind:class="{'has-failure': specgroup.hasFailure}">
+                <div class="title icon-sprite-before"
+                    v-on:click="toggleReportNode(specgroup)"
+                    >{{specgroup.name}}:</div>
+                <div class="child-nodes" v-bind:class="{'child-nodes-expanded': specgroup.expanded}">
+                    <layout-spec v-for="spec in specgroup.specs" v-bind:spec="spec" v-bind:bus="bus" v-bind:layout="layout"></layout-spec>
+                </div>
+            </div>
+        </template>
+
+        <template id="tpl-layout-spec">
+            <div class="layout-spec" v-bind:class="[isFailed ? 'has-failure': '', 'status-' + spec.status]">
+                <div class="title icon-sprite-before"
+                    v-on:click="showSpec"
+                    v-bind:title="spec.place ? spec.place.filePath + ':' + spec.place.lineNumber : ''"
+                    >{{spec.name}}</div>
+                <ul class="error-messages" v-if="isFailed">
+                    <li class="error-message" v-if="spec.imageComparison">
+                        <span class="link" v-on:click="imageComparisonShown = true">Show image comparison</span>
+                    </li>
+                    <li class="error-message" v-for="error in spec.errors">{{error}}</li>
+                </ul>
+                <div v-if="spec.subLayout" class="sublayout">
+                    <layout-section v-if="spec.subLayout.sections" v-for="section in spec.subLayout.sections" v-bind:section="section" v-bind:bus="bus" v-bind:layout="spec.subLayout"></layout-section>
+                </div>
+                <image-comparison-popup v-if="imageComparisonShown" v-on:close="imageComparisonShown = false" v-bind:imagedata="spec.imageComparison"/>
+            </div>
+        </template>
+
+
+        <template id="tpl-image-comparison-popup">
+            <div class="image-comparison-popup">
+                <div class="popup-shadow" v-on:click="$emit('close')"> </div>
+                <div class="popup-container" v-bind:style="{top: position.top + 'px', left: position.left + 'px', width: position.width + 'px', height: position.height + 'px'}">
+                    <div class="popup-body">
+                        <div class="image-layout">
+                            <h5>Actual Image</h5>
+                            <img v-bind:src="imagedata.actualImage"/>
+                        </div>
+                        <div class="image-layout">
+                            <h5>Expected Image</h5>
+                            <img v-bind:src="imagedata.expectedImage"/>
+                        </div>
+                        <div class="image-layout">
+                            <h5>Comparison Map</h5>
+                            <img v-bind:src="imagedata.comparisonMapImage"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+
+        <template id="tpl-screenshot-popup">
+            <div>
+                <div class="popup-shadow" v-on:click="$emit('close')"> </div>
+                <div class="popup-container" v-bind:style="{top: position.top + 'px', left: position.left + 'px', width: position.width + 'px', height: position.height + 'px'}">
+                    <div class="popup-body">
+                        <div class="image-cropper" v-bind:style="{width: crop.width + 'px', height: crop.height + 'px'}">
+                            <img v-bind:src="screenshot" v-bind:style="{'margin-left': crop.offsetLeft +'px', 'margin-top': crop.offsetTop + 'px'}"/>
+                        </div>
+                        <svg v-bind:width="crop.width + 'px'" v-bind:height="crop.height + 'px'">
+                            <g v-for="object in highlight.objects">
+                                <rect
+                                    v-bind:x="object.area.x + crop.offsetLeft"
+                                    v-bind:y="object.area.y + crop.offsetTop"
+                                    v-bind:width="object.area.width"
+                                    v-bind:height="object.area.height"
+                                    style="opacity: 0.8"
+                                    v-bind:style="{fill: object.fill?object.color:'none', 'stroke-width': object.border?3:0, stroke: object.border?object.color:'none'}"/>
+                                <g v-if="object.caption">
+                                    <rect
+                                        v-bind:x="object.area.x + crop.offsetLeft"
+                                        v-bind:y="object.area.y + crop.offsetTop - 20"
+                                        v-bind:width="object.name.length * 15 + 10"
+                                        v-bind:height="20"
+                                        style="opacity: 0.8; stroke-width: 0; stroke: none;"
+                                        v-bind:style="{fill: object.color}"/>
+                                    <text
+                                        v-bind:x="object.area.x + crop.offsetLeft + 5"
+                                        v-bind:y="object.area.y + crop.offsetTop - 5"
+                                        fill="#ffffff"
+                                        font-weight="bold"
+                                        font-family="helvetica"
+                                        font-size="15px"
+                                        >{{object.name}}</text>
+                                </g>
+                            </g>
+
+                            <g v-for="guideElements in guides">
+                                <g v-for="guide in guideElements">
+                                    <line class="meta-line-guide" v-if="guide.type === 'line'"
+                                        v-bind:x1="guide.x1 + crop.offsetLeft"
+                                        v-bind:y1="guide.y1 + crop.offsetTop"
+                                        v-bind:x2="guide.x2 + crop.offsetLeft"
+                                        v-bind:y2="guide.y2 + crop.offsetTop"/>
+
+                                    <g v-if="guide.type === 'text'">
+                                        <text class="meta-text"
+                                            v-bind:x="guide.x + crop.offsetLeft"
+                                            v-bind:y="guide.y + crop.offsetTop"
+                                            v-bind:transform="guide.vertical ? 'rotate(-90,' + (guide.x + crop.offsetLeft) + ', ' + (guide.y + crop.offsetTop) +')': 'rotate(0)'"
+                                            >{{guide.text}}</text>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <div class="popup-side-panel">
+                            <div v-if="spec">
+                                <span class="spec-name">{{spec.name}}</span>
+                                <ul v-if="spec.errors" class="spec-errors">
+                                    <li v-for="error in spec.errors">{{error}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+        <script>renderTestReport(REPORT_DATA);</script>
+    </body>
+</html>

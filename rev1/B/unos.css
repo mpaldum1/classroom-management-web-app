@@ -1,0 +1,46 @@
+@import "common.css";
+
+.label {
+  width: 140px;
+  text-align: left;
+}
+
+div#sadrzaj {
+   display: flex;
+   align-items: center; 
+   flex-direction: column;
+   background-color: #E8F1F2;
+   min-height: 100vh;
+   margin-top: 10px;
+   border-radius: 5px;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+table input {
+  float: right;
+  clear: both;
+}
+
+table input[type="submit"] {
+    width: 50%;
+}
+
+
+/*MALI SCREEN*/
+@media screen and (max-width: 600px) { 
+  .label {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 600px) { 
+  .label {
+    display: inline-block;
+  }
+}

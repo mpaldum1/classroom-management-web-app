@@ -1,0 +1,275 @@
+{
+  "testId" : "1-mobilesale.gspec",
+  "name" : "mobileSale.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Simple check",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  mobileSale.gspec --size 599x800 --url file:///Users/makfisic/Desktop/WT%20Spirala%201/sale.html --htmlreport Galen1200x800",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: mobileSale.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573321337352,
+          "sections" : [ {
+            "name" : "Main section",
+            "place" : {
+              "filePath" : "mobileSale.gspec",
+              "lineNumber" : 16
+            },
+            "objects" : [ {
+              "name" : "meni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "above sadrzaj",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "meni", "sadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "inside glavniDiv",
+                "meta" : [ ],
+                "highlight" : [ "meni", "glavniDiv" ]
+              } ]
+            }, {
+              "name" : "logo",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 21
+                },
+                "name" : "inside meni",
+                "meta" : [ ],
+                "highlight" : [ "logo", "meni" ]
+              } ]
+            }, {
+              "name" : "sliba",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "width 60px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sliba",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "sliba",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "60px",
+                  "realDistance" : "60px"
+                } ],
+                "highlight" : [ "sliba" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 24
+                },
+                "name" : "height 60px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sliba",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sliba",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "60px",
+                  "realDistance" : "60px"
+                } ],
+                "highlight" : [ "sliba" ]
+              } ]
+            }, {
+              "name" : "sadrzaj",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "below meni",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "sadrzaj", "meni" ]
+              } ]
+            }, {
+              "name" : "zauzetaSala",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "css background-color is \"rgb(255, 165, 0)\"",
+                "highlight" : [ "zauzetaSala" ]
+              } ]
+            }, {
+              "name" : "slobodnaSala",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 30
+                },
+                "name" : "css background-color is \"rgb(0, 128, 0)\"",
+                "highlight" : [ "slobodnaSala" ]
+              } ]
+            }, {
+              "name" : "kancelarija",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 32
+                },
+                "name" : "css background-color is \"rgb(128, 128, 128)\"",
+                "highlight" : [ "kancelarija" ]
+              } ]
+            }, {
+              "name" : "sala",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "css background-color is \"rgb(255, 255, 255)\"",
+                "highlight" : [ "sala" ]
+              } ]
+            }, {
+              "name" : "tabelaSala",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 36
+                },
+                "name" : "inside sadrzaj",
+                "meta" : [ ],
+                "highlight" : [ "tabelaSala", "sadrzaj" ]
+              } ]
+            }, {
+              "name" : "headerRedni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 38
+                },
+                "name" : "absent",
+                "highlight" : [ ]
+              } ]
+            }, {
+              "name" : "headerSala",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 40
+                },
+                "name" : "absent",
+                "highlight" : [ ]
+              } ]
+            }, {
+              "name" : "listaLinkova",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 42
+                },
+                "name" : "css display is \"flex\"",
+                "highlight" : [ "listaLinkova" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobileSale.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "css flex-direction is \"column\"",
+                "highlight" : [ "listaLinkova" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "meni" : {
+              "area" : [ 0, 0, 599, 275 ]
+            },
+            "glavniDiv" : {
+              "area" : [ 0, 0, 599, 920 ]
+            },
+            "zauzetaSala" : {
+              "area" : [ 374, 337, 51, 33 ]
+            },
+            "listaLinkova" : {
+              "area" : [ 259, 120, 80, 125 ]
+            },
+            "sala" : {
+              "area" : [ 170, 304, 51, 33 ]
+            },
+            "sliba" : {
+              "area" : [ 269, 30, 60, 60 ]
+            },
+            "logo" : {
+              "area" : [ 0, 0, 599, 60 ]
+            },
+            "sadrzaj" : {
+              "area" : [ 0, 280, 599, 640 ]
+            },
+            "kancelarija" : {
+              "area" : [ 221, 535, 51, 33 ]
+            },
+            "slobodnaSala" : {
+              "area" : [ 374, 304, 51, 33 ]
+            },
+            "tabelaSala" : {
+              "area" : [ 266, 295, 66, 610 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        } ],
+        "time" : 1573321335430,
+        "type" : "node"
+      } ],
+      "time" : 1573321330738,
+      "type" : "node"
+    } ]
+  }
+}

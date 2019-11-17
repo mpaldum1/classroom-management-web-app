@@ -1,0 +1,647 @@
+@objects
+	meni	.meni
+	logo  .logo
+	lista   ul
+	elementLIste-* ul li
+    sadrzaj   .sadrzaj
+	html    html
+    body    body
+    a       a
+    slika img
+    unos    .unos
+    labela-* label
+    izbor   select
+    unnesi-*    input
+    vanjskaTabela   .vanjskaTabela
+    para    p
+    tabela  .tabela
+    dan-*   .dan
+    span    span  
+    prvi-*  .prvi
+    prazno-*    .prazno
+    pun-*   .pun
+    broj-*  .broj
+    ostali-*    .ostali
+    slobodan-*  .slobodan
+    zauzet-*    .zauzet
+    prethodni   .prethodni
+    sljedeci    .sljedeci
+    
+
+= Skeleton =
+    html:
+        inside screen 0px top left right, >= 0px bottom
+
+    body:
+        inside screen 30px top, 8px left right, >= 0px bottom
+
+    html, body, sadrzaj:
+        centered horizontally inside screen 1px
+
+    sadrzaj:
+        inside screen 0px bottom, 8px left right, >= 0px top
+
+= html elements =
+    slika:
+        centered horizontally inside html 1px
+        height 50px
+        inside html 5px top
+        width 70px
+
+= body elements =
+    broj-2, zauzet-1:
+        centered horizontally inside prvi-6 1px
+
+    prvi-4:
+        above pun-7 11px
+        below dan-4 11px
+        left-of prvi-5 5px
+        right-of prvi-3 5px
+
+    prvi-5:
+        above pun-8 11px
+        below dan-5 11px
+        left-of prvi-6 5px
+
+    prvi-6:
+        above pun-9 11px
+        below dan-6 11px
+        left-of prvi-7 5px
+
+    prvi-7:
+        above ostali-7 11px
+        below dan-7 11px
+
+    prvi-1:
+        above pun-4 11px
+        below dan-1 11px
+        left-of prvi-2 5px
+
+    prvi-2:
+        above pun-5 11px
+        below dan-2 11px
+        left-of prvi-3 4px
+
+    slobodan-11:
+        below broj-12 1px
+        inside ostali-9 3px right, 2px left, 1px bottom
+
+    slobodan-10:
+        below broj-11 1px
+        inside ostali-8 3px right, 2px left, 1px bottom
+
+    prvi-3:
+        above pun-6 11px
+        below dan-3 11px
+
+    ostali-18:
+        above ostali-25 11px
+        below ostali-11 11px
+        left-of ostali-19 5px
+        right-of ostali-17 5px
+
+    ostali-19:
+        above ostali-26 11px
+        below ostali-12 11px
+        left-of ostali-20 5px
+
+    ostali-16:
+        above ostali-23 11px
+        below ostali-9 11px
+        left-of ostali-17 4px
+        right-of ostali-15 5px
+
+    unos:
+        above prethodni
+
+    ostali-17:
+        above ostali-24 11px
+        below ostali-10 11px
+
+    ostali-14:
+        above ostali-21 11px
+        below ostali-7 11px
+        right-of ostali-13 5px
+
+    ostali-15:
+        above ostali-22 11px
+        below ostali-8 11px
+
+    ostali-12:
+        below pun-8 11px
+        left-of ostali-13 5px
+        right-of ostali-11 5px
+
+    ostali-13:
+        above ostali-20 11px
+        below pun-9 11px
+
+    ostali-21:
+        above prazno-5 11px
+        right-of ostali-20 5px
+
+    pun-5:
+        above ostali-9 11px
+        left-of pun-6 4px
+        right-of pun-4 5px
+
+    ostali-22:
+        above prazno-6 11px
+        left-of ostali-23 5px
+
+    pun-4:
+        above ostali-8 11px
+
+    pun-7:
+        above ostali-11 11px
+        left-of pun-8 5px
+        right-of pun-6 5px
+
+    sljedeci:
+        below vanjskaTabela 4px
+        inside body >= 0px right
+        right-of prethodni
+
+    ostali-20:
+        above ostali-27 11px
+
+    pun-6:
+        above ostali-10 11px
+
+    pun-9:
+        left-of ostali-7 5px
+        right-of pun-8 5px
+
+    dan-1, dan-2, dan-3, dan-4, dan-5, dan-6, dan-7, izbor:
+        height 19px
+
+    broj-29, zauzet-2:
+        centered horizontally inside ostali-26 1px
+
+    prazno-5:
+        inside tabela 2px right, 57px bottom
+        right-of ostali-27 5px
+
+    prazno-6:
+        inside tabela 12px bottom, 3px left, >= 2px right
+
+    broj-16, slobodan-15:
+        centered horizontally inside ostali-13 1px
+
+    broj-15, slobodan-14:
+        centered horizontally inside ostali-12 1px
+
+    dan-5, prvi-5, pun-8, ostali-12, ostali-19, ostali-26:
+        width 49px
+
+    slobodan-20:
+        below broj-21 1px
+        inside ostali-18 3px right, 2px left, 1px bottom
+
+    slobodan-22:
+        below broj-23 1px
+        inside ostali-20 3px right, 2px left, 1px bottom
+
+    slobodan-21:
+        below broj-22 1px
+        inside ostali-19 2px left right, 1px bottom
+
+    ostali-27:
+        right-of ostali-26 5px
+
+    broj-19, slobodan-18:
+        centered horizontally inside ostali-16 1px
+
+    ostali-25:
+        left-of ostali-26 5px
+        right-of ostali-24 5px
+
+    ostali-23:
+        left-of ostali-24 4px
+
+    ostali-9:
+        left-of ostali-10 4px
+        right-of ostali-8 5px
+
+    slobodan-13:
+        below broj-14 1px
+        inside ostali-11 3px right, 2px left, 1px bottom
+
+    slobodan-12:
+        below broj-13 1px
+        inside ostali-10 3px right, 2px left, 1px bottom
+
+    broj-12, slobodan-11:
+        centered horizontally inside ostali-9 1px
+
+    slobodan-15:
+        below broj-16 1px
+        inside ostali-13 3px right, 2px left, 1px bottom
+
+    prvi-7, ostali-7, ostali-14, ostali-21:
+        inside tabela 2px right
+
+    slobodan-14:
+        below broj-15 1px
+        inside ostali-12 2px left right, 1px bottom
+
+    broj-11, slobodan-10:
+        centered horizontally inside ostali-8 1px
+
+    slobodan-17:
+        inside ostali-15 3px right, 2px left, 1px bottom
+
+    slobodan-16:
+        inside ostali-14 3px right, 2px left, 1px bottom
+
+    slobodan-19:
+        inside ostali-17 3px right, 2px left, 1px bottom
+
+    slobodan-18:
+        inside ostali-16 3px right, 2px left, 1px bottom
+
+    broj-20, slobodan-19:
+        centered horizontally inside ostali-17 1px
+
+    prethodni, unnesi-1, sljedeci:
+        height 25px
+
+    prvi-1, pun-4, ostali-8, ostali-15, ostali-22:
+        inside tabela 3px left
+
+    labela-2, labela-3:
+        inside unos 0px left
+        left-of unnesi-2 0px
+
+    broj-5, slobodan-4:
+        centered horizontally inside pun-5 1px
+
+    broj-6, slobodan-5:
+        centered horizontally inside pun-6 1px
+
+    broj-4, slobodan-3:
+        centered horizontally inside pun-4 1px
+
+    dan-6:
+        left-of dan-7 5px
+        right-of dan-5 5px
+
+    broj-1, slobodan-1:
+        centered horizontally inside prvi-5 1px
+
+    dan-7:
+        inside tabela 3px top, 2px right
+
+    dan-4:
+        left-of dan-5 5px
+        right-of dan-3 5px
+
+    dan-2:
+        left-of dan-3 4px
+        right-of dan-1 5px
+
+    slobodan-24:
+        below broj-25 1px
+        inside ostali-22 3px right, 2px left, 1px bottom
+
+    slobodan-23:
+        below broj-24 1px
+        inside ostali-21 3px right, 2px left, 1px bottom
+
+    dan-4, prvi-4, pun-7, ostali-11, ostali-18, ostali-25:
+        centered horizontally inside tabela 1px
+
+    slobodan-26:
+        below broj-27 1px
+        inside ostali-24 3px right, 2px left, 1px bottom
+
+    slobodan-25:
+        below broj-26 1px
+        inside ostali-23 3px right, 2px left, 1px bottom
+
+    dan-1:
+        inside tabela 3px top left
+
+    slobodan-28:
+        inside ostali-27 3px right, 2px left, 1px bottom
+
+    slobodan-27:
+        inside ostali-25 3px right, 2px left, 1px bottom
+
+    broj-3, slobodan-2:
+        centered horizontally inside prvi-7 1px
+
+    broj-30, slobodan-28:
+        centered horizontally inside ostali-27 1px
+
+    slobodan-9:
+        below broj-10 1px
+        inside ostali-7 3px right, 2px left, 1px bottom
+
+    meni:
+        above unos 29px
+        height 69px
+        inside body 0px top left right
+
+    a:
+        inside lista 40px left, 0px top bottom
+        left-of elementLIste-2 0px
+        width 54px
+
+    unnesi-2, unnesi-3:
+        height 29px
+
+    broj-24, slobodan-23:
+        centered horizontally inside ostali-21 1px
+
+    slobodan-7:
+        below broj-8 1px
+        inside pun-8 2px left right, 1px bottom
+
+    broj-10, slobodan-9:
+        centered horizontally inside ostali-7 1px
+
+    slobodan-8:
+        inside pun-9 3px right, 2px left, 1px bottom
+
+    broj-22, slobodan-21:
+        centered horizontally inside ostali-19 1px
+
+    slobodan-1:
+        below broj-1 1px
+        inside prvi-5 2px left right, 1px bottom
+
+    broj-28, slobodan-27:
+        centered horizontally inside ostali-25 1px
+
+    labela-1:
+        above labela-2 0px
+        inside unos 0px top left
+
+    slobodan-2:
+        inside prvi-7 3px right, 2px left, 1px bottom
+
+    labela-2:
+        above labela-3 0px
+
+    labela-3:
+        above labela-4 0px
+
+    labela-4:
+        inside unos 1px bottom, 0px left
+        left-of unnesi-3 0px
+
+    slobodan-5:
+        inside pun-6 3px right, 2px left, 1px bottom
+
+    broj-26, slobodan-25:
+        centered horizontally inside ostali-23 1px
+
+    slobodan-6:
+        inside pun-7 3px right, 2px left, 1px bottom
+
+    slobodan-3:
+        inside pun-4 3px right, 2px left, 1px bottom
+
+    slobodan-4:
+        inside pun-5 3px right, 2px left, 1px bottom
+
+    ostali-10:
+        left-of ostali-11 5px
+
+    broj-7, slobodan-6:
+        centered horizontally inside pun-7 1px
+
+    ostali-23, ostali-24, ostali-25, ostali-26, ostali-27:
+        inside tabela 57px bottom
+
+    broj-8, slobodan-7:
+        centered horizontally inside pun-8 1px
+
+    slobodan-3, slobodan-10, slobodan-17, slobodan-24, slobodan-4, slobodan-11, slobodan-18, slobodan-25, slobodan-5, slobodan-12, slobodan-19, slobodan-26, slobodan-6, slobodan-13, slobodan-20, slobodan-27, slobodan-1, slobodan-7, slobodan-14, slobodan-21, zauzet-2, zauzet-1, slobodan-8, slobodan-15, slobodan-22, slobodan-28, slobodan-2, slobodan-9, slobodan-16, slobodan-23:
+        height 12px
+
+    broj-9, slobodan-8:
+        centered horizontally inside pun-9 1px
+
+    para, prvi-1, pun-4, ostali-8, ostali-15, ostali-22, prazno-6, prvi-2, pun-5, ostali-9, ostali-16, ostali-23, prvi-3, pun-6, ostali-10, ostali-17, ostali-24, prvi-4, pun-7, ostali-11, ostali-18, ostali-25, prvi-5, pun-8, ostali-12, ostali-19, ostali-26, prvi-6, pun-9, ostali-13, ostali-20, ostali-27, prvi-7, ostali-7, ostali-14, ostali-21, prazno-5:
+        height 34px
+
+    zauzet-1:
+        inside prvi-6 3px right, 2px left, 1px bottom
+
+    elementLIste-2, elementLIste-3, elementLIste-4, elementLIste-5:
+        inside lista 0px top bottom
+
+    vanjskaTabela, unos:
+        inside body >= 0px left right
+
+    tabela:
+        below para 0px
+        inside vanjskaTabela 6px left right, 10px bottom
+
+    lista, a, elementLIste-2, elementLIste-3, elementLIste-4, elementLIste-5, broj-4, broj-11, broj-18, broj-25, broj-5, broj-12, broj-19, broj-26, broj-6, broj-13, broj-20, broj-27, broj-7, broj-14, broj-21, broj-28, broj-1, broj-8, broj-15, broj-22, broj-29, broj-2, broj-9, broj-16, broj-23, broj-30, broj-3, broj-10, broj-17, broj-24:
+        height 18px
+
+    prvi-2, pun-5, ostali-9, ostali-16, prvi-3, pun-6, ostali-10, ostali-17, prvi-4, pun-7, ostali-11, ostali-18, prvi-5, pun-8, ostali-12, ostali-19, prvi-6, pun-9, ostali-13, ostali-20:
+        inside tabela
+
+    broj-7:
+        above slobodan-6 1px
+        inside pun-7 3px right, 2px top left
+
+    lista:
+        centered horizontally inside meni 1px
+        inside meni 50px top, 1px bottom, 0px left right
+
+    broj-6:
+        above slobodan-5 1px
+        inside pun-6 3px right, 2px top left
+
+    broj-9:
+        above slobodan-8 1px
+        inside pun-9 3px right, 2px top left
+
+    broj-8:
+        inside pun-8 2px top left right
+
+    broj-3:
+        above slobodan-2 1px
+        inside prvi-7 3px right, 2px top left
+
+    broj-2:
+        above zauzet-1 1px
+        inside prvi-6 3px right, 2px top left
+
+    broj-14, slobodan-13:
+        centered horizontally inside ostali-11 1px
+
+    broj-5:
+        above slobodan-4 1px
+        inside pun-5 3px right, 2px top left
+
+    broj-4:
+        above slobodan-3 1px
+        inside pun-4 3px right, 2px top left
+
+    broj-18, slobodan-17:
+        centered horizontally inside ostali-15 1px
+
+    dan-1, prvi-1, pun-4, ostali-8, ostali-15, ostali-22, prazno-6, dan-2, prvi-2, pun-5, ostali-9, ostali-16, ostali-23, dan-3, prvi-3, pun-6, ostali-10, ostali-17, ostali-24, dan-4, prvi-4, pun-7, ostali-11, ostali-18, ostali-25, dan-6, prvi-6, pun-9, ostali-13, ostali-20, ostali-27, dan-7, prvi-7, ostali-7, ostali-14, ostali-21, prazno-5:
+        width 50px
+
+    broj-17, slobodan-16:
+        centered horizontally inside ostali-14 1px
+
+    broj-13, slobodan-12:
+        centered horizontally inside ostali-10 1px
+
+    zauzet-2:
+        inside ostali-26 2px left right, 1px bottom
+
+    broj-1:
+        inside prvi-5 2px top left right
+
+    dan-2, dan-3, dan-4, dan-5, dan-6:
+        inside tabela 3px top
+
+    meni, vanjskaTabela, unos:
+        centered horizontally inside body 1px
+
+    broj-30:
+        above slobodan-28 1px
+        inside ostali-27 3px right, 2px top left
+
+    prethodni:
+        inside body >= 0px left
+
+    para, tabela:
+        centered horizontally inside vanjskaTabela 1px
+
+    broj-28:
+        above slobodan-27 1px
+        inside ostali-25 3px right, 2px top left
+
+    vanjskaTabela:
+        above prethodni 4px
+        below meni
+
+    broj-29:
+        above zauzet-2 1px
+        inside ostali-26 2px top left right
+
+    para:
+        inside vanjskaTabela 6px top left right
+
+    broj-20:
+        above slobodan-19 1px
+        inside ostali-17 3px right, 2px top left
+
+    broj-21:
+        inside ostali-18 3px right, 2px top left
+
+    unnesi-2:
+        above unnesi-3 5px
+        below unnesi-1 5px
+        inside unos 0px right
+
+    broj-22:
+        inside ostali-19 2px top left right
+
+    unnesi-1:
+        inside unos >= 0px right
+        right-of labela-1 4px
+        width 13px
+
+    broj-23:
+        inside ostali-20 3px right, 2px top left
+
+    broj-24:
+        inside ostali-21 3px right, 2px top left
+
+    broj-25:
+        inside ostali-22 3px right, 2px top left
+
+    unnesi-3:
+        inside unos 6px bottom, 0px right
+        right-of labela-3 0px
+
+    broj-26:
+        inside ostali-23 3px right, 2px top left
+
+    broj-4, slobodan-3, broj-11, slobodan-10, broj-18, slobodan-17, broj-25, slobodan-24, broj-5, slobodan-4, broj-12, slobodan-11, broj-19, slobodan-18, broj-26, slobodan-25, broj-6, slobodan-5, broj-13, slobodan-12, broj-20, slobodan-19, broj-27, slobodan-26, broj-7, slobodan-6, broj-14, slobodan-13, broj-21, slobodan-20, broj-28, slobodan-27, broj-1, slobodan-1, broj-8, slobodan-7, broj-15, slobodan-14, broj-22, slobodan-21, broj-29, zauzet-2, broj-2, zauzet-1, broj-9, slobodan-8, broj-16, slobodan-15, broj-23, slobodan-22, broj-30, slobodan-28, broj-3, slobodan-2, broj-10, slobodan-9, broj-17, slobodan-16, broj-24, slobodan-23:
+        width 45px
+
+    broj-27:
+        inside ostali-24 3px right, 2px top left
+
+    broj-23, slobodan-22:
+        centered horizontally inside ostali-20 1px
+
+    broj-21, slobodan-20:
+        centered horizontally inside ostali-18 1px
+
+    labela-1, labela-2, labela-3, labela-4:
+        height 30px
+
+    broj-27, slobodan-26:
+        centered horizontally inside ostali-24 1px
+
+    elementLIste-3:
+        left-of elementLIste-5
+        right-of elementLIste-2 4px
+        width 38px
+
+    elementLIste-2:
+        width 28px
+
+    elementLIste-5:
+        right-of elementLIste-4 5px
+        width 41px
+
+    elementLIste-4:
+        right-of elementLIste-2 41px
+        width 75px
+
+    broj-25, slobodan-24:
+        centered horizontally inside ostali-22 1px
+
+    broj-17:
+        above slobodan-16 1px
+        inside ostali-14 3px right, 2px top left
+
+    broj-18:
+        above slobodan-17 1px
+        inside ostali-15 3px right, 2px top left
+
+    broj-19:
+        above slobodan-18 1px
+        inside ostali-16 3px right, 2px top left
+
+    izbor:
+        above unnesi-1 3px
+        inside unos 0px top, 47px right
+        right-of labela-1 0px
+        width 51px
+
+    broj-10:
+        inside ostali-7 3px right, 2px top left
+
+    broj-11:
+        inside ostali-8 3px right, 2px top left
+
+    broj-12:
+        inside ostali-9 3px right, 2px top left
+
+    broj-13:
+        inside ostali-10 3px right, 2px top left
+
+    broj-14:
+        inside ostali-11 3px right, 2px top left
+
+    broj-15:
+        inside ostali-12 2px top left right
+
+    broj-16:
+        inside ostali-13 3px right, 2px top left
+

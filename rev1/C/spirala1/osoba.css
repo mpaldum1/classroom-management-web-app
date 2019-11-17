@@ -1,0 +1,92 @@
+*{
+	margin:0px;
+	box-sizing:border-box;
+}
+
+#okvir
+{
+	margin:auto;
+	margin-top:10vh;
+	width:90%; /* mrzim radit s px jer ne znam kako to kad na razlicite uredaje ide ?*/
+	background-color:white; /* to je samo grupacija*/
+	display:flex;
+	flex-direction:column;
+	min-width:450px;
+	
+}
+
+.meni, .sadrzaj, div.logo img
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #029c0a;
+}
+
+
+.meni
+{
+	position:relative;
+	background-color: #6CAAB3;
+	
+	font-size:3vw;
+	text-align:center;
+	
+}
+
+.meni ul
+{
+	list-style:none;
+	position: relative;	
+}
+
+.meni ul li
+{
+	display:inline;
+	padding-right: 7vw;
+	
+}
+
+.meni ul li a
+{
+	color:black;
+}
+
+.meni ul li:nth-child(5) a
+{
+	text-decoration:none;
+}
+
+.logo
+{
+  width: 8vw;
+  height: 6vw;
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+}
+div.logo img
+{
+	width:10%;
+	height:10%;
+	display: block;
+	position: absolute;
+	bottom: 50%;
+	min-height: 100%;
+	min-width: 100%;
+	transform:scale(2);
+}
+
+
+.sadrzaj
+{
+	position:relative;
+	background-color: #6CAAB3;
+	margin-top: .5em;
+	min-height:70vh;
+	padding-top:5%;
+	display:flex;
+	flex-direction:column;
+	
+}
+

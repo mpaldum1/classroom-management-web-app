@@ -1,0 +1,47 @@
+@objects
+	meni	.meni
+	logo  .logo
+	lista   ul
+	elementLIste-* ul li
+    sadrzaj   .sadrzaj
+	html    html
+    body    body
+    a       a
+    slika .slika1
+    slike-* .slika2
+    f footer
+= main =
+    body:
+            css background-color is "rgba(0, 0, 0, 0)" 
+    meni:
+    	inside body 0px top
+    	above sadrzaj 20px
+        contains partly logo
+        contains elementLIste-*
+        css background-color is "rgba(100, 149, 237, 1)"
+    logo:
+        width ~ 70px
+        height ~ 50px
+        inside partly meni
+    slika:
+        width ~ 70px
+        height ~ 50px
+        inside logo
+    @forEach [elementLIste-*] as menuItem, next as nextItem
+        ${menuItem}:
+            above ${nextItem}  <6px
+            above ${nextItem}  >-4px
+            aligned vertically all ${nextItem}
+    sadrzaj:
+        inside partly body
+        css background-color is "rgba(100, 149, 237, 1)"
+        height ~100% of body/height
+        
+
+    @forEach [slike-*] as menuItem, next as nextItem
+        ${menuItem}:
+            height ~160px  
+            width ~160px
+    f:
+        css background-color is "rgba(100, 149, 237, 1)"
+        width ~ 98% of screen/width

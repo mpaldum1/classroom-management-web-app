@@ -1,0 +1,51 @@
+@objects
+	meni	.meni
+	logo  .logo
+	lista   ul
+	elementLIste-* ul li
+    sadrzaj   .sadrzaj
+	html    html
+    body    body
+    a       a
+    slika img
+    labela-* label
+    unos-* input
+= meni section =
+	
+    body:
+            css background-color is "rgba(0, 0, 0, 0)" 
+    meni:
+    	inside body 0px top
+    	above sadrzaj 20px
+        contains partly logo
+        contains elementLIste-*
+        css background-color is "rgba(100, 149, 237, 1)"
+    logo:
+        width ~ 70px
+        height ~ 50px
+        inside partly meni
+    slika:
+        width ~ 70px
+        height ~ 50px
+        inside logo
+
+    @forEach [elementLIste-*] as menuItem, next as nextItem
+        ${menuItem}:
+            above ${nextItem}  <6px
+            above ${nextItem}  >-4px
+            aligned vertically all ${nextItem}
+
+= TEST =
+    @forEach [labela-*] as menuItem, next as nextItem
+        ${menuItem}:
+            above ${nextItem}  ~36px
+            aligned vertically all ${nextItem}
+            width ~200px
+            height ~30px
+    @forEach [unos-*] as menuItem, next as nextItem
+        ${menuItem}:
+            above ${nextItem}  ~36px
+            height ~30px
+    @for [1 - 5] as index
+        labela-${index}:
+            above unos-${index} ~ 0px 

@@ -1,0 +1,84 @@
+@import "common.css";
+
+#salaLista {
+  width: 140px;
+}
+
+.label {
+  display: inline-block;
+  width: 100px;
+  text-align: left;
+}
+
+#sadrzaj {
+  display: flex;
+  align-items: center; 
+  flex-direction: column;
+  background-color: #E8F1F2;
+  min-height: 100vh;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+input, #salaLista {
+  float: right;
+  clear: both;
+  width: 180px;
+}
+
+#dani,
+.datumi-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-column-gap: 7px;
+  grid-row-gap: 5px;
+  padding: 5px;
+}
+
+#mjesec {
+  color: #0A2342;
+  text-align: center;
+  padding: 10px;
+}
+
+.datumi-grid button:first-child {
+  grid-column: 5;
+}
+
+.datumi-grid button {
+  padding: 5px;
+  border-radius: 1px;
+}
+
+.datumi-grid button.slobodna {
+  background-color: green; 
+}
+
+.datumi-grid button.zauzeta {
+  background-color: orange;
+}
+
+#kalendar {
+  border-radius: 1%;
+  border-width: 1.5px;
+  border-color: #0A2342;
+  border-style: solid;
+  background-color: white;
+}
+
+#buttons {
+  margin: 20px;
+}
+
+#prethodni,
+#sljedeci {
+  background-color: #4CAF50; 
+  border: none;
+  color: white;
+  width: 100px; 
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

@@ -1,0 +1,17 @@
+{
+  "tests" : [ {
+    "name" : "mobileunostestGenerisani.gspec",
+    "startedAt" : 1573674385759,
+    "endedAt" : 1573674395773,
+    "failed" : true,
+    "statistic" : {
+      "passed" : 62,
+      "errors" : 1,
+      "warnings" : 0,
+      "total" : 63
+    },
+    "testId" : "1-mobileunostestgenerisani.gspec",
+    "duration" : 10014,
+    "failed" : true
+  } ]
+}

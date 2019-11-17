@@ -1,0 +1,60 @@
+#meni{
+    background-color: rgb(136, 136, 167);
+    float:top;
+    top:25pt;
+    height: 82px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+#meni ul{
+    position: absolute;
+    bottom: 0pt;
+}
+#meni li {
+    list-style-type: none;
+    display: inline;
+    text-align: bottom;
+    padding: 4px;
+    bottom:0pt;
+}
+#meni li a{
+    color: rgb(8, 7, 7);
+    font-family: Arial;
+}
+#logo{
+    float: center;
+    background-color: coral;
+    width: 50pt;
+    height: 50pt;
+    position: absolute;
+    top: -40%;
+    right: 50%;
+}
+#sadrzaj{
+    background-color: rgb(198, 198, 221);
+    padding: 300pt;
+    margin-top: 30pt;
+    position: relative;
+}
+#forma{
+    font-family: Arial;
+    width:50%;
+    position: absolute;
+    left: 20pt;
+    top:20pt;
+    resize: vertical;
+}
+#forma input[type=submit]{
+    width: 150pt;
+    resize: vertical;
+}
+input [type=text]{
+    position: absoulute;
+    margin-left: 50pt;
+}
+@media  (max-width: 600px){
+   #forma input[type=text], input[type=email],  input[type=number] {
+    width: 100%;
+}
+}

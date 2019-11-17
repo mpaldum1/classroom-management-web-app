@@ -1,0 +1,156 @@
+#meni{
+    background-color: rgb(136, 136, 167);
+    float:top;
+    top:25pt;
+    height: 82px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+}
+#meni ul{
+    position: absolute;
+    bottom: 0pt;
+}
+#meni li {
+    list-style-type: none;
+    display: inline;
+    text-align: bottom;
+    padding: 4px;
+    bottom:0pt;
+}
+#meni li a{
+    color: rgb(8, 7, 7);
+    font-family: Arial;
+}
+#logo{
+    float: center;
+    background-color: coral;
+    width: 50pt;
+    height: 50pt;
+    position: absolute;
+    top: -40%;
+    right: 50%;
+}
+#sadrzaj{
+    background-color: rgb(173, 173, 175);
+    padding: 300pt;
+    margin-top: 30pt;
+    position: relative;
+}
+#odabir{
+    position: absolute;
+    top:10pt;
+    left:40%;
+}
+
+ul {list-style-type: none;}
+/* Month header */
+.month {
+    padding: 70px 25px;
+    width: 50%;
+    background: #677de0;
+    text-align: left;
+    position: absolute;
+    top:120pt;
+    border: 2pt solid black;
+  }
+  /* Month list */
+  .month ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .month ul li {
+    color: black;
+    font-family: arial;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  /* Weekdays (Mon-Sun) */
+  .weekdays {
+    margin: 0;
+    padding: 10px 0;
+   /* background-color:rgb(112, 150, 221);*/
+  }
+  
+  .weekdays li {
+    display: inline-block;
+    width: 60pt;
+   /* height: 60pt;*/
+    border: 2pt solid rgb(6, 2, 65);
+    margin: 8pt;
+    text-align: center;
+  }
+  
+  /* Days (1-31) */
+  .days {
+    padding: 9px 0;
+    margin: 0;
+  }
+  .days li.prazno {
+      border:2pt solid #677de0 !important;
+      background-color: #677de0 !important;
+      width: 60pt;
+      height: 30pt;
+      margin: 8pt;
+  }
+  .days li {
+    list-style-type: none;
+    display: inline-block;
+    border: 2pt solid black;
+    width: 60pt;
+    height: 30pt;
+    margin: 8pt;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+  }
+ .days li.slobodna {
+    background: linear-gradient(180deg, rgb(243, 239, 240) 50%, rgb(17, 143, 6) 50%) !important;
+  }
+  .days li.zauzeta{
+    background: linear-gradient(180deg, rgb(243, 239, 240) 50%, rgb(182, 25, 5) 50%) !important;
+  }
+  .dugme{
+      position: absolute;
+      bottom: 10pt;
+      border:2pt solid black;
+      width: 80pt;
+      height: 40pt;
+      font-family: Arial;
+      font-size: 12pt;
+      background-color: #677de0;
+  }
+  #d1{
+      position: absolute;
+      left:25.5%;
+  }
+  #d2{
+      position: absolute;
+      right:21%;
+  }
+  @media  (max-width: 600px){
+    .days li:nth-of-type(-n+7){
+      display: block;
+    }
+    .days li:nth-of-type(n+8), .month li.mjesec {
+      display: none;
+    }
+    .weekdays li{
+      display: block;
+      width: 60pt;
+      height: 30pt;
+    }
+    .days {
+      margin: 0;
+      padding: 10px 0;
+      position: absolute;
+      left:150pt;
+      top:55pt;
+    }
+    .month{
+      position: absolute;
+      left:35pt;
+    }
+  }

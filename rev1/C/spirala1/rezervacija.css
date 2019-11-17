@@ -1,0 +1,329 @@
+*{
+	margin:0px;
+	box-sizing:border-box;
+}
+
+#okvir
+{
+	margin:auto;
+	margin-top:10vh;
+	width:90%; /* mrzim radit s px jer ne znam kako to kad na razlicite uredaje ide ?*/
+	background-color:white; /* to je samo grupacija*/
+	display:flex;
+	flex-direction:column;
+	min-width:450px;
+}
+
+.meni, .sadrzaj, div.logo img
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: #029c0a;
+}
+
+
+.meni
+{
+	position:relative;
+	background-color: #6CAAB3;
+	
+	font-size:3vw;
+	text-align:center;
+	
+}
+
+.meni ul
+{
+	list-style:none;
+	position: relative;	
+}
+
+.meni ul li
+{
+	display:inline;
+	padding-right: 7vw;
+	
+}
+
+.meni ul li a
+{
+	color:black;
+}
+
+.meni ul li:nth-child(4) a
+{
+	text-decoration:none;
+}
+
+.logo
+{
+  width: 8vw;
+  height: 6vw;
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+  margin: 0;
+}
+div.logo img
+{
+	width:10%;
+	height:10%;
+	display: block;
+	position: absolute;
+	bottom: 50%;
+	min-height: 100%;
+	min-width: 100%;
+	transform:scale(2);
+}
+
+
+.sadrzaj
+{
+	position:relative;
+	background-color: #6CAAB3;
+	margin-top: .5em;
+	/*min-height:70vh;*/
+	padding-top:2%;
+	display:flex;
+	flex-direction:column;
+	
+}
+
+.grupa1
+{
+	display:flex;
+	flex-direction:row;
+}
+
+.grupa2
+{
+	display:flex;
+	flex-flow: row;
+	margin-top:10px;
+	
+}
+
+.grupa2 div:nth-child(1) 
+{
+	padding-left:10vw;
+}
+
+.grupa2 div:nth-child(2) 
+{
+	padding-left:10vw;
+}
+
+
+.listaSala
+{
+	width:50%;
+}
+
+.listaSala select  
+{
+	width:40vw;
+	background-color:#0069ed;
+	color:white;
+	display: block;
+	margin: 0 auto;
+	font-family:inherit;
+}
+
+
+
+.grupa1 label
+{
+	display:block;
+	padding-left: 15px;
+}
+
+.sadrzaj input[type=checkbox]
+{
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin:0;
+  vertical-align: bottom;
+  position: relative;
+  top: -1px;
+}
+
+
+.kalendar
+{
+	margin:auto;
+	margin-top:5px;
+	margin-bottom:1vh;
+	display:flex;
+	flex-flow: column;
+	border: solid 2px #0069ed ;
+	width:65vw;
+	
+}
+
+.kalendar label
+{
+	font-weight:bold;
+	padding-top:20px;
+	padding-left:20px;
+	
+}
+
+
+.kalendar table
+{
+	margin:auto;
+	display:table;
+	margin-top:5px;
+	padding-right:5%;
+	padding-left:10px;
+	border-spacing:10px;
+	overflow:hidden;
+	resize:both;
+	width:60vw;
+	
+}
+.kalendar table th
+{
+	
+	padding:0px;
+	font-weight:bold;
+	border: solid 2px #0069ed;
+}
+
+.kalendar td
+{
+	background-color:#f2eee4 ;
+	height:5vw;
+	border: solid 2px #0069ed;
+	vertical-align:top;
+	text-align:center;
+	font-size:2.5vw;
+	background:linear-gradient(to bottom,  #f2eee4 0,  #f2eee4 55%, #0069ed 55%, #0069ed 61%, #43db35 61%, #43db35 100%);
+	
+}
+
+.kalendar .zauzetDan 
+{
+	background:linear-gradient(to bottom,  #f2eee4 0,  #f2eee4 55%, #0069ed 55%, #0069ed 61%,  #ff3508 61%,  #ff3508 100%);
+}
+
+.missDay
+{
+	visibility: hidden; 
+}
+
+
+.grupa3
+{
+	 margin-left:auto;
+	 margin-right:auto;
+	 margin-bottom:2vh;
+}
+
+.grupa3 button:nth-child(1) 
+{
+	margin-right:75px;
+}
+/* dizajn dugmeta */
+button {
+
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    background: #0069ed;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    cursor: not-allowed;
+    text-align: center;
+    transition: background 500ms ease-in-out, 
+                transform 500ms ease;
+	border-radius: 2rem;
+}
+
+
+button:hover,
+button:focus {
+    background: #0053ba;
+	 outline:none;
+}
+
+button:active {
+    transform: scale(0.90);
+	border:none;
+}
+
+
+@media screen and (max-width: 600px) 
+{
+	.logo
+	{
+		min-width:40px;
+		min-height:30px;
+	}
+	
+	.meni ul
+	{
+		text-align:left;
+	}
+	.meni ul li
+	{
+		display:block;
+		font-size:3vh;
+	}
+	
+	
+	.listaSala 
+	{
+	width:20vw;
+	}
+	.listaSala select  
+	{
+		width:20vw;
+		margin: auto;
+	}
+	
+	.grupa2 div:nth-child(1), .grupa2 div:nth-child(2) 
+	{
+		margin-right:auto;
+	}
+
+	/* kalendar */
+	
+	tr:nth-child(n+3) /* sakriva sve sedmice osim prve*/
+	{
+		display:none;
+	}
+	
+	table { border-collapse: collapse;}
+	tr { display: block; float: left; }
+	
+	th, td { display: block; border: 1px solid black; margin-right:20px; margin-top:20px;}
+	.kalendar td
+	{
+		width:10vw;
+		height:5vh;
+		line-height:80%;
+		font-size:3vh;
+	}
+	.kalendar th
+	{
+		width:10vw;
+		height:5vh;
+		line-height:200%;
+		font-size:4vw;
+	}
+	.kalendar
+	{
+		padding-bottom:5px;
+		margin:auto;
+		margin-bottom:2px;
+		margin-top:2px;
+	}
+	
+	
+	
+
+}
+	

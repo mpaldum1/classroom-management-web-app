@@ -1,0 +1,1730 @@
+{
+  "testId" : "1-mobilepocetnatestgenerisani.gspec",
+  "name" : "mobilepocetnatestGenerisani.gspec",
+  "report" : {
+    "nodes" : [ {
+      "name" : "Mutation test",
+      "status" : "info",
+      "nodes" : [ {
+        "name" : "check  mobilepocetnatestGenerisani.gspec --url http://localhost/pocetna.html --size 590x768 --offset 5 --htmlreport Pocetna590GRep",
+        "status" : "info",
+        "nodes" : [ {
+          "name" : "Check layout: mobilepocetnatestGenerisani.gspec included tags: ",
+          "status" : "info",
+          "time" : 1573674543993,
+          "sections" : [ {
+            "name" : "Skeleton",
+            "place" : {
+              "filePath" : "mobilepocetnatestGenerisani.gspec",
+              "lineNumber" : 13
+            },
+            "objects" : [ {
+              "name" : "html",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "centered horizontally inside screen 1px",
+                "highlight" : [ "html", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 31
+                },
+                "name" : "inside screen 0px top left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "html",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "html",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "html",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "html", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 40
+                },
+                "name" : "above f",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "html",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "f",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "203px"
+                } ],
+                "highlight" : [ "html", "f" ]
+              } ]
+            }, {
+              "name" : "body",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "centered horizontally inside screen 1px",
+                "highlight" : [ "body", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 37
+                },
+                "name" : "inside screen 30px top, 8px left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "body",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "30px",
+                  "realDistance" : "30px"
+                }, {
+                  "from" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "8px",
+                  "realDistance" : "8px"
+                }, {
+                  "from" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "8px",
+                  "realDistance" : "8px"
+                } ],
+                "highlight" : [ "body", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 40
+                },
+                "name" : "above f",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "body",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "f",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "173px"
+                } ],
+                "highlight" : [ "body", "f" ]
+              } ]
+            }, {
+              "name" : "sadrzaj",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "centered horizontally inside screen 1px",
+                "highlight" : [ "sadrzaj", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 43
+                },
+                "name" : "inside screen 8px left right, >= 0px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "8px",
+                  "realDistance" : "8px"
+                }, {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "8px",
+                  "realDistance" : "8px"
+                }, {
+                  "from" : {
+                    "object" : "sadrzaj",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "192px"
+                } ],
+                "highlight" : [ "sadrzaj", "screen" ]
+              } ]
+            }, {
+              "name" : "f",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "centered horizontally inside screen 1px",
+                "highlight" : [ "f", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 26
+                },
+                "name" : "above slike-9 30px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "f",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "slike-9",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "30px",
+                  "realDistance" : "30px"
+                } ],
+                "highlight" : [ "f", "slike-9" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 27
+                },
+                "name" : "below sadrzaj 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "f",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sadrzaj",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "f", "sadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 28
+                },
+                "name" : "inside screen 8px left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "f",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "8px",
+                  "realDistance" : "8px"
+                }, {
+                  "from" : {
+                    "object" : "f",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "8px",
+                  "realDistance" : "8px"
+                } ],
+                "highlight" : [ "f", "screen" ]
+              } ]
+            }, {
+              "name" : "slike-8",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "centered horizontally inside screen 1px",
+                "highlight" : [ "slike-8", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 18
+                },
+                "name" : "above slike-9 15px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-8",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "slike-9",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "15px",
+                  "realDistance" : "15px"
+                } ],
+                "highlight" : [ "slike-8", "slike-9" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 19
+                },
+                "name" : "below sadrzaj",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-8",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "sadrzaj",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "537px"
+                } ],
+                "highlight" : [ "slike-8", "sadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "inside screen >= 0px left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-8",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "199px"
+                }, {
+                  "from" : {
+                    "object" : "slike-8",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-8", "screen" ]
+              } ]
+            }, {
+              "name" : "slike-9",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "centered horizontally inside screen 1px",
+                "highlight" : [ "slike-9", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 34
+                },
+                "name" : "inside screen >= 0px left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-9",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "199px"
+                }, {
+                  "from" : {
+                    "object" : "slike-9",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-9", "screen" ]
+              } ]
+            }, {
+              "name" : "slike-10",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 15
+                },
+                "name" : "centered horizontally inside screen 1px",
+                "highlight" : [ "slike-10", "screen" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 22
+                },
+                "name" : "below slike-9 15px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-10",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-9",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "15px",
+                  "realDistance" : "15px"
+                } ],
+                "highlight" : [ "slike-10", "slike-9" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 23
+                },
+                "name" : "inside screen 15px bottom, >= 0px left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-10",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "15px",
+                  "realDistance" : "15px"
+                }, {
+                  "from" : {
+                    "object" : "slike-10",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "199px"
+                }, {
+                  "from" : {
+                    "object" : "slike-10",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "screen",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "200px"
+                } ],
+                "highlight" : [ "slike-10", "screen" ]
+              } ]
+            } ]
+          }, {
+            "name" : "html elements",
+            "place" : {
+              "filePath" : "mobilepocetnatestGenerisani.gspec",
+              "lineNumber" : 45
+            },
+            "objects" : [ {
+              "name" : "slika",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 47
+                },
+                "name" : "centered horizontally inside html 1px",
+                "highlight" : [ "slika", "html" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 48
+                },
+                "name" : "height 50px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "50px",
+                  "realDistance" : "50px"
+                } ],
+                "highlight" : [ "slika" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 49
+                },
+                "name" : "inside html 5px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "html",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                } ],
+                "highlight" : [ "slika", "html" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 50
+                },
+                "name" : "width 70px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slika",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "slika",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "70px",
+                  "realDistance" : "70px"
+                } ],
+                "highlight" : [ "slika" ]
+              } ]
+            } ]
+          }, {
+            "name" : "body elements",
+            "place" : {
+              "filePath" : "mobilepocetnatestGenerisani.gspec",
+              "lineNumber" : 52
+            },
+            "objects" : [ {
+              "name" : "lista",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 54
+                },
+                "name" : "centered horizontally inside meni 1px",
+                "highlight" : [ "lista", "meni" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 55
+                },
+                "name" : "inside meni 50px top, 0px left right bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "lista",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "50px",
+                  "realDistance" : "50px"
+                }, {
+                  "from" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "lista",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "lista", "meni" ]
+              } ]
+            }, {
+              "name" : "meni",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 58
+                },
+                "name" : "above slike-1 25px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "slike-1",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "25px",
+                  "realDistance" : "25px"
+                } ],
+                "highlight" : [ "meni", "slike-1" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 59
+                },
+                "name" : "inside body 0px top left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "meni",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "meni", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 87
+                },
+                "name" : "centered horizontally inside body 1px",
+                "highlight" : [ "meni", "body" ]
+              } ]
+            }, {
+              "name" : "slike-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 62
+                },
+                "name" : "below slike-2 15px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "15px",
+                  "realDistance" : "15px"
+                } ],
+                "highlight" : [ "slike-3", "slike-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 63
+                },
+                "name" : "inside body 5px bottom, >= 0px left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "5px",
+                  "realDistance" : "5px"
+                }, {
+                  "from" : {
+                    "object" : "slike-3",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "191px"
+                }, {
+                  "from" : {
+                    "object" : "slike-3",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "192px"
+                } ],
+                "highlight" : [ "slike-3", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 87
+                },
+                "name" : "centered horizontally inside body 1px",
+                "highlight" : [ "slike-3", "body" ]
+              } ]
+            }, {
+              "name" : "a",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 66
+                },
+                "name" : "inside elementLIste-2 0px top left bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "a",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "a",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "a",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "a", "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 67
+                },
+                "name" : "width 27px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "a",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "a",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "27px",
+                  "realDistance" : "27px"
+                } ],
+                "highlight" : [ "a" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 74
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "a",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "a",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "a" ]
+              } ]
+            }, {
+              "name" : "elementLIste-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 70
+                },
+                "name" : "above elementLIste-2 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-1", "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 71
+                },
+                "name" : "inside lista 40px left, 0px top right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "40px",
+                  "realDistance" : "40px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-1", "lista" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 74
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "elementLIste-1" ]
+              } ]
+            }, {
+              "name" : "elementLIste-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 74
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "elementLIste-2" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 77
+                },
+                "name" : "inside lista 40px left, 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "40px",
+                  "realDistance" : "40px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-2", "lista" ]
+              } ]
+            }, {
+              "name" : "elementLIste-3",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 74
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "elementLIste-3" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 77
+                },
+                "name" : "inside lista 40px left, 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "40px",
+                  "realDistance" : "40px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-3", "lista" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 83
+                },
+                "name" : "above elementLIste-4 1px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "1px",
+                  "realDistance" : "1px"
+                } ],
+                "highlight" : [ "elementLIste-3", "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 84
+                },
+                "name" : "below elementLIste-2 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-3",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-2",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-3", "elementLIste-2" ]
+              } ]
+            }, {
+              "name" : "elementLIste-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 74
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 77
+                },
+                "name" : "inside lista 40px left, 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "40px",
+                  "realDistance" : "40px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-4", "lista" ]
+              } ]
+            }, {
+              "name" : "elementLIste-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 74
+                },
+                "name" : "height 18px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "18px",
+                  "realDistance" : "18px"
+                } ],
+                "highlight" : [ "elementLIste-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 93
+                },
+                "name" : "below elementLIste-4 0px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "elementLIste-4",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-5", "elementLIste-4" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 94
+                },
+                "name" : "inside lista 40px left, 1px bottom, 0px right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : "40px",
+                  "realDistance" : "40px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "1px",
+                  "realDistance" : "1px"
+                }, {
+                  "from" : {
+                    "object" : "elementLIste-5",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "lista",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : "0px",
+                  "realDistance" : "0px"
+                } ],
+                "highlight" : [ "elementLIste-5", "lista" ]
+              } ]
+            }, {
+              "name" : "slike-1",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 80
+                },
+                "name" : "inside body >= 0px left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-1",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "191px"
+                }, {
+                  "from" : {
+                    "object" : "slike-1",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "192px"
+                } ],
+                "highlight" : [ "slike-1", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 87
+                },
+                "name" : "centered horizontally inside body 1px",
+                "highlight" : [ "slike-1", "body" ]
+              } ]
+            }, {
+              "name" : "slike-2",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 80
+                },
+                "name" : "inside body >= 0px left right",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-2",
+                    "edge" : "left"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "left"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "191px"
+                }, {
+                  "from" : {
+                    "object" : "slike-2",
+                    "edge" : "right"
+                  },
+                  "to" : {
+                    "object" : "body",
+                    "edge" : "right"
+                  },
+                  "expectedDistance" : ">= 0px",
+                  "realDistance" : "192px"
+                } ],
+                "highlight" : [ "slike-2", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 87
+                },
+                "name" : "centered horizontally inside body 1px",
+                "highlight" : [ "slike-2", "body" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 90
+                },
+                "name" : "below slike-1 15px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-2",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-1",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "15px",
+                  "realDistance" : "15px"
+                } ],
+                "highlight" : [ "slike-2", "slike-1" ]
+              } ]
+            } ]
+          }, {
+            "name" : "sadrzaj elements",
+            "place" : {
+              "filePath" : "mobilepocetnatestGenerisani.gspec",
+              "lineNumber" : 96
+            },
+            "objects" : [ {
+              "name" : "slike-4",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 98
+                },
+                "name" : "centered horizontally inside sadrzaj 1px",
+                "highlight" : [ "slike-4", "sadrzaj" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 99
+                },
+                "name" : "inside sadrzaj 3px bottom",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-4",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "sadrzaj",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "3px",
+                  "realDistance" : "3px"
+                } ],
+                "highlight" : [ "slike-4", "sadrzaj" ]
+              } ]
+            } ]
+          }, {
+            "name" : "f elements",
+            "place" : {
+              "filePath" : "mobilepocetnatestGenerisani.gspec",
+              "lineNumber" : 101
+            },
+            "objects" : [ {
+              "name" : "slike-6",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 103
+                },
+                "name" : "above slike-7 15px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-6",
+                    "edge" : "bottom"
+                  },
+                  "to" : {
+                    "object" : "slike-7",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "15px",
+                  "realDistance" : "15px"
+                } ],
+                "highlight" : [ "slike-6", "slike-7" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 104
+                },
+                "name" : "below slike-5 15px",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-6",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "slike-5",
+                    "edge" : "bottom"
+                  },
+                  "expectedDistance" : "15px",
+                  "realDistance" : "15px"
+                } ],
+                "highlight" : [ "slike-6", "slike-5" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 110
+                },
+                "name" : "inside f",
+                "meta" : [ ],
+                "highlight" : [ "slike-6", "f" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 113
+                },
+                "name" : "centered horizontally inside f 1px",
+                "highlight" : [ "slike-6", "f" ]
+              } ]
+            }, {
+              "name" : "slike-5",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 107
+                },
+                "name" : "inside f 12px top",
+                "meta" : [ {
+                  "from" : {
+                    "object" : "slike-5",
+                    "edge" : "top"
+                  },
+                  "to" : {
+                    "object" : "f",
+                    "edge" : "top"
+                  },
+                  "expectedDistance" : "12px",
+                  "realDistance" : "12px"
+                } ],
+                "highlight" : [ "slike-5", "f" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 113
+                },
+                "name" : "centered horizontally inside f 1px",
+                "highlight" : [ "slike-5", "f" ]
+              } ]
+            }, {
+              "name" : "slike-7",
+              "specs" : [ {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 110
+                },
+                "name" : "inside f",
+                "meta" : [ ],
+                "highlight" : [ "slike-7", "f" ]
+              }, {
+                "status" : "info",
+                "place" : {
+                  "filePath" : "mobilepocetnatestGenerisani.gspec",
+                  "lineNumber" : 113
+                },
+                "name" : "centered horizontally inside f 1px",
+                "highlight" : [ "slike-7", "f" ]
+              } ]
+            } ]
+          } ],
+          "objects" : {
+            "lista" : {
+              "area" : [ 8, 80, 543, 92 ]
+            },
+            "meni" : {
+              "area" : [ 8, 30, 543, 142 ]
+            },
+            "slike-4" : {
+              "area" : [ 199, 722, 160, 160 ]
+            },
+            "slika" : {
+              "area" : [ 244, 5, 70, 50 ]
+            },
+            "slike-3" : {
+              "area" : [ 199, 547, 160, 160 ]
+            },
+            "a" : {
+              "area" : [ 48, 98, 27, 18 ]
+            },
+            "slike-6" : {
+              "area" : [ 199, 1072, 160, 160 ]
+            },
+            "slike-5" : {
+              "area" : [ 199, 897, 160, 160 ]
+            },
+            "slike-8" : {
+              "area" : [ 199, 1422, 160, 160 ]
+            },
+            "slike-10" : {
+              "area" : [ 199, 1772, 160, 160 ]
+            },
+            "slike-7" : {
+              "area" : [ 199, 1247, 160, 160 ]
+            },
+            "f" : {
+              "area" : [ 8, 885, 543, 682 ]
+            },
+            "slike-9" : {
+              "area" : [ 199, 1597, 160, 160 ]
+            },
+            "screen" : {
+              "area" : [ 0, 0, 559, 1947 ]
+            },
+            "body" : {
+              "area" : [ 8, 30, 543, 682 ]
+            },
+            "elementLIste-3" : {
+              "area" : [ 48, 116, 503, 18 ]
+            },
+            "elementLIste-2" : {
+              "area" : [ 48, 98, 503, 18 ]
+            },
+            "sadrzaj" : {
+              "area" : [ 8, 192, 543, 693 ]
+            },
+            "elementLIste-5" : {
+              "area" : [ 48, 153, 503, 18 ]
+            },
+            "elementLIste-4" : {
+              "area" : [ 48, 135, 503, 18 ]
+            },
+            "elementLIste-1" : {
+              "area" : [ 48, 80, 503, 18 ]
+            },
+            "html" : {
+              "area" : [ 0, 0, 559, 682 ]
+            },
+            "slike-2" : {
+              "area" : [ 199, 372, 160, 160 ]
+            },
+            "slike-1" : {
+              "area" : [ 199, 197, 160, 160 ]
+            }
+          },
+          "screenshot" : "layout-1-screenshot.png",
+          "type" : "layout"
+        }, {
+          "name" : "Mutation testing: mobilepocetnatestGenerisani.gspec included tags: ",
+          "status" : "error",
+          "time" : 1573674543993,
+          "mutationReport" : {
+            "objectMutationStatistics" : {
+              "lista" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "meni" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-4" : {
+                "passed" : 9,
+                "failed" : 1,
+                "failedMutations" : [ "slike-4: move top edge down by 5px" ]
+              },
+              "slika" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-3" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "a" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-6" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-8" : {
+                "passed" : 9,
+                "failed" : 1,
+                "failedMutations" : [ "slike-8: move top edge down by 5px" ]
+              },
+              "slike-10" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-7" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "slike-7: increase height by 5px", "slike-7: decrease height by 5px" ]
+              },
+              "f" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-9" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "screen" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "body" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-3" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "sadrzaj" : {
+                "passed" : 9,
+                "failed" : 1,
+                "failedMutations" : [ "sadrzaj: move top edge down by 5px" ]
+              },
+              "elementLIste-5" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-4" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "elementLIste-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "html" : {
+                "passed" : 8,
+                "failed" : 2,
+                "failedMutations" : [ "html: increase height by 5px", "html: decrease height by 5px" ]
+              },
+              "slike-2" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              },
+              "slike-1" : {
+                "passed" : 10,
+                "failed" : 0,
+                "failedMutations" : [ ]
+              }
+            },
+            "totalPassed" : 233,
+            "totalFailed" : 7,
+            "failedRatio" : 2.9166666666666665,
+            "totalMutations" : 240
+          },
+          "type" : "mutation"
+        } ],
+        "time" : 1573674538788,
+        "type" : "node"
+      } ],
+      "time" : 1573674534447,
+      "type" : "node"
+    } ]
+  }
+}

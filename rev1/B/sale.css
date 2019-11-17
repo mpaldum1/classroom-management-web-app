@@ -1,0 +1,44 @@
+@import "common.css";
+
+div#sadrzaj {
+	background-color: #E8F1F2;
+	margin-top: 1%;
+	min-height: 100vh;
+	justify-content: center;
+}
+
+div#sadrzaj table {
+	margin: auto;
+	width: 70%;
+}
+
+.headerSprat {
+	background-color: gray;
+	text-align: center;
+}
+
+.headerRedni {
+	background-color: gray;
+}
+
+.zauzetaSala {
+	background-color: orange;
+}
+
+.slobodnaSala {
+	background-color: #8FC93A;
+}
+
+.kancelarija {
+	background-color: gray;
+}
+
+
+/*MALI SCREEN*/
+@media screen and (max-width: 600px) { 
+	.headerSprat, 
+	.headerRedni {
+		visibility: hidden;
+	}
+}
+  

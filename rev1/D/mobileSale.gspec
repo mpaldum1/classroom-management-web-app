@@ -1,0 +1,58 @@
+@objects
+    meni .meni
+    logo .logo
+    sliba #sliba
+    sadrzaj .sadrzaj
+    glavniDiv .glavniDiv
+    zauzetaSala .zauzetaSala
+    slobodnaSala .slobodnaSala
+    kancelarija .kancelarija
+    sala .sala
+    tabelaSala .tabelaSala
+    spisakSala .spisakSala
+    headerRedni .headerRedni
+    headerSala .headerSala
+    listaLinkova #listaLinkova
+= Main section =
+    meni:
+        above sadrzaj
+        inside glavniDiv
+    logo:
+        inside meni
+    sliba:
+        width 60px
+        height 60px
+    sadrzaj:
+        below meni
+    zauzetaSala:
+        css background-color is "rgb(255, 165, 0)"
+    slobodnaSala:
+        css background-color is "rgb(0, 128, 0)"
+    kancelarija:
+        css background-color is "rgb(128, 128, 128)"
+    sala:
+        css background-color is "rgb(255, 255, 255)"
+    tabelaSala:
+        inside sadrzaj
+    headerRedni:
+        absent 
+    headerSala:
+        absent
+    listaLinkova:
+        css display is "flex"
+        css flex-direction is "column"
+    
+    
+
+    
+    
+
+    
+   
+
+
+    
+
+
+            
+            
