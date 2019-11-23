@@ -1,0 +1,34 @@
+A
+
+Validacija: Fajlovi nisu validirani prilikom predaje. Odgovarajuci format nemaju: pocetna.html, rezervacija.html, sale.html, unos.html, pocetna.css, rezervacija.css, sale.css, unos.css ...
+Dovršenost aplikacije: Aplikacija nije potpuno dovršena. Tačnije, nekon smanjenja veličine ekrana ispod 600px elementi liste u meniju nisu jedan iznad drugog (osim u sala.html). Pri dovodljnom smanjenju ekrana, logo ne ostaje na horizontalnom centru. Tabela u sali.html nije naročito responsivna, te se nije pazilo na detalje poput pozicioniranja elemenata unutar ćelija. Dizajn tabele je vrlo loš. Dizajn unosa na ekranima većim od 600px je također vrlo loš. Fajl rezevacija.html je potpuno neuređena, iako vrši traženu funkcionalnost za manje ekranje. Testovi nisu urađeni.
+Ispravnost aplikacije: Kako je u pitanju samo css i html aplikacija radi, nema bagova koji mogu prouzrokovati krah programa, iako je dizajn izuzetno loš. Propust je kreiranje 2 check-boxa za periodične rezevacije.... Potrebna nam je samo jedna. Kako slike nisu upload-ova zajedno sa fajlovima one se uopšte ne prikazuju. Aplikacija nije ispravna kako nije izvršena validacija.
+Kvalitet koda: Kod projektnog zadatka je vrlo jednostavan u općem slučaju, pa nema obično problema. U ovom projektu treba više poraditi na organizaciji stabla.
+
+B
+
+Validacija: Svi fajlovi su validirani prije slanja.
+Dovršenost aplikacije: Aplikacija je gotovo dovršena. Izuzetak su situacije u rezervacija.html kada je širina ekrana ispod 600px, kao i nedostatak Galen testova. Ostatak projekta je vrlo dobro urađen, kako funkcionalno tako i stilitički, iako se moglo dodatno poraditi na dizajnu. Također, iako nije greška, vrijedi spoemnuti da su linija ispod naziva stranie u meniju potpuno uklonjene, a ne samo na aktivnim stranicama. Također nije vođeno računa o određenom vertikalnim i horizontalnom poravananju u sale.html.
+Ispravnost aplikacije: Aplikacija je ispravna. Nema većih bagova, kako je u pitanju samo html i css, ona ne može krahirati. Testovi nisu pisani...
+Kvalitet koda: Kod je jednostavan i lahko razumljiv.
+
+c
+
+Validacija: Svi fajlovi su validirani prije slanja.
+Dovršenost aplikacije: Funkcionalnosti apliakcije su završene. Izuetak su Galen testovi, kako oni nisu napisani. Dizajn aplikacije je izuzetno loš. Naročito rezervacija.html i sale.thml. Iako je respozivnost ispod velicine 600px ukljucena, vrlo je lose realizirano.
+Ispravnost aplikacije: Aplikacija radi. Kako je css i html u pitanju nema mogućnost kraha. Projekat nije izvršen potpuno u skladu sa postavkom.
+Kvalitet koda: Kvod je relativno kvalitetan.
+
+D
+
+Validacija: Fajlovi nisu validirani prilikom predaje. Odgovarajuci format nemaju: pocetna.html, rezervacija.html, sale.html, unos.html...
+Dovršenost aplikacije: Aplikacija ima sve funkcionalnosti koje su tražene u postavci projektnog zadatka. Problem im u responzivnosti ekrana ispod 600px za sale.html, kako ostaju borderi koji se preklapaju sa menijem. Također, select sa forme se vrlo brzo može smanjiti da se nikako ne vidi, što je veliki problem prilikom unosa ukoliko su u pitanju mali ekrani. U ostalim slučajevima treba naglasiti da je vrlo dobar dizajn stranica. Napisani testovi su dovoljni da testiraju funkcionalnosti aplikacije.
+Ispravnost aplikacije: Aplikacija je gotovo poptuno ispravna, uz izuzetke koji su navdeni.
+Kvalitet koda:  Iako vrlo jednostavan, kod je neorganizovan i relativno nepregledan, pogotovo uzimajući u obzir malu dimenziju koda. Također, treba poraditi na organizaciji resursa u projektu.
+
+E
+
+Validacija: Svi fajlovi su validirani, iako ima određeni broj upozorenja.
+Dovršenost aplikacije: Aplikacija je potpuno završena. Sve funkcionalnosti tražene postavkom su implementirane, kao i jako veliki broj testova što se mora pohvaliti. Iako je blago oskudan u dizajnu stranice, izuzetno kvalitetan i kompletan rad.
+Ispravnost aplikacije: Aplikacija je potpuno ispravna, bez ikakvih bagova.
+Kvalitet koda: Kod je relativno kvalitetan, uz izuzetak komentiranja dijelova nemaju nikavu svrhu (rezervacije.html). Također, potrebno je na bolji način organizovati resurse projekta.

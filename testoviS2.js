@@ -21,10 +21,10 @@ describe('Kalendar', function () {
 
         it('obojiZauzeca() - duple vrijednosti', function () {
 
-            Kalendar.iscrtajKalendar(document.getElementById("kalendar"),10);
-            Kalendar.ucitajPodatke([{dan:6, semestar:"zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac:"Dave"}],
-                [{datum:"06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac:"James"},
-                 {datum:"06.10.2019.", pocetak:"12:50", kraj:"17:30", naziv:"0-01", predavac:"Kirk"}]);
+            Kalendar.iscrtajKalendar(document.getElementById("kalendar"), 10);
+            Kalendar.ucitajPodatke([{ dan: 6, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" }],
+                [{ datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "James" },
+                { datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "Kirk" }]);
             Kalendar.obojiZauzeca(document.getElementById("kalendar"), 10, "0-01", "12:00", "13:30");
 
             var djeca = document.querySelector(".datum").children;
@@ -35,13 +35,248 @@ describe('Kalendar', function () {
                 if (klasa === "zauzeta") {
                     brojZauzetih++;
                 }
-                console.log(klasa);
             }
             assert.equal(brojZauzetih, 4, 'Neispravno! - Ukupno moraju biti 4 zauzeca');
         });
 
-    });
+        it('obojiZauzeca() - zauzece drugog semestra', function () {
 
+            Kalendar.iscrtajKalendar(document.getElementById("kalendar"), 2);
+            Kalendar.ucitajPodatke([{ dan: 6, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" }], []);
+            // zauzece termina zimskog semestra
+
+            Kalendar.obojiZauzeca(document.getElementById("kalendar"), 2, "0-01", "12:00", "13:30");
+            // mjesec mart je u ljetnom semestru
+
+            var djeca = document.querySelector(".datum").children;
+            var brojZauzetih = 0;
+
+            for (var i = 0; i < djeca.length; i++) {                     // kupimo sve datume iz kalendara
+                var klasa = djeca[i].lastChild.className;
+                if (klasa === "zauzeta") {
+                    brojZauzetih++;
+                }
+
+            }
+
+            assert.equal(brojZauzetih, 0, 'Neispravno! - Ne smije biti obojenih zauzeca');
+        });
+
+        it('obojiZauzeca() - zauzece drugog mjeseca', function () {
+
+            Kalendar.iscrtajKalendar(document.getElementById("kalendar"), 10);
+            Kalendar.ucitajPodatke([{ datum: "17.08.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "James" }], []);
+            // zauzece termina u 8. mjesecu 
+
+            Kalendar.obojiZauzeca(document.getElementById("kalendar"), 10, "0-01", "12:00", "13:30");
+            // jedino zauzece nije u mjesecu kojeg bojimo
+
+            var djeca = document.querySelector(".datum").children;
+            var brojZauzetih = 0;
+
+            for (var i = 0; i < djeca.length; i++) {                     // kupimo sve datume iz kalendara
+                var klasa = djeca[i].lastChild.className;
+                if (klasa === "zauzeta") {
+                    brojZauzetih++;
+                }
+
+            }
+            assert.equal(brojZauzetih, 0, 'Neispravno! - Ne smije biti obojenih zauzeca');
+
+        });
+
+        it('obojiZauzeca() - svi termini zauzeti', function () {
+
+            Kalendar.iscrtajKalendar(document.getElementById("kalendar"), 10);
+            Kalendar.ucitajPodatke([{ dan: 1, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" },
+            { dan: 2, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" },
+            { dan: 3, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" },
+            { dan: 4, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" },
+            { dan: 5, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" },
+            { dan: 6, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" }, ,
+            { dan: 7, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" }], []);
+
+            // zauzece termina zimskog semestra
+
+            Kalendar.obojiZauzeca(document.getElementById("kalendar"), 10, "0-01", "12:00", "13:30");
+            // mjesec novembar je u zimskom semestru
+
+            var djeca = document.querySelector(".datum").children;
+            var brojSlobodnih = 0;
+
+            for (var i = 0; i < djeca.length; i++) {                     // kupimo sve datume iz kalendara
+                var klasa = djeca[i].lastChild.className;
+                if (klasa === "slobodna") {
+                    brojSlobodnih++;
+                }
+
+            }
+
+            console.log(brojSlobodnih);
+            assert.equal(brojSlobodnih, 0, 'Neispravno! - Ne smije biti slobodnih sala!');
+        });
+
+        it('obojiZauzeca() - uzastopni poziv', function () {
+
+            Kalendar.iscrtajKalendar(document.getElementById("kalendar"), 10);
+            Kalendar.ucitajPodatke([{ dan: 6, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" }],
+                [{ datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "James" },
+                { datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "Kirk" }]);
+
+            Kalendar.obojiZauzeca(document.getElementById("kalendar"), 10, "0-01", "12:00", "13:30");
+
+            var djeca = document.querySelector(".datum").children;
+            var brojZauzetihPrviPoziv = 0;
+
+            for (var i = 0; i < djeca.length; i++) {                     // kupimo sve datume iz kalendara
+                var klasa = djeca[i].lastChild.className;
+                if (klasa === "zauzeta") {
+                    brojZauzetihPrviPoziv++;
+                }
+            }
+
+            Kalendar.obojiZauzeca(document.getElementById("kalendar"), 10, "0-01", "12:00", "13:30");
+
+            djeca = document.querySelector(".datum").children;
+            var brojZauzetihDrugiPoziv = 0;
+
+            for (var i = 0; i < djeca.length; i++) {                     // kupimo sve datume iz kalendara
+                var klasa = djeca[i].lastChild.className;
+                if (klasa === "zauzeta") {
+                    brojZauzetihDrugiPoziv++;
+                }
+            }
+            assert.equal(brojZauzetihPrviPoziv, brojZauzetihDrugiPoziv, 'Neispravno! - Mora biti isti broj zauzeca!');
+        });
+
+        it('obojiZauzeca() - primjena posljednjih podataka', function () {
+
+            Kalendar.iscrtajKalendar(document.getElementById("kalendar"), 10);
+            Kalendar.ucitajPodatke([{ dan: 6, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" }],
+                [{ datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "James" },
+                { datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "Kirk" }]);
+
+            Kalendar.obojiZauzeca(document.getElementById("kalendar"), 10, "0-01", "12:00", "13:30");
+
+            var djeca = document.querySelector(".datum").children;
+            var listaPrvihZauzeca = [];
+            var brojPrvihZauzeca = 0;
+
+            for (var i = 0; i < djeca.length; i++) {                     // generisemo listu prvih zauzeca
+                var klasa = djeca[i].lastChild.className;
+                if (klasa === "zauzeta") {
+                    listaPrvihZauzeca[i] = 1
+                    brojPrvihZauzeca++;
+                }
+                else {
+                    listaPrvihZauzeca[i] = 0;
+                }
+            }
+
+            Kalendar.ucitajPodatke([{ dan: 5, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" }],
+                [{ datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "James" }]);
+            Kalendar.obojiZauzeca(document.getElementById("kalendar"), 10, "0-01", "12:00", "13:30");
+
+            djeca = document.querySelector(".datum").children;
+            var listaDrugihZauzeca = [];
+            var brojDrugihZauzeca = 0;
+
+            for (var i = 0; i < djeca.length; i++) {                     // generisemo listu drugih zauzeca
+                var klasa = djeca[i].lastChild.className;
+                if (klasa === "zauzeta") {
+                    listaDrugihZauzeca[i] = 1
+                    brojDrugihZauzeca++;
+                }
+                else {
+                    listaDrugihZauzeca[i] = 0;
+                }
+            }
+
+            assert.notEqual(listaPrvihZauzeca, listaDrugihZauzeca, 'Neispravno! - moraju biti razlicita zauzeca');
+            assert.notEqual(brojPrvihZauzeca, brojDrugihZauzeca, 'Neispravno! - moraju biti razlicita zauzeca');
+
+            assert.equal(5, brojDrugihZauzeca, 'Neispravno! - mora se primijeniti nad posljednjim podacima');
+
+        });
+
+        it('obojiZauzeca() - test izmjena naziva sale', function () {
+
+            Kalendar.iscrtajKalendar(document.getElementById("kalendar"), 10);
+            Kalendar.ucitajPodatke([{ dan: 6, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" }],
+                [{ datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "James" },
+                { datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "EE1", predavac: "Kirk" }]);
+
+
+            Kalendar.obojiZauzeca(document.getElementById("kalendar"), 10, "EE1", "12:00", "13:30");
+            // imamo samo jednom rezervisanu salu EE1
+
+            var djeca = document.querySelector(".datum").children;
+            var brojZauzetih = 0;
+
+            for (var i = 0; i < djeca.length; i++) {                     // kupimo sve datume iz kalendara
+                var klasa = djeca[i].lastChild.className;
+                if (klasa === "zauzeta") {
+                    brojZauzetih++;
+                }
+
+            }
+            assert.equal(brojZauzetih, 1, 'Neispravno! - Mora biti jedno zauzece!');
+
+        });
+
+        it('obojiZauzeca() - test kraj prije pocetka vremena', function () {
+
+            Kalendar.iscrtajKalendar(document.getElementById("kalendar"), 10);
+            Kalendar.ucitajPodatke([{ dan: 6, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" }],
+                [{ datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "James" },
+                { datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "EE1", predavac: "Kirk" }]);
+
+
+            Kalendar.obojiZauzeca(document.getElementById("kalendar"), 10, "0-01", "14:00", "12:00");
+            // rezervacija pocinje nakon sto zavrsi...
+
+
+            var djeca = document.querySelector(".datum").children;
+            var brojZauzetih = 0;
+
+            for (var i = 0; i < djeca.length; i++) {                     // kupimo sve datume iz kalendara
+                var klasa = djeca[i].lastChild.className;
+                if (klasa === "zauzeta") {
+                    brojZauzetih++;
+                }
+
+            }
+            assert.equal(brojZauzetih, 0, 'Neispravno! - Sala nije rezervisana!');
+
+        });
+
+        it('obojiZauzeca() - test isto vrijeme', function () {
+
+            Kalendar.iscrtajKalendar(document.getElementById("kalendar"), 10);
+            Kalendar.ucitajPodatke([{ dan: 6, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" }],
+                [{ datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "James" },
+                { datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "EE1", predavac: "Kirk" }]);
+
+
+            Kalendar.obojiZauzeca(document.getElementById("kalendar"), 10, "0-01", "12:00", "12:00");
+            // pocetak rezervacije i kraj je u istom trenutnk
+
+
+            var djeca = document.querySelector(".datum").children;
+            var brojZauzetih = 0;
+
+            for (var i = 0; i < djeca.length; i++) {                     // kupimo sve datume iz kalendara
+                var klasa = djeca[i].lastChild.className;
+                if (klasa === "zauzeta") {
+                    brojZauzetih++;
+                }
+
+            }
+            assert.equal(brojZauzetih, 0, 'Neispravno! - Sala nije rezervisana!');
+
+        });
+
+    });
     describe('iscrtajKalendar()', function () {
 
 
