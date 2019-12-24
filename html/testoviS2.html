@@ -6,8 +6,8 @@
     <title>Mocha Tests</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css" />
-    <link rel="stylesheet" type="text/css" href="sale.css">
-    <link rel="stylesheet" type="text/css" href="rezervacija.css">
+    <link rel="stylesheet" type="text/css" href="/css/sale.css">
+    <link rel="stylesheet" type="text/css" href="/css/rezervacija.css">
     <style>
         td {
             border: 1px solid black;
@@ -23,14 +23,14 @@
     <div class="frame">
         <div class="meni">
             <ul id="lista">
-                <li> <a href="testoviS2.html" >Početna </a></li>
-                <li> <a href="testoviS2.html" > Sale </a> </li>
-                <li> <a href="testoviS2.html" > Unos </a> </li>
-                <li> <a href="testoviS2.html" > Rezervacije</a> </li>
-                <li> <a href="testoviS2.html" > Osobe</a> </li>
+                <li> <a href="/html/testoviS2.html" >Početna </a></li>
+                <li> <a href="/html/testoviS2.html" > Sale </a> </li>
+                <li> <a href="/html/testoviS2.html" > Unos </a> </li>
+                <li> <a href="/html/testoviS2.html" > Rezervacije</a> </li>
+                <li> <a href="/html/testoviS2.html" > Osobe</a> </li>
             </ul>
             <div class="logo">
-                <img id="slikaLogo" src="logo.jpg" alt="logo">
+                <img id="slikaLogo" src="/Galerija/logo.jpg" alt="logo">
             </div>
         </div>
 
@@ -70,10 +70,10 @@
         mocha.setup('bdd');
         mocha.checkLeaks();
     </script>
-    <script src="kalendar.js"></script>
-    <script src="testoviS2.js"></script>
+    <script src="/js/kalendar.js"></script>
+    <script src="/js/testoviS2.js"></script>
     <script class="mocha-exec">
-        mocha.run();
+        mocha.run().globals(['Components']);
     </script>
 </body>
 

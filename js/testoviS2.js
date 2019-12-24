@@ -22,6 +22,7 @@ describe('Kalendar', function () {
         it('obojiZauzeca() - duple vrijednosti', function () {
 
             Kalendar.iscrtajKalendar(document.getElementById("kalendar"), 10);
+            
             Kalendar.ucitajPodatke([{ dan: 6, semestar: "zimski", pocetak: "10:30", kraj: "22:30", naziv: "0-01", predavac: "Dave" }],
                 [{ datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "James" },
                 { datum: "06.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "Kirk" }]);
