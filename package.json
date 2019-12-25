@@ -1,0 +1,21 @@
+{
+  "name": "wt1918154",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mpaldum1@bitbucket.org/mpaldum1/wt1918154.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/mpaldum1/wt1918154#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node": "^13.5.0",
+    "package.json": "^2.0.1"
+  }
+}
