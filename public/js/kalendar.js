@@ -34,6 +34,7 @@ let Kalendar = (function () {
         this.predavac = predavac;
     }
 
+
     // privatni atributi
 
     function ucitajPodatkeImpl(periodicna, vanredna) {
@@ -178,7 +179,7 @@ let Kalendar = (function () {
             var trenutni;
             var vanredniMjesec;
 
-            if (element.datum != undefined) {                        // u pitanju je vanredno zauzece
+            if (element.datum != undefined) {                                 // u pitanju je vanredno zauzece
                 vanredniMjesec = parseInt(element.datum.split(".")[1]);
 
                 if (vanredniMjesec != null && trenutniMjesec == vanredniMjesec) {

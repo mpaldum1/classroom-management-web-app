@@ -1,4 +1,4 @@
-{
+  {
     "periodicna": [
       {
         "dan": 6,
@@ -35,7 +35,7 @@
         "predavac": "Kirk"
       },
       {
-        "datum": "17.10.2019.",
+        "datum": "17.11.2019.",
         "pocetak": "13:50",
         "kraj": "18:30",
         "naziv": "0-01",
