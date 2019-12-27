@@ -1,6 +1,6 @@
 let Pozivi = (function () {
 
-    var htmlRef;
+
     var listaZauzeca = [];
 
     function periodicnaZauzeca(dan, semestar, pocetak, kraj, naziv, predavac) {
@@ -21,16 +21,17 @@ let Pozivi = (function () {
     }
 
     // privatni atributi
-
     function ucitajImpl(zauzeca) {
 
         let xhttp = new XMLHttpRequest();
 
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                JSONzauzeca = JSON.parse(xhttp.responseText);
+                JSONzauzeca = JSON.parse(xhttp.responseText);             
 
                 Kalendar.ucitajPodatke(JSONzauzeca.periodicna, JSONzauzeca.vanredna);
+               // Kalendar.obojiZauzeca(htmlRef,trenutniMjesec,sala,pocetak,kraj);
+                prilagodiUcitavanje(listaZauzeca, JSONzauzeca.vanredna, JSONzauzeca.periodicna);
             }
         };
 
@@ -41,53 +42,88 @@ let Pozivi = (function () {
 
     function rezervisiImpl(zauzece, trenutniMjesec) {
 
-        let xhttp = new XMLHttpRequest();
+        let odobrenaRezervacija = false;
+        // kupimo aktuelno stanje iz zauzecea.json
 
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
+        var danPeriodicnog;
+        if (zauzece.dan != null) {
+            danPeriodicnog = zauzece.dan;
+            zauzece.dan = zauzece.dan % 7;
+            if(zauzece.dan == 0) zauzece.dan = 7;
+        }
 
-                JSONzauzeca = JSON.parse(xhttp.responseText);
-                Kalendar.ucitajPodatke(JSONzauzeca.periodicna, JSONzauzeca.vanredna);
-                prilagodiUcitavanje(listaZauzeca, JSONzauzeca.vanredna, JSONzauzeca.periodicna);
+        // kako bi znali pritisnut datum na kalendaru za periodicno zauzece 
+        // provjeriti indeks ovdje da li ide od 1 il 0
 
-                // kupimo aktuelno stanje iz zauzecea.json
+        if (isZauzetTermin(zauzece)) {
 
-                if (isZauzetTermin(zauzece)) {
+            let datum = zauzece.datum;
+            trenutniMjesec = trenutniMjesec + 1;
 
-                    let datum = zauzece.datum;
-                    trenutniMjesec = trenutniMjesec + 1;
+            let stringMjeseca = String(trenutniMjesec);
+            if (trenutniMjesec < 10) {
+                stringMjeseca = "0" + stringMjeseca;
+            }
 
-                    if (datum == undefined) {
-                        // periodicno je zauzece - pronalazimo datum
+            // provjeriti indeks ovdje da li ide od 1 il 0
 
-                        let godina = new Date().getFullYear();
-                        datum = zauzece.dan + "/" + trenutniMjesec + "/" + godina;
+            if (datum == undefined) {
+                // periodicno je zauzece - pronalazimo datum
 
-                    }
-
-                    else {
-
-                        // vanredno zauzece , ali trazi se drugi format datuma
-                        let tempNiz = datum.split(".");
-                        datum = tempNiz[0] + "/" + trenutniMjesec + "/" + tempNiz[2];
-
-                    }
-
-                    window.alert("Nije moguće rezervisati salu " + zauzece.naziv + " za navedeni datum " + datum + " i termin od "
-                        + zauzece.pocetak + " do " + zauzece.kraj + "!");
+                let stringDana = danPeriodicnog;
+                if (danPeriodicnog < 10) {
+                    stringDana = "0" + stringDana;
                 }
 
-                else {
+                let godina = new Date().getFullYear();
+                datum = stringDana + "/" + stringMjeseca + "/" + godina;
+            }
 
-                    // mozemo rezervisati
+            else {
+
+                // vanredno zauzece , ali trazi se drugi format datuma
+                let tempNiz = datum.split(".");
+
+                let stringDana = tempNiz[0];
+                if (stringDana.lenght < 2) {
+                    stringDana = "0" + stringDana;
                 }
-
+                datum = stringDana + "/" + stringMjeseca + "/" + tempNiz[2];
 
             }
-        };
 
-        xhttp.open("GET", "/json/zauzeca.json", true);
-        xhttp.send();
+            window.alert("Nije moguće rezervisati salu " + zauzece.naziv + " za navedeni datum " + datum + " i termin od "
+                + zauzece.pocetak + " do " + zauzece.kraj + "!");
+        }
+
+        else {
+            // mozemo rezervisati
+            let ajax = new XMLHttpRequest();
+            odobrenaRezervacija = true;
+
+            ajax.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    JSONzauzeca = JSON.parse(ajax.responseText);
+                    
+                    console.log("povratak", JSONzauzeca);
+
+                    let sala = document.getElementById("sala").value;
+                    let pocetak = document.getElementById("pocetak").value;
+                    let kraj = document.getElementById("kraj").value;
+
+                    Kalendar.ucitajPodatke(JSONzauzeca.periodicna, JSONzauzeca.vanredna);
+                  //  Kalendar.iscrtajKalendar(document.getElementById("kalendar"),trenutniMjesec);
+                    Kalendar.obojiZauzeca(htmlRef,trenutniMjesec,sala,pocetak,kraj);
+                    prilagodiUcitavanje(listaZauzeca, JSONzauzeca.vanredna, JSONzauzeca.periodicna);
+                }
+            };
+
+            ajax.open("POST", "/http://localhost:8080/html/rezervacija.html", true);
+            ajax.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+            ajax.send(JSON.stringify(zauzece));
+
+
+        }
 
     }
 
@@ -103,16 +139,11 @@ let Pozivi = (function () {
 
         let prilagodjenaPeriodicna = [];
 
-        if (zauzece.dan != null) {
+        if (zauzece.dan != null && zauzece.dan != NaN) {
 
             // u pitanju je redovno zauzece
             // prilagođavamo zauzece
-
-            if (!isRegularnoRedovnoZauzece(zauzece)) {
-                // nije regularno zauzece
-                return;
-            }
-
+            ;
             for (var i = zauzece.dan; i <= 31; i += 7) {        // ukoliko je broj dana manji, ignorise se ostatak
 
                 // popunjavamo listu zauzeca za svaku sedmicu u navedenom terminu
@@ -125,7 +156,7 @@ let Pozivi = (function () {
 
         else {
             // vanredno zauzece - samo jedno zauzece za razliku od periodicnog
-            prilagodjenaPeriodicna.push(zauzece);
+            prilagodjenaPeriodicna.push(zauzece)
         }
 
         // provjera - imamo li preklapanja u zauzecima
@@ -133,8 +164,11 @@ let Pozivi = (function () {
         let flag = false;
         let trenutnaGodina = new Date().getFullYear();
 
-
         prilagodjenaPeriodicna.forEach(elementZauzeca => {
+
+            if (!isRegularnoRedovnoZauzece(zauzece)) {
+                flag = true;
+            }
 
             listaZauzeca.forEach(element => {
 
@@ -161,7 +195,6 @@ let Pozivi = (function () {
 
                 if (result) {
                     flag = true;
-                    console.log("preklapanje!");
                     // imamo preklapanje;
                     // return ne radi u situaciji foreach petlje - mozda optimizovati kasnije...
                 }
@@ -179,16 +212,16 @@ let Pozivi = (function () {
             listaZauzeca.push(new vanrednaZauzeca(element.datum, element.pocetak, element.kraj, element.naziv, element.predavac));
         });
 
-        periodicna = periodicna.filter(element => {                   
+        periodicna = periodicna.filter(element => {
             return isRegularnoRedovnoZauzece(element);
         });
 
         periodicna.forEach(element => {
             for (var i = element.dan; i <= 31; i += 7) {        // ukoliko je broj dana manji, ignorise se 
-                
-                 // popunjavamo listu zauzeca za svaku sedmicu u navedenom terminu 
 
-                 // provjeriti radi li za svaki mjesec u navedenom semestru...
+                // popunjavamo listu zauzeca za svaku sedmicu u navedenom terminu 
+
+                // provjeriti radi li za svaki mjesec u navedenom semestru...
 
                 var trenutna = new periodicnaZauzeca(i, element.semestar, element.pocetak, element.kraj, element.naziv, element.predavac);
                 listaZauzeca.push(trenutna);
@@ -200,6 +233,7 @@ let Pozivi = (function () {
 
         var result = element.dan >= 0;                             //da li je regularno periodicno zauzece - validacija
         result = result && (element.semestar == "zimski" || element.semestar == "ljetni");
+
         var vrijeme = element.pocetak;
         result = result && vrijeme.includes(":") && parseInt(vrijeme.substring(0, 2)) != undefined
             && parseInt(vrijeme.substring(3, 5)) != undefined;

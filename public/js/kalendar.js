@@ -89,7 +89,7 @@ let Kalendar = (function () {
             }
         });
 
-        console.log(listaZauzeca);
+        console.log("lista Zauzeca" , listaZauzeca);
     }
 
     function filtriraj() {
@@ -174,6 +174,8 @@ let Kalendar = (function () {
 
         var brojDanaMjeseca = new Date(trenutniDatum.getFullYear(), trenutniMjesec + 1, 0).getDate();
 
+        console.log("filterLsita", filterLista);
+
         filterLista.forEach(element => {
 
             var trenutni;
@@ -182,20 +184,23 @@ let Kalendar = (function () {
             if (element.datum != undefined) {                                 // u pitanju je vanredno zauzece
                 vanredniMjesec = parseInt(element.datum.split(".")[1]);
 
+                console.log("vanredno");
                 if (vanredniMjesec != null && trenutniMjesec == vanredniMjesec) {
                     var dan = parseInt(element.datum.split(".")[0]);
 
                     if (dan > brojDanaMjeseca) return;
                     var selekcija = ".item:nth-child(" + dan + ") :nth-child(2)";
 
+                    console.log(selekcija);
 
                     trenutni = document.querySelector(selekcija);
+                    console.log("trenutni", trenutni);
                     trenutni.setAttribute("class", "zauzeta");
                 }
             }
 
             else {
-
+                console.log("redovno");
                 if (element.dan == undefined) return;                   // dodatni uslov - mogu zalutati vanredne drugih mjeseci...
 
                 var semestar = zimski;
@@ -216,9 +221,7 @@ let Kalendar = (function () {
 
     }
 
-    function init() {
-
-      
+    function init() {     
 
         var element = document.getElementById("kalendar");
         htmlRef = element;

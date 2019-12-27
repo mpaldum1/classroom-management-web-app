@@ -3,7 +3,7 @@ const mjeseci = ["Januar", "Februar", "Mart", "April", "Maj", "Juni", "Juli", "A
 
 Pozivi.ucitaj("/json/zauzeca.json");
 
-window.onclick = e => { 
+window.onclick = e => {
 
     let element = e.target
     if (element.className === "broj") {
@@ -19,8 +19,7 @@ window.onclick = e => {
             let mjesec = document.querySelector(".mjesec").innerHTML;
             let dan = element.innerHTML;
 
-            // podaci pokupljeni sa forme
-            
+            // podaci pokupljeni sa forme        
             // validirati podatke unesene sa forme
 
             if (periodicna) {
@@ -34,16 +33,13 @@ window.onclick = e => {
                     semestar = "zimski";
                 }
                 else if (brojMjeseca > 0 && brojMjeseca < 6) {
-                    brojMjeseca = "ljetni";
+                    semestar = "ljetni";
                 }
                 // sta ako nema semestar?
 
-                let danPeriodicnog = dan % 7;
                 // provjeriti indeks ovdje da li ide od 1 il 0
 
-                let periodicnoZauzece = { "dan": danPeriodicnog, "semestar": semestar, "pocetak": pocetak, "kraj": kraj, "naziv": sala, "predavac": "Mano" };
-                console.log("Periodicno zauzece", periodicnoZauzece);
-
+                let periodicnoZauzece = { "dan": dan, "semestar": semestar, "pocetak": pocetak, "kraj": kraj, "naziv": sala, "predavac": "Mano" };
                 Pozivi.rezervisi(periodicnoZauzece, brojMjeseca);
             }
 
@@ -52,11 +48,21 @@ window.onclick = e => {
                 // vanredno zauzece
                 let godina = new Date().getFullYear();
                 let brojMjeseca = mjeseci.indexOf(mjesec);
-                console.log("mejsec", brojMjeseca);
-                let datum = String(dan) + "." + String(brojMjeseca) + "." + String(godina) + ".";
+
+                let stringDana = String(dan);
+                if (dan < 10) {
+                    stringDana = "0" + stringDana;
+                }
+
+                let stringMjeseca = String(brojMjeseca);
+                if (brojMjeseca < 10) {
+                    stringMjeseca = "0" + stringMjeseca;
+                }
+                let datum = stringDana + "." + stringMjeseca + "." + String(godina) + ".";
 
                 let vanrednoZauzece = { "datum": datum, "pocetak": pocetak, "kraj": kraj, "naziv": sala, "predavac": "Mano" };
-                console.log("Vanredno zauzece", vanrednoZauzece);
+
+
                 Pozivi.rezervisi(vanrednoZauzece, brojMjeseca);
             }
         }
