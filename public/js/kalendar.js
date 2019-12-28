@@ -1,4 +1,6 @@
 var htmlRef;
+var pocetnaPeriodicna;
+var pocetnaVanredna;
 
 let Kalendar = (function () {
 
@@ -12,6 +14,7 @@ let Kalendar = (function () {
     trenutniMjesec = trenutniDatum.getMonth();
     var listaZauzeca = [];
     var filterLista = [];
+
 
     pocetakPretrage = "09:00";
     krajPretrage = "13:00";
@@ -40,15 +43,22 @@ let Kalendar = (function () {
     function ucitajPodatkeImpl(periodicna, vanredna) {
 
         listaZauzeca = [];
-    
+        pocetnaPeriodicna = periodicna;
+        pocetnaVanredna = vanredna;
+
+        var trenutnaGodina = new Date().getFullYear();
+        let prviDan = new Date(trenutnaGodina, trenutniMjesec, 1).getDay();
+        if (prviDan == 0) prviDan = 7;
+        prviDan--;
+
         vanredna = vanredna.filter(element => {
 
             //filtriranje neregularnih parametara - vanredna
 
             var datum = element.datum;
-            var result =  datum.includes(".") && parseInt(datum.substring(0,2)) != NaN
-            &&  parseInt(datum.substring(3,5)) != NaN && parseInt(datum.substring(7,11)) != NaN ;
-                      
+            var result = datum.includes(".") && parseInt(datum.substring(0, 2)) != NaN
+                && parseInt(datum.substring(3, 5)) != NaN && parseInt(datum.substring(7, 11)) != NaN;
+
             var vrijeme = element.pocetak;
             result = result && vrijeme.includes(":") && parseInt(vrijeme.substring(0, 2)) != NaN
                 && parseInt(vrijeme.substring(3, 5)) != NaN;
@@ -60,36 +70,32 @@ let Kalendar = (function () {
             return result;
         });
 
-            vanredna.forEach(element => {
+        vanredna.forEach(element => {
             listaZauzeca.push(new vanrednaZauzeca(element.datum, element.pocetak, element.kraj, element.naziv, element.predavac));
         });
-       
+
 
         periodicna = periodicna.filter(element => {
-
-            var result = element.dan >= 0;                             //filtriranje neregularnih parametara - periodicna
-            result = result && (element.semestar == "zimski" || element.semestar == "ljetni");
-            var vrijeme = element.pocetak;
-            result = result && vrijeme.includes(":") && parseInt(vrijeme.substring(0, 2)) != undefined
-                && parseInt(vrijeme.substring(3, 5)) != undefined;
-
-            vrijeme = element.kraj;
-            result = result && vrijeme.includes(":") && parseInt(vrijeme.substring(0, 2)) != undefined
-                && parseInt(vrijeme.substring(3, 5)) != undefined;
-
-            return result;
+            return (isRegularnoRedovnoZauzece(element));
         });
 
-        
+
         periodicna.forEach(element => {
-            for (var i = element.dan; i <= 31; i += 7) {        // ukoliko je broj dana manji, ignorise se ostatak
+            var i;
+            if (element.dan >= prviDan) {
+                i = element.dan - prviDan + 1;
+            }
+            else {
+                i = element.dan + 8 - prviDan;
+            }
+
+            for (; i <= 31; i += 7) {        // ukoliko je broj dana manji, ignorise se ostatak
 
                 var trenutna = new periodicnaZauzeca(i, element.semestar, element.pocetak, element.kraj, element.naziv, element.predavac);
                 listaZauzeca.push(trenutna);
             }
         });
 
-        console.log("lista Zauzeca" , listaZauzeca);
     }
 
     function filtriraj() {
@@ -128,6 +134,7 @@ let Kalendar = (function () {
         var trenutnaGodina = new Date().getFullYear();
         var brojDanaMjeseca = new Date(trenutnaGodina, mjesec + 1, 0).getDate();
         var prviDan = new Date(trenutnaGodina, mjesec, 1).getDay();
+        if (prviDan == 0) prviDan = 7;
 
         var datum = document.createElement("div");
         datum.setAttribute("class", "datum");
@@ -164,6 +171,7 @@ let Kalendar = (function () {
         krajPretrage = kraj;
         htmlRef = kalendarRef;
 
+
         filterLista = listaZauzeca;                                       // vrsimo pretragu
         filtriraj();
 
@@ -174,8 +182,6 @@ let Kalendar = (function () {
 
         var brojDanaMjeseca = new Date(trenutniDatum.getFullYear(), trenutniMjesec + 1, 0).getDate();
 
-        console.log("filterLsita", filterLista);
-
         filterLista.forEach(element => {
 
             var trenutni;
@@ -184,23 +190,20 @@ let Kalendar = (function () {
             if (element.datum != undefined) {                                 // u pitanju je vanredno zauzece
                 vanredniMjesec = parseInt(element.datum.split(".")[1]);
 
-                console.log("vanredno");
+
                 if (vanredniMjesec != null && trenutniMjesec == vanredniMjesec) {
                     var dan = parseInt(element.datum.split(".")[0]);
 
                     if (dan > brojDanaMjeseca) return;
                     var selekcija = ".item:nth-child(" + dan + ") :nth-child(2)";
-
-                    console.log(selekcija);
-
                     trenutni = document.querySelector(selekcija);
-                    console.log("trenutni", trenutni);
                     trenutni.setAttribute("class", "zauzeta");
                 }
             }
 
             else {
-                console.log("redovno");
+
+
                 if (element.dan == undefined) return;                   // dodatni uslov - mogu zalutati vanredne drugih mjeseci...
 
                 var semestar = zimski;
@@ -210,7 +213,7 @@ let Kalendar = (function () {
                 if (semestar.indexOf(trenutniMjesec) >= 0) {
 
                     if (element.dan > brojDanaMjeseca) return;
-                    var selekcija = ".item:nth-child(" + element.dan + ") :nth-child(2)";
+                    var selekcija = ".item:nth-child(" + String(element.dan) + ") :nth-child(2)";
 
                     trenutni = document.querySelector(selekcija);
                     trenutni.setAttribute("class", "zauzeta");
@@ -221,31 +224,76 @@ let Kalendar = (function () {
 
     }
 
-    function init() {     
+    // funkcija za poredjenje vremena
+    function porediVrijeme(prvo, drugo) {
+
+        var elementiPrvog = prvo.split(":");
+        var elementiDrugog = drugo.split(":");
+
+        var prviDatum = new Date("01/01/2000");                 // proizvoljne vrijednosti
+        var drugiDatum = new Date("01/01/2000");
+
+        prviDatum.setHours(elementiPrvog[0]);
+        prviDatum.setMinutes(elementiPrvog[1]);
+        drugiDatum.setHours(elementiDrugog[0]);
+        drugiDatum.setMinutes(elementiDrugog[1]);
+
+        if (prviDatum < drugiDatum) {
+            return -1;
+        }
+        else if (prviDatum == drugiDatum) {
+            return 0;
+        }
+        else {
+            return 1;
+        }
+    }
+
+    function isRegularnoRedovnoZauzece(element) {
+
+        var result = element.dan >= 0;                             //filtriranje neregularnih parametara - periodicna
+        result = result && (element.semestar == "zimski" || element.semestar == "ljetni");
+        var vrijeme = element.pocetak;
+        result = result && vrijeme.includes(":") && parseInt(vrijeme.substring(0, 2)) != undefined
+            && parseInt(vrijeme.substring(3, 5)) != undefined;
+
+        vrijeme = element.kraj;
+        result = result && vrijeme.includes(":") && parseInt(vrijeme.substring(0, 2)) != undefined
+            && parseInt(vrijeme.substring(3, 5)) != undefined;
+
+        return result;
+    }
+
+    function init() {
 
         var element = document.getElementById("kalendar");
         htmlRef = element;
         iscrtajKalendarImpl(element, new Date().getMonth());
 
-     // hardkodirane pocetne vrijednosti
- /* 
-        ucitajPodatkeImpl([{ dan: 6, semestar: "zimski", pocetak: "17:30", kraj: "22:30", naziv: "0-01", predavac: "Jason" },
-        { dan: 2, semestar: "zimski", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "Keiko" },
-        { dan: 3, semestar: "ljetni", pocetak: "09:30", kraj: "22:30", naziv: "EE1", predavac: "Phil" }],
-            [{ datum: "05.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "Kirk" },
-            { datum: "17.10.2019.", pocetak: "13:50", kraj: "18:30", naziv: "0-01", predavac: "James" },
-            { datum: "05.09.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "Lars" },
-            { datum: "20.10.2019.", pocetak: "11:50", kraj: "21:30", naziv: "0-01", predavac: "Serj" },
-            { datum: "21.10.2019.", pocetak: "11:30", kraj: "20:30", naziv: "EE1", predavac: "Roberto" }]); */
+        // hardkodirane pocetne vrijednosti
+        /* 
+               ucitajPodatkeImpl([{ dan: 6, semestar: "zimski", pocetak: "17:30", kraj: "22:30", naziv: "0-01", predavac: "Jason" },
+               { dan: 2, semestar: "zimski", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "Keiko" },
+               { dan: 3, semestar: "ljetni", pocetak: "09:30", kraj: "22:30", naziv: "EE1", predavac: "Phil" }],
+                [{ datum: "05.10.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "Kirk" },
+                { datum: "17.10.2019.", pocetak: "13:50", kraj: "18:30", naziv: "0-01", predavac: "James" },
+                { datum: "05.09.2019.", pocetak: "12:50", kraj: "17:30", naziv: "0-01", predavac: "Lars" },
+                { datum: "20.10.2019.", pocetak: "11:50", kraj: "21:30", naziv: "0-01", predavac: "Serj" },
+                { datum: "21.10.2019.", pocetak: "11:30", kraj: "20:30", naziv: "EE1", predavac: "Roberto" }]); */
 
-        obojiZauzecaImpl(element, trenutniMjesec, nazivSale, pocetakPretrage, krajPretrage); 
+        obojiZauzecaImpl(element, trenutniMjesec, nazivSale, pocetakPretrage, krajPretrage);
     }
 
     return {
+
         inicijalizuj: init,
         obojiZauzeca: obojiZauzecaImpl,
         ucitajPodatke: ucitajPodatkeImpl,
         iscrtajKalendar: iscrtajKalendarImpl,
+        porediVrijeme: porediVrijeme,
+        periodicnaZauzeca: periodicnaZauzeca,
+        vanrednaZauzeca: vanrednaZauzeca,
+        isRegularnoRedovnoZauzece: isRegularnoRedovnoZauzece
     }
 
 
@@ -257,6 +305,7 @@ function eventPrethodni() {
 
     if (trenutniMjesec > 0) {
         trenutniMjesec--;
+        Kalendar.ucitajPodatke(pocetnaPeriodicna, pocetnaVanredna);
         Kalendar.obojiZauzeca(document.getElementById("kalendar"), trenutniMjesec, nazivSale, pocetakPretrage, krajPretrage);
     }
 
@@ -265,6 +314,7 @@ function eventPrethodni() {
 function eventSljedeci() {
     if (trenutniMjesec < 11) {
         trenutniMjesec++;
+        Kalendar.ucitajPodatke(pocetnaPeriodicna, pocetnaVanredna);
         Kalendar.obojiZauzeca(document.getElementById("kalendar"), trenutniMjesec, nazivSale, pocetakPretrage, krajPretrage);
     }
 
@@ -315,29 +365,6 @@ function prilagodiVrijeme(vrijeme) {
 
 }
 
-// funkcija za poredjenje vremena
-function porediVrijeme(prvo, drugo) {
 
-    var elementiPrvog = prvo.split(":");
-    var elementiDrugog = drugo.split(":");
-
-    var prviDatum = new Date("01/01/2000");                 // proizvoljne vrijednosti
-    var drugiDatum = new Date("01/01/2000");
-
-    prviDatum.setHours(elementiPrvog[0]);
-    prviDatum.setMinutes(elementiPrvog[1]);
-    drugiDatum.setHours(elementiDrugog[0]);
-    drugiDatum.setMinutes(elementiDrugog[1]);
-
-    if (prviDatum < drugiDatum) {
-        return -1;
-    }
-    else if (prviDatum == drugiDatum) {
-        return 0;
-    }
-    else {
-        return 1;
-    }
-}
 
 
