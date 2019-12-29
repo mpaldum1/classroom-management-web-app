@@ -56,8 +56,9 @@ app.post("/http://localhost:8080/html/rezervacija.html", function (req, res) {
                          prviDan--;
 
                          let semestar = getSemestar(mjesec);
+                         console.log(objekti.vanredna[i]);
                          if (objekti.vanredna[i].naziv == novoZauzece.naziv && prviDan == novoZauzece.dan && semestar == novoZauzece.semestar
-                              && porediVrijeme(objekti.periodicna[i].pocetak, novoZauzece.kraj) <= 0 && porediVrijeme(novoZauzece.pocetak, objekti.periodicna[i].kraj) <= 0) {
+                              && porediVrijeme(objekti.vanredna[i].pocetak, novoZauzece.kraj) <= 0 && porediVrijeme(novoZauzece.pocetak, objekti.vanredna[i].kraj) <= 0) {
                               flag = true;
 
                               // preklapanje!
@@ -79,7 +80,7 @@ app.post("/http://localhost:8080/html/rezervacija.html", function (req, res) {
                // vanredno zauzece 
                for (let i = 0; i < objekti.vanredna.length; i++) {
                     if (objekti.vanredna[i].datum == novoZauzece.datum && objekti.vanredna[i].naziv == novoZauzece.naziv
-                         && porediVrijeme(objekti.periodicna[i].pocetak, novoZauzece.kraj) <= 0 && porediVrijeme(novoZauzece.pocetak, objekti.periodicna[i].kraj) <= 0) {
+                         && porediVrijeme(objekti.vanredna[i].pocetak, novoZauzece.kraj) <= 0 && porediVrijeme(novoZauzece.pocetak, objekti.vanredna[i].kraj) <= 0) {
                          flag = true;
                          // preklapanje!
                          res.statusCode = 270;
@@ -95,7 +96,7 @@ app.post("/http://localhost:8080/html/rezervacija.html", function (req, res) {
                     let mjesec = parseInt(nizDatum[1]);
                     let godina = parseInt(nizDatum[2]);
 
-                    let prviDan = new Date(godina, mjesec - 1, dan).getDay();
+                    let prviDan = new Date(godina, mjesec, dan).getDay();
                     if (prviDan == 0) prviDan = 7; // problem nedjelje...
                     prviDan--;
 
@@ -105,6 +106,8 @@ app.post("/http://localhost:8080/html/rezervacija.html", function (req, res) {
                          if (objekti.periodicna[i].dan == prviDan && semestar == objekti.periodicna[i].semestar && objekti.periodicna[i].naziv == novoZauzece.naziv
                               && porediVrijeme(objekti.periodicna[i].pocetak, novoZauzece.kraj) <= 0 && porediVrijeme(novoZauzece.pocetak, objekti.periodicna[i].kraj) <= 0) {
                               // preklapanje!
+
+                              console.log("preklop");
                               flag = true;
                               res.statusCode = 270;
                               break;

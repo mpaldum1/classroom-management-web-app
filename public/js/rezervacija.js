@@ -43,11 +43,12 @@ window.onclick = e => {
                     // semestar novog zauzeca
 
                     let brojMjeseca = mjeseci.indexOf(mjesec);
+                    console.log(brojMjeseca);
                     var semestar;
                     if (brojMjeseca < 1 || brojMjeseca > 8) {
                         semestar = "zimski";
                     }
-                    else if (brojMjeseca > 0 && brojMjeseca < 6) {
+                    else if (brojMjeseca > 0 && brojMjeseca < 5) {
                         semestar = "ljetni";
                     }
                     // sta ako nema semestar?
