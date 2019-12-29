@@ -30,6 +30,7 @@ window.onclick = e => {
 
                 window.alert("Nije moguće rezervisati salu " + sala + " za navedeni datum " + datum + " i termin od "
                     + pocetak + " do " + kraj + "!");
+               //     Pozivi.ucitaj("/json/zauzeca.json");          provjeriti ovo
             }
 
             else {

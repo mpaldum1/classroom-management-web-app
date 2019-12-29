@@ -53,62 +53,93 @@ let Pozivi = (function () {
 
             }
 
-                let sala = document.getElementById("sala").value;
-                let pocetak = document.getElementById("pocetak").value;
-                let kraj = document.getElementById("kraj").value;
-                let prviDan = new Date(trenutnaGodina, trenutniMjesec - 1, zauzece.dan).getDay();
+            let sala = document.getElementById("sala").value;
+            let pocetak = document.getElementById("pocetak").value;
+            let kraj = document.getElementById("kraj").value;
+            let prviDan = new Date(trenutnaGodina, trenutniMjesec - 1, zauzece.dan).getDay();
 
-                let ajax = new XMLHttpRequest();
-                odobrenaRezervacija = true;
+            let ajax = new XMLHttpRequest();
+            odobrenaRezervacija = true;
 
-                ajax.onreadystatechange = function () {
-                    if (this.readyState == 4 && (this.status == 200 || this.status == 250 || this.status == 270)) {
-                        JSONzauzeca = JSON.parse(ajax.responseText);
+            ajax.onreadystatechange = function () {
+                if (this.readyState == 4 && (this.status == 200 || this.status == 250 || this.status == 270)) {
+                    JSONzauzeca = JSON.parse(ajax.responseText);
 
-                        console.log("status", this.status);
+                    console.log("status", this.status);
 
 
-                        Kalendar.ucitajPodatke(JSONzauzeca.periodicna, JSONzauzeca.vanredna);
-                        Kalendar.iscrtajKalendar(document.getElementById("kalendar"), trenutniMjesec);
-                        Kalendar.obojiZauzeca(htmlRef, trenutniMjesec, sala, pocetak, kraj);
+                    Kalendar.ucitajPodatke(JSONzauzeca.periodicna, JSONzauzeca.vanredna);
+                    Kalendar.iscrtajKalendar(document.getElementById("kalendar"), trenutniMjesec);
+                    Kalendar.obojiZauzeca(htmlRef, trenutniMjesec, sala, pocetak, kraj);
 
-                        listaZauzeca = [];
-                        prilagodiUcitavanje(listaZauzeca, JSONzauzeca.vanredna, JSONzauzeca.periodicna);
+                    listaZauzeca = [];
+                    prilagodiUcitavanje(listaZauzeca, JSONzauzeca.vanredna, JSONzauzeca.periodicna);
 
-                        switch (this.status) {
-                            case 270:
-                                alert("Nije moguće rezervisati salu " + sala + " za navedeni datum " + datum +
-                                    " i termin od " + pocetak + " do " + kraj + "!");
-                                break;
+                    switch (this.status) {
+                        case 270:
+                            alert("Nije moguće rezervisati salu " + sala + " za navedeni datum " + datum +
+                                " i termin od " + pocetak + " do " + kraj + "!");
 
-                            case 250:
+                            //  ucitajImpl("/json/zauzeca.json");
+                            break;
+
+                        case 250:
 
                             console.log(trenutniMjesec);
-                                alert("Nije moguće rezervisati salu " + sala + " periodicno u " + sedmica[prviDan] + ", " +
-                                    getSemestar(trenutniMjesec) + " semestar, u vrijeme od " + pocetak + " do " + kraj + "!");
-                                break;
-                        }
-                    };
+                            alert("Nije moguće rezervisati salu " + sala + " periodicno u " + sedmica[prviDan] + ", " +
+                                getSemestar(trenutniMjesec) + " semestar, u vrijeme od " + pocetak + " do " + kraj + "!");
+                            //     ucitajImpl("/json/zauzeca.json");
+                            break;
+                    }
+                };
 
-                }
-                ajax.open("POST", "/http://localhost:8080/html/rezervacija.html", true);
-                ajax.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+            }
+            ajax.open("POST", "/http://localhost:8080/html/rezervacija.html", true);
+            ajax.setRequestHeader("Content-Type", "application/json; charset=utf-8");
 
-                let trenutniSemestar = zauzece.semestar;
-                if(zauzece.semestar !== "ljetni" && zauzece.semestar!== "zimski") {
-                    trenutniSemestar = "";
-                }
-                console.log(trenutniSemestar);
+            let trenutniSemestar = zauzece.semestar;
+            if (zauzece.semestar !== "ljetni" && zauzece.semestar !== "zimski") {
+                trenutniSemestar = "";
+            }
+            console.log(trenutniSemestar);
 
-                if (zauzece.dan != undefined && trenutniSemestar === "") {
-                    alert("Nije moguće rezervisati salu " + sala + " periodicno za vrijeme raspusta sa pocetkom od " + pocetak + " do " + kraj + "!");
-                    return;
-                }
+            if (zauzece.dan != undefined && trenutniSemestar === "") {
+                alert("Nije moguće rezervisati salu " + sala + " periodicno za vrijeme raspusta sa pocetkom od " + pocetak + " do " + kraj + "!");
+                //   ucitajImpl("/json/zauzeca.json");
+                return;
+            }
 
-                ajax.send(JSON.stringify(zauzece));
+            ajax.send(JSON.stringify(zauzece));
         }
 
-    
+        function dobaviSlikeImpl(dugme, index) {
+            // dugme je bool pritiska na dugme : false -> prethodni, true -> sljedeci
+
+            for(let i = index; i < index + 3; i++) {
+                dobaviSliku(i);
+            }
+
+
+        }
+
+        function dobaviSliku (index) {
+           
+
+             let xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    // skontaj sta
+
+                }
+            };
+            
+                xhttp.open("GET", "/Galerija/slika" + String(index) + ".jpg", true);
+                xhttp.send();            
+
+        }
+
+
         function prilagodiUcitavanje(listaZauzeca, vanredna, periodicna) {
 
             vanredna.forEach(element => {
@@ -131,7 +162,7 @@ let Pozivi = (function () {
                 }
             });
         }
-        
+
         // funckija pronalaska semestra
         function getSemestar(mjesec) {
 
@@ -150,7 +181,8 @@ let Pozivi = (function () {
         return {
 
             ucitaj: ucitajImpl,
-            rezervisi: rezervisiImpl
+            rezervisi: rezervisiImpl,
+            dobaviSlike: dobaviSlikeImpl
         }
 
     }

@@ -137,6 +137,26 @@ app.get('/zauzeca.json', function (req, res) {
      res.sendFile(__dirname + "/zauzeca.json");
 });
 
+app.get ("/http://localhost:8080/html/pocetna.html", function (req, res) {
+
+     console.log ("daj te slike vamo!");
+
+     fs.readdir(__dirname + "/public/Galerija", function (err, files) {
+
+               console.log(__dirname);
+
+               let index = parseInt(req);
+               console.log(files);
+
+               let brojSlika = files.length;
+               console.log(req, index, brojSlika);
+
+     });
+
+     res.sendFile(__dirname + "/Galerija/slika1");
+     
+});
+
 app.listen(8080);
 
 const zimski = [9, 10, 11, 0];

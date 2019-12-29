@@ -6,6 +6,13 @@
     text-decoration: none;
 }
 
+
+.sadrzaj{
+  overflow: hidden;
+}
+
+
+
 .galerija {
     display: grid;
     padding: 0;
@@ -24,6 +31,39 @@
     min-width: 200px;
     max-width: 760px;
 }
+
+.prethodni{
+
+
+    box-sizing: border-box;
+    float: left;
+    }
+    
+    .sljedeci{
+        
+        box-sizing: border-box;
+        float: right;
+    
+         
+    }
+    
+    .prethodni button, .sljedeci button{
+        
+        font-size: 16px;
+        border: solid cadetblue;
+        padding: 5px;
+        padding-left: 15px;
+        padding-right: 15px;
+        background-color: cadetblue;
+       
+    }
+    
+    .prethodni button:hover, .sljedeci button:hover
+    {
+        background-color: royalblue;
+        color: white;
+    
+    }
 
 @media (max-width: 600px) {
 .galerija{

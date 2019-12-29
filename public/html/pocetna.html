@@ -4,7 +4,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link rel="stylesheet" href="/css/sale.css">
         <link rel="stylesheet" href="/css/pocetna.css">
         <title>Početna
@@ -36,19 +36,21 @@
                     <img src="/Galerija/slika2.jpg" alt="slika2">
                     <img src="/Galerija/slika3.jpg" alt="slika3">
 
-
-                    <img src="/Galerija/slika4.jpg" alt="slika4">
-                    <img src="/Galerija/slika5.jpg" alt="slika5">
-                    <img src="/Galerija/slika6.jpg" alt="slika6">
-
-                    <img src="/Galerija/slika7.jpg" alt="slika7">
-                    <img src="/Galerija/slika8.jpg" alt="slika8">
-                    <img src="/Galerija/slika9.jpg" alt="slika9">
-
-                    <img src="/Galerija/slika10.jpg" alt="slika10" id="kraj" >
-
                 </div>
+
+            </div>          
+            <div class="prethodni">
+                <button type="button" id = "prethodni"  onclick=" eventPrethodni()">Prethodni</button>
+            </div>
+            <div class="sljedeci">
+                <button type="button" id = "sljedeci" onclick=" eventSljedeci()"    >Sljedeći</button>
             </div>
 
+            </div>
         </div>
+
+        <script src="/js/Pozivi.js"></script>
+        <script src="/js/pocetna.js"></script>
+
     </body>
+</html>
