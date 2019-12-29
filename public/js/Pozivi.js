@@ -112,30 +112,92 @@ let Pozivi = (function () {
             ajax.send(JSON.stringify(zauzece));
         }
 
-        function dobaviSlikeImpl(dugme, index) {
-            // dugme je bool pritiska na dugme : false -> prethodni, true -> sljedeci
 
-            for(let i = index; i < index + 3; i++) {
-                dobaviSliku(i);
-            }
+        var index = 1;
+        var maxIndex = 10
+
+        function dobaviSliku(nizElemenataSlika) {
+
+            var url = '/http://localhost:8080/html/pocetna.html';
+
+            $.ajax({
+                url: url,
+                type: "POST",
+                data: { lista: nizElemenataSlika },
+                dataType: "json",
+
+                success: function (response_data_json) {
+
+                    // pokupili smo potrebne slike
+                    view_data = response_data_json;
+
+                    nizElemenataSlika.push(view_data[0], view_data[1], view_data[2]);
+                    console.log(view_data);
+                    if (view_data.lenght > 3)
+                        maxIndex = view_data[3];
+
+                    index += 3;
+                    console.log("index", index);
+
+                    document.getElementById("prethodni").disabled = false;
 
 
+                    let djecaGalerije = document.querySelector(".galerija").children
+
+                    if (index > maxIndex)
+                        index = maxIndex;
+
+                    
+                    for (let i = 0; i < 3; i++) {   
+                    
+                        djecaGalerije[i].src = "/Galerija/" + nizElemenataSlika[index + i - 1];
+                        console.log("/Galerija/" + nizElemenataSlika[index + i - 1]);
+
+                        djecaGalerije[i].alt = "slika" + String(index + i);
+                        if (i + index == maxIndex) {
+                            document.getElementById("sljedeci").disabled = true;
+                        }
+                    }
+                    console.log("slike", nizElemenataSlika);
+
+                    console.log("maxIndex", maxIndex);
+
+                    if (view_data.includes("kraj") && index > maxIndex) {
+                        document.getElementById("sljedeci").disabled = true;
+                        //  trenutniIndexZandnjePrikazaneSlike += view_data.length - 1;
+                    }
+                    console.log(view_data);
+                    //   prikaziSlike(view_data); //Proslijedimo podatke funkciji
+                },
+                
+                failure: function(response_data_json) {
+                    index += 3;
+                }
+            });
         }
 
-        function dobaviSliku (index) {
-           
+        function pritisnutPrethodni() {
+            // ne dobavljamo slike - imamo ih vec na raspolaganju
 
-             let xhttp = new XMLHttpRequest();
+            document.getElementById("sljedeci").disabled = false;
 
-            xhttp.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 200) {
-                    // skontaj sta
+            let djecaGalerije = galerija.children;
 
-                }
-            };
-            
-                xhttp.open("GET", "/Galerija/slika" + String(index) + ".jpg", true);
-                xhttp.send();            
+            if (index < 4) {
+                index = 4;
+            }
+
+            for (let i = 0; i < 3; i++) {
+
+                djecaGalerije[i].src = "/Galerija/slika" + String(index - 3 + i) + ".jpg";
+                djecaGalerije[i].alt = "slika" + String(index - 3 + i);
+
+                if (index - 3 + i == 1)
+                    document.getElementById("prethodni").disabled = true;
+            }
+
+            index -= 3;
+            console.log("index", index);
 
         }
 
@@ -182,7 +244,8 @@ let Pozivi = (function () {
 
             ucitaj: ucitajImpl,
             rezervisi: rezervisiImpl,
-            dobaviSlike: dobaviSlikeImpl
+            dobaviSliku: dobaviSliku,
+            pritisnutPrethodni: pritisnutPrethodni
         }
 
     }

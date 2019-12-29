@@ -137,23 +137,35 @@ app.get('/zauzeca.json', function (req, res) {
      res.sendFile(__dirname + "/zauzeca.json");
 });
 
-app.get ("/http://localhost:8080/html/pocetna.html", function (req, res) {
-
-     console.log ("daj te slike vamo!");
+app.post ("/http://localhost:8080/html/pocetna.html", function (req, res) {
 
      fs.readdir(__dirname + "/public/Galerija", function (err, files) {
 
-               console.log(__dirname);
-
-               let index = parseInt(req);
-               console.log(files);
-
+               let tijeloZahtjeva = req.body;
                let brojSlika = files.length;
-               console.log(req, index, brojSlika);
+               let response = [];
 
+               // sta je sa pocetnim slucajem? (svakako se dobavlja na pocetku...)
+
+                for (var i = 0; i < brojSlika; i++) {
+                    if (!tijeloZahtjeva.lista.includes(files[i])) {
+                        response.push(files[i]);
+                        if (response.length == 3) 
+                         // najvise tri slike dobavljamo 
+                            break;
+                    } 
+                }
+
+                if (brojSlika - tijeloZahtjeva.lista.length <= 3) {
+                    response.push("kraj");
+                }
+
+                response.push(String(brojSlika));
+                res.json(response);
+              
      });
 
-     res.sendFile(__dirname + "/Galerija/slika1");
+     res.sendFile(__dirname + "/public/Galerija");
      
 });
 

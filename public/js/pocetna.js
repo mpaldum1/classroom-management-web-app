@@ -1,53 +1,32 @@
-nizElemenataSlika = [];
+
 var index = 1;
+
 var galerija = document.querySelector(".galerija");
+var nizElemenataSlika = [];
+var maxIndex = 10
+
+// niz koristimo prilikom cache-iranja
 
 if (index == 1) {
     document.getElementById("prethodni").disabled = true;
 }
 
+for (let i = 0; i < 3; i++) {
+
+    nizElemenataSlika.push(galerija.children[i].alt + ".jpg");
+}
+
+console.log(nizElemenataSlika);
+// pocetno ucitavnanje  
+
 function eventPrethodni() {
- 
-    
-    document.getElementById("sljedeci").disabled = false;
-    
-    Pozivi.dobaviSlike(false, index);
-
-    let djecaGalerije = galerija.children;
-
-    if (index < 4) {
-        index = 4;
-    }
-
-    for (let i = 0; i < 3; i++) {
-        djecaGalerije[i].src = "/Galerija/slika" + String(index - 3 + i) + ".jpg";
-        djecaGalerije[i].alt = "slika" + String(index - 3 + i);
-
-        if(index - 3 + i == 1)
-        document.getElementById("prethodni").disabled = true;
-    }
-
-    index -= 3;   
+    Pozivi.pritisnutPrethodni();
 
 }
 
 function eventSljedeci() {
 
-    index += 3;
-    document.getElementById("prethodni").disabled = false;
+    Pozivi.dobaviSliku(nizElemenataSlika);
+   console.log(index);
 
-    Pozivi.dobaviSlike(true, index);
-    let djecaGalerije = galerija.children
-
-    if (index > 8) 
-        index = 8;
-
-    for (let i = 0; i < 3; i++) {
-        djecaGalerije[i].src = "/Galerija/slika" + String(index + i) + ".jpg";
-        djecaGalerije[i].alt = "slika" + String(index + i);
-        if(i + index == 10) {
-            document.getElementById("sljedeci").disabled = true;
-        }
-    }
-   
 }
