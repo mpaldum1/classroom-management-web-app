@@ -26,7 +26,7 @@ let Pozivi = (function () {
             xhttp.send();
         }
 
-
+        
         function rezervisiImpl(zauzece, trenutniMjesec) {
 
             // kako bi znali pritisnut datum na kalendaru za periodicno zauzece
@@ -112,6 +112,28 @@ let Pozivi = (function () {
             ajax.send(JSON.stringify(zauzece));
         }
 
+        function prilagodiUcitavanje(listaZauzeca, vanredna, periodicna) {
+
+            vanredna.forEach(element => {
+                listaZauzeca.push(new Kalendar.vanrednaZauzeca(element.datum, element.pocetak, element.kraj, element.naziv, element.predavac));
+            });
+
+            periodicna = periodicna.filter(element => {
+                return Kalendar.isRegularnoRedovnoZauzece(element);
+            });
+
+            periodicna.forEach(element => {
+                for (var i = element.dan; i <= 31; i += 7) {
+
+                    // ukoliko je broj dana manji, ignorise se 
+                    // popunjavamo listu zauzeca za svaku sedmicu u navedenom terminu 
+                    // provjeriti radi li za svaki mjesec u navedenom semestru...
+
+                    var trenutna = new Kalendar.periodicnaZauzeca(i, element.semestar, element.pocetak, element.kraj, element.naziv, element.predavac);
+                    listaZauzeca.push(trenutna);
+                }
+            });
+        }
 
         var index = 1;
         var maxIndex = 10
@@ -202,28 +224,7 @@ let Pozivi = (function () {
         }
 
 
-        function prilagodiUcitavanje(listaZauzeca, vanredna, periodicna) {
-
-            vanredna.forEach(element => {
-                listaZauzeca.push(new Kalendar.vanrednaZauzeca(element.datum, element.pocetak, element.kraj, element.naziv, element.predavac));
-            });
-
-            periodicna = periodicna.filter(element => {
-                return Kalendar.isRegularnoRedovnoZauzece(element);
-            });
-
-            periodicna.forEach(element => {
-                for (var i = element.dan; i <= 31; i += 7) {
-
-                    // ukoliko je broj dana manji, ignorise se 
-                    // popunjavamo listu zauzeca za svaku sedmicu u navedenom terminu 
-                    // provjeriti radi li za svaki mjesec u navedenom semestru...
-
-                    var trenutna = new Kalendar.periodicnaZauzeca(i, element.semestar, element.pocetak, element.kraj, element.naziv, element.predavac);
-                    listaZauzeca.push(trenutna);
-                }
-            });
-        }
+        
 
         // funckija pronalaska semestra
         function getSemestar(mjesec) {
@@ -245,7 +246,8 @@ let Pozivi = (function () {
             ucitaj: ucitajImpl,
             rezervisi: rezervisiImpl,
             dobaviSliku: dobaviSliku,
-            pritisnutPrethodni: pritisnutPrethodni
+            pritisnutPrethodni: pritisnutPrethodni,
+            prilagodi: prilagodiUcitavanje,
         }
 
     }

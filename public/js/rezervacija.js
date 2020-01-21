@@ -32,11 +32,10 @@ function ucitajZauzecaIzBaze() {
     ajax.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
 
-            JSONzauzeca = JSON.parse(ajax.responseText);
-            console.log("ucitavane", JSONzauzeca);
-            Kalendar.ucitajPodatke(JSONzauzeca.periodicna, JSONzauzeca.vanredna);
-         
 
+            JSONzauzeca = JSON.parse(ajax.responseText);
+            Kalendar.ucitajPodatke(JSONzauzeca.periodicna, JSONzauzeca.vanredna);
+              
         }
     };
 
@@ -58,10 +57,10 @@ function upisiUBazu(zauzece, trenutniMjesec) {
         stringMjeseca = "0" + stringMjeseca;
     }
 
-    if (datum != undefined) {
+    if (datum != undefined && datum != null) {
 
         let pripremaDatum = datum.split(".");
-        zauzece.datum  = pripremaDatum[0] + ".0" + (parseInt(pripremaDatum[1])) + "." + pripremaDatum[2];
+        zauzece.datum = pripremaDatum[0] + ".0" + (parseInt(pripremaDatum[1])) + "." + pripremaDatum[2];
         // vanredno zauzece , ali trazi se drugi format datuma
 
         let tempNiz = datum.split(".");
@@ -84,27 +83,34 @@ function upisiUBazu(zauzece, trenutniMjesec) {
     ajax.onreadystatechange = function () {
         if (this.readyState == 4 && (this.status == 200 || this.status == 250 || this.status == 270)) {
 
+            console.log("status", this.status);
+            
+
             JSONzauzeca = JSON.parse(ajax.responseText);
-            console.log(JSONzauzeca);
+
+            console.log(JSONzauzeca)
+
+            Kalendar.ucitajPodatke(JSONzauzeca.periodicna, JSONzauzeca.vanredna);
             Kalendar.iscrtajKalendar(document.getElementById("kalendar"), trenutniMjesec);
             Kalendar.obojiZauzeca(htmlRef, trenutniMjesec, sala, pocetak, kraj);
-           
+      
 
             switch (this.status) {
                 case 270:
-                    alert("Nije moguće rezervisati salu " + sala + " za navedeni datum " + datum +
-                        " i termin od " + pocetak + " do " + kraj + "!");
-
+                    alert("Salu za navedeni termin je već rezervisao " + this.responseText);
                     //  ucitajImpl("/json/zauzeca.json");
                     break;
 
                 case 250:
 
-                    console.log(trenutniMjesec);
-                    alert("Nije moguće rezervisati salu " + sala + " periodicno u " + sedmica[prviDan] + ", " +
-                        getSemestar(trenutniMjesec) + " semestar, u vrijeme od " + pocetak + " do " + kraj + "!");
+                
+                    alert("Salu za navedeni termin je već rezervisao " + this.responseText);
                     //     ucitajImpl("/json/zauzeca.json");
                     break;
+
+                
+                    
+                   
             }
         };
 
@@ -117,8 +123,6 @@ function upisiUBazu(zauzece, trenutniMjesec) {
     if (zauzece.semestar !== "ljetni" && zauzece.semestar !== "zimski") {
         trenutniSemestar = "";
     }
-
-    console.log(trenutniSemestar);
 
     if (zauzece.dan != undefined && trenutniSemestar === "") {
         alert("Nije moguće rezervisati salu " + sala + " periodicno za vrijeme raspusta sa pocetkom od " + pocetak + " do " + kraj + "!");
@@ -183,7 +187,7 @@ window.onclick = e => {
                     else if (brojMjeseca > 0 && brojMjeseca < 5) {
                         semestar = "ljetni";
                     }
-                    
+
                     // sta ako nema semestar?
 
                     // provjeriti indeks ovdje da li ide od 1 il 
@@ -195,9 +199,9 @@ window.onclick = e => {
                     dan = (dan + prviDan - 1) % 7;
 
                     let periodicnoZauzece = { "dan": dan, "semestar": semestar, "pocetak": pocetak, "kraj": kraj, "naziv": sala, "predavac": predavac };
-            //        Pozivi.rezervisi(periodicnoZauzece, brojMjeseca);
-                    upisiUBazu(periodicnoZauzece,brojMjeseca);
-                    console.log(periodicnoZauzece);
+                    //        Pozivi.rezervisi(periodicnoZauzece, brojMjeseca);
+                    upisiUBazu(periodicnoZauzece, brojMjeseca);
+                  
                 }
 
                 else {
@@ -214,13 +218,13 @@ window.onclick = e => {
                         stringMjeseca = "0" + stringMjeseca;
                     }
                     let datum = stringDana + "." + stringMjeseca + "." + String(godina) + ".";
-                    let vanrednoZauzece = { "datum": datum, "pocetak": pocetak, "kraj": kraj, "naziv": sala, "predavac": predavac};
+                    let vanrednoZauzece = { "datum": datum, "pocetak": pocetak, "kraj": kraj, "naziv": sala, "predavac": predavac };
 
-                    console.log("vanredno", vanrednoZauzece);
-                    upisiUBazu(vanrednoZauzece,brojMjeseca);
+                 
+                    upisiUBazu(vanrednoZauzece, brojMjeseca);
 
-                    console.log(vanrednoZauzece);
-                //    Pozivi.rezervisi(vanrednoZauzece, brojMjeseca);
+                 
+                    //    Pozivi.rezervisi(vanrednoZauzece, brojMjeseca);
                 }
             }
         }

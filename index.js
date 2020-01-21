@@ -40,7 +40,6 @@ app.get('/html/ucitajIzBaze', function (req, res) {
      }).then(function (zauzeca) {
 
           zauzeca = nastimajZauzeca(zauzeca);
-          console.log("zauzeca", zauzeca);
           res.send(JSON.stringify(zauzeca));
      });
 
@@ -62,6 +61,9 @@ app.post('/html/upisiUBazu', function (req, res) {
           var objekti = nastimajZauzeca(zauzeca);
           let flag = false; // bool vrijednost - da li je doslo do preklapanja ili ne?
 
+          console.log(objekti);
+          console.log(novoZauzece);
+
           if (novoZauzece.dan != null) {
                // periodicno zauzece
 
@@ -71,9 +73,10 @@ app.post('/html/upisiUBazu', function (req, res) {
                          && objekti.periodicna[i].pocetak < novoZauzece.kraj && novoZauzece.pocetak < objekti.periodicna[i].kraj) {
                          flag = true;
                          // preklapanje!
-                         console.log("poklapanje u prvom");
+
                          res.statusCode = 250;
                          break;
+
                     }
                }
 
@@ -91,13 +94,14 @@ app.post('/html/upisiUBazu', function (req, res) {
                          prviDan--;
 
                          let semestar = getSemestar(mjesec);
-                         console.log(objekti.vanredna[i]);
+
                          if (objekti.vanredna[i].naziv == novoZauzece.naziv && prviDan == novoZauzece.dan && semestar == novoZauzece.semestar &&
                               objekti.vanredna[i].pocetak < novoZauzece.kraj && novoZauzece.pocetak < objekti.vanredna[i].kraj) {
                               flag = true;
 
                               // preklapanje!
                               console.log("poklapanje u drugom");
+
                               res.statusCode = 250;
                               break;
                          }
@@ -115,7 +119,7 @@ app.post('/html/upisiUBazu', function (req, res) {
                // vanredno zauzece 
                for (let i = 0; i < objekti.vanredna.length; i++) {
                     if (objekti.vanredna[i].datum == novoZauzece.datum && objekti.vanredna[i].naziv == novoZauzece.naziv
-                         && porediVrijeme(objekti.vanredna[i].pocetak, novoZauzece.kraj) <= 0 && porediVrijeme(novoZauzece.pocetak, objekti.vanredna[i].kraj) <= 0) {
+                         && objekti.vanredna[i].pocetak < novoZauzece.kraj && novoZauzece.pocetak < objekti.vanredna[i].kraj) {
                          flag = true;
                          // preklapanje!
                          res.statusCode = 270;
@@ -140,7 +144,7 @@ app.post('/html/upisiUBazu', function (req, res) {
 
                     for (let i = 0; i < objekti.periodicna.length; i++) {
                          if (objekti.periodicna[i].dan == prviDan && semestar == objekti.periodicna[i].semestar && objekti.periodicna[i].naziv == novoZauzece.naziv
-                              && porediVrijeme(objekti.periodicna[i].pocetak, novoZauzece.kraj) <= 0 && porediVrijeme(novoZauzece.pocetak, objekti.periodicna[i].kraj) <= 0) {
+                              && objekti.periodicna[i].pocetak < novoZauzece.kraj && novoZauzece.pocetak < objekti.periodicna[i].kraj) {
                               // preklapanje!
 
                               console.log("preklop");
@@ -266,7 +270,7 @@ app.post("/http://localhost:8080/html/rezervacija.html", function (req, res) {
                          prviDan--;
 
                          let semestar = getSemestar(mjesec);
-                       
+
                          if (objekti.vanredna[i].naziv == novoZauzece.naziv && prviDan == novoZauzece.dan && semestar == novoZauzece.semestar
                               && porediVrijeme(objekti.vanredna[i].pocetak, novoZauzece.kraj) <= 0 && porediVrijeme(novoZauzece.pocetak, objekti.vanredna[i].kraj) <= 0) {
                               flag = true;
@@ -433,7 +437,7 @@ function nastimajZauzeca(zauzeca) {
 
      for (let i = 0; i < zauzeca.length; i++) {
 
-          
+
           let trenutni = zauzeca[i];
           let pocetak = trenutni.terminRezervacija.pocetak;
           let kraj = trenutni.terminRezervacija.kraj;
@@ -443,7 +447,7 @@ function nastimajZauzeca(zauzeca) {
 
           let datum = trenutni.terminRezervacija.datum;
 
-        
+
           if (datum == null) {
                // u pitanju je periodicno zauzece
 
@@ -455,16 +459,37 @@ function nastimajZauzeca(zauzeca) {
           }
           else {
                //  vanredno zauzece
-                           
+
 
                let trenutno = { datum: datum, pocetak: pocetak, kraj: kraj, naziv: sala, predavac: predavac };
-               console.log(trenutno);
                vanredna.push(trenutno);
           }
 
      }
 
      listaZauzeca = { periodicna: periodicna, vanredna: vanredna };
-  
+
      return listaZauzeca;
 }
+
+app.get('/html/ucitajOsobe', function (req, res) {
+
+     db.rezervacija.findAll({
+
+          include: [{ model: db.termin, as: "terminRezervacija" },
+          { model: db.sala, as: "salaRezervacija" },
+          { model: db.osoblje, as: "osobljeRezervacija", required: false }
+          ]
+
+     }).then(function (zauzeca) {
+
+          db.osoblje.findAll({
+
+          }).then(function (osoblje) {
+               zauzeca = nastimajZauzeca(zauzeca);
+               let result = {zauzeca: zauzeca, osoblje: osoblje}
+               res.send(JSON.stringify(result));
+          });
+     });
+
+});
