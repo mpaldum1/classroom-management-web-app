@@ -31,15 +31,19 @@
             <form class="forma">
                 <label for="sala">Sala</label>
                 <select name="sala" id="sala" onchange="eventSala(this.value)">
-                    <option value="0-01">0-01</option>
-                    <option value="EE1">EE1</option>
+                    <option value="1-11">1-11</option>
+                    <option value="1-15">1-15</option>
+                    
                 </select>
                 <label for="periodicna">Periodična</label>
                 <input type="checkbox" name="periodicna" id="periodicna" onchange="eventPeriodicna(this.checked)"> <br>
                 <label for="pocetak">Početak</label>
                 <input type="time" name="pocetak" id="pocetak" value="09:00" onchange="eventPocetak(this.value)"> <br>
                 <label for="kraj">Kraj</label>
-                <input type="time" name="kraj" id="kraj" value="13:00" onchange="eventKraj(this.value)">
+                <input type="time" name="kraj" id="kraj" value="13:00" onchange="eventKraj(this.value)"> <br>
+                <label for="osoblje">Osoblje</label>
+                <select name="osoblje" id="osoblje" >
+                </select>
 
             </form>
             <div class="kalendar" id = "kalendar">

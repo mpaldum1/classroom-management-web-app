@@ -18,7 +18,7 @@ let Kalendar = (function () {
 
     pocetakPretrage = "09:00";
     krajPretrage = "13:00";
-    nazivSale = "0-01";
+    nazivSale = "1-11";
 
     function periodicnaZauzeca(dan, semestar, pocetak, kraj, naziv, predavac) {
         this.dan = dan;
@@ -100,10 +100,12 @@ let Kalendar = (function () {
 
     function filtriraj() {
 
-        filterLista = listaZauzeca.filter(function (element) {
 
-            var result = pocetakPretrage < krajPretrage
-                && porediVrijeme(element.pocetak, krajPretrage) <= 0 && porediVrijeme(pocetakPretrage, element.kraj) <= 0
+
+        filterLista = listaZauzeca.filter(function (element) {
+            console.log("sala", element.naziv, nazivSale);
+            var result = pocetakPretrage < krajPretrage &&
+            element.pocetak < krajPretrage && pocetakPretrage < element.kraj
                 && element.naziv == nazivSale;
 
             return result;
@@ -165,6 +167,7 @@ let Kalendar = (function () {
 
     function obojiZauzecaImpl(kalendarRef, mjesec, sala, pocetak, kraj) {
 
+
         trenutniMjesec = mjesec
         nazivSale = sala;
         pocetakPretrage = pocetak;
@@ -174,6 +177,7 @@ let Kalendar = (function () {
 
         filterLista = listaZauzeca;                                       // vrsimo pretragu
         filtriraj();
+
 
         if (kalendarRef.firstChild) {                                     // ako je kalendar vec iscrtan
             ocisti(kalendarRef);
@@ -188,7 +192,7 @@ let Kalendar = (function () {
             var vanredniMjesec;
 
             if (element.datum != undefined) {                                 // u pitanju je vanredno zauzece
-                vanredniMjesec = parseInt(element.datum.split(".")[1]);
+                vanredniMjesec = parseInt(element.datum.split(".")[1] - 1);
 
 
                 if (vanredniMjesec != null && trenutniMjesec == vanredniMjesec) {

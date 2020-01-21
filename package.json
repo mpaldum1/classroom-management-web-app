@@ -15,7 +15,9 @@
   "homepage": "https://bitbucket.org/mpaldum1/wt1918154#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mysql2": "^2.1.0",
     "node": "^13.5.0",
-    "package.json": "^2.0.1"
+    "package.json": "^2.0.1",
+    "sequelize": "^5.21.3"
   }
 }
