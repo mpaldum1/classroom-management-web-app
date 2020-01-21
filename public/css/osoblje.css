@@ -1,9 +1,7 @@
-#lista :nth-child(2) a {
+#lista :nth-child(-n+4) a {
     text-decoration: underline;
 }
-#lista :nth-child(3) a {
-    text-decoration: underline;
-}
+
 
 #lista :nth-child(5) a {
     text-decoration: none;
@@ -73,7 +71,7 @@ div.table-title {
 th {
   color:#D5DDE5;;
   background:rgb(94, 172, 221);
-  border-bottom:4px solid #9ea7af;
+
   border-right: 1px solid #343a45;
   font-size:23px;
   font-weight: 100;

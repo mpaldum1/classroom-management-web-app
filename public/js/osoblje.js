@@ -57,11 +57,9 @@ function ucitajOsobeIzBaze() {
 
             for (let i = 0; i < JSONzauzeca.vanredna.length; i++) {
 
-
                 //vanredno
                 if (trenutniDatum == JSONzauzeca.vanredna[i].datum &&
                     JSONzauzeca.vanredna[i].pocetak <= trenutnoVrijeme && trenutnoVrijeme <= JSONzauzeca.vanredna[i].kraj) {
-
 
                     lista.push({ osoba: JSONzauzeca.vanredna[i].predavac, sala: JSONzauzeca.vanredna[i].naziv });
                 }

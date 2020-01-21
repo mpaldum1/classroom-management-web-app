@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-app.get('/html/select', function (req, res) {
+app.get('/html/osoblje', function (req, res) {
 
      db.osoblje.findAll({
           attributes: ['ime', 'prezime', 'uloga'], raw: true
@@ -28,7 +28,7 @@ app.get('/html/select', function (req, res) {
      })
 });
 
-app.get('/html/ucitajIzBaze', function (req, res) {
+app.get('/html/ucitajIzBaze', function (req, res) {    
 
      db.rezervacija.findAll({
 
@@ -38,7 +38,7 @@ app.get('/html/ucitajIzBaze', function (req, res) {
           ]
 
      }).then(function (zauzeca) {
-
+          console.log(zauzeca);
           zauzeca = nastimajZauzeca(zauzeca);
           res.send(JSON.stringify(zauzeca));
      });
@@ -397,8 +397,6 @@ app.post("/http://localhost:8080/html/pocetna.html", function (req, res) {
 });
 
 
-app.listen(8080);
-
 const zimski = [9, 10, 11, 0];
 const ljetni = [1, 2, 3, 4, 5];
 
@@ -498,9 +496,12 @@ app.get('/html/ucitajOsobe', function (req, res) {
 
           }).then(function (osoblje) {
                zauzeca = nastimajZauzeca(zauzeca);
+             
                let result = { zauzeca: zauzeca, osoblje: osoblje }
                res.send(JSON.stringify(result));
           });
      });
 
 });
+
+module.exports = app.listen(8080);

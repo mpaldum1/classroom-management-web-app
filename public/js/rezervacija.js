@@ -21,7 +21,7 @@ function ucitajOsoblja() {
         }
     };
 
-    xhttp.open("GET", "select", true);
+    xhttp.open("GET", "osoblje", true);
     xhttp.send();
 }
 

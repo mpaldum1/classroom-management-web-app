@@ -30,7 +30,6 @@ db.termin.hasOne(db.rezervacija, {as:'rezervacijaSTermin',foreignKey:'termin'});
 db.rezervacija.belongsTo(db.termin, {as:'terminRezervacija',foreignKey:'termin'});
 
 
-
 // Veza 1-1 Sala - Osoblje
 db.sala.belongsTo(db.osoblje, {as:'odgovornaOsoba',foreignKey:'zaduzenaOsoba'});
 db.osoblje.hasOne(db.sala, {as:'salaOsoblje',foreignKey:'zaduzenaOsoba'});
