@@ -1,5 +1,3 @@
-
-
 let trenutniDan = new Date().getDate();
 let trenutniMjesec = new Date().getMonth() + 1;
 let trenutnaGodina = new Date().getFullYear();
@@ -22,12 +20,13 @@ var lista = [];
 
 // pronasli smo datum, trenutno vrijeme i dan u sedmici sto ce nam biti potrebno za nasu pretragu
 
-
 function iscrtajTabelu(lista) {
 
-    var tijeloTabele = document.getElementById("tijelo");
-
-
+    const tijeloTabele = document.getElementById("tijelo");
+    while (tijeloTabele.firstChild) {
+        tijeloTabele.firstChild.remove();
+    }
+    
     for (var i = 0; i < lista.length; i++) {
 
         var red = document.createElement("tr");
@@ -45,11 +44,7 @@ function iscrtajTabelu(lista) {
 
         tijeloTabele.appendChild(red);
     }
-
-    //    document.querySelector(".item:last-child").appendChild(broj);
-
 }
-
 
 function ucitajOsobeIzBaze() {
 
@@ -58,26 +53,17 @@ function ucitajOsobeIzBaze() {
         if (this.readyState == 4 && this.status == 200) {
 
             let result = JSON.parse(ajax.responseText);
-            console.log(result);
             let JSONzauzeca = result.zauzeca;
-
-            console.log(JSONzauzeca);
 
             for (let i = 0; i < JSONzauzeca.vanredna.length; i++) {
 
-                console.log(JSONzauzeca.vanredna[i]);
-                console.log(trenutniDatum);
-                console.log(trenutnoVrijeme);
-
-                console.log(trenutniDatum == JSONzauzeca.vanredna[i].datum, JSONzauzeca.vanredna[i].pocetak <= trenutnoVrijeme,trenutnoVrijeme <= JSONzauzeca.vanredna[i].kraj);
-        
 
                 //vanredno
                 if (trenutniDatum == JSONzauzeca.vanredna[i].datum &&
                     JSONzauzeca.vanredna[i].pocetak <= trenutnoVrijeme && trenutnoVrijeme <= JSONzauzeca.vanredna[i].kraj) {
 
-                   
-                    lista.push({ osoba: JSONzauzeca.vanredna[i].predavac, sala: JSONzauzeca.vanredna[i].naziv});
+
+                    lista.push({ osoba: JSONzauzeca.vanredna[i].predavac, sala: JSONzauzeca.vanredna[i].naziv });
                 }
             }
 
@@ -92,44 +78,45 @@ function ucitajOsobeIzBaze() {
             }
 
             let osobe = result.osoblje;
-            for(let i = 0; i < osobe.length; i++) {
+            for (let i = 0; i < osobe.length; i++) {
 
                 let kancelarija = true;
 
                 for (let j = 0; j < lista.length; j++) {
                     if (osobe[i].ime + " " + osobe[i].prezime === lista[j].osoba)
-                    kancelarija = false;
+                        kancelarija = false;
                 }
 
-                if(kancelarija) {
-                    lista.push({osoba: osobe[i].ime + " " + osobe[i].prezime, sala: "U kancelariji"});
+                if (kancelarija) {
+                    lista.push({ osoba: osobe[i].ime + " " + osobe[i].prezime, sala: "U kancelariji" });
                 }
             }
 
-            console.log(lista);
             iscrtajTabelu(lista);
+            lista = [];
         }
     }
 
-ajax.open("GET", "ucitajOsobe", true);
-ajax.send();
+    ajax.open("GET", "ucitajOsobe", true);
+    ajax.send();
 
 }
 
-setInterval(ucitajOsobeIzBaze(), 30000);
+ucitajOsobeIzBaze();
+setInterval(ucitajOsobeIzBaze, 30000);
+
+// okidamo svakih 30 sekundi
 
 const zimski = [9, 10, 11, 0];
-const ljetni = [1, 2, 3, 4];
+const ljetni = [1, 2, 3, 4, 5];
 
 // funckija pronalaska semestra
 function getSemestar(mjesec) {
 
     if (zimski.includes(mjesec)) {
-        console.log("zimski", mjesec);
         return "zimski";
     }
     else if (ljetni.includes(mjesec)) {
-        console.log("ljetni", mjesec);
         return "ljetni";
     }
     return "";

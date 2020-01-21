@@ -101,9 +101,7 @@ let Kalendar = (function () {
     function filtriraj() {
 
 
-
         filterLista = listaZauzeca.filter(function (element) {
-            console.log("sala", element.naziv, nazivSale);
             var result = pocetakPretrage < krajPretrage &&
             element.pocetak < krajPretrage && pocetakPretrage < element.kraj
                 && element.naziv == nazivSale;

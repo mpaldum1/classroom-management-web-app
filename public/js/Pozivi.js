@@ -159,7 +159,7 @@ let Pozivi = (function () {
                         maxIndex = view_data[3];
 
                     index += 3;
-                    console.log("index", index);
+                  
 
                     document.getElementById("prethodni").disabled = false;
 

@@ -1,5 +1,4 @@
 const mjeseci = ["Januar", "Februar", "Mart", "April", "Maj", "Juni", "Juli", "August", "Septembar", "Oktobar", "Novembar", "Decembar"];
-
 var selectOsoblje = document.getElementById("osoblje");
 
 function ucitajOsoblja() {
@@ -48,7 +47,6 @@ function upisiUBazu(zauzece, trenutniMjesec) {
     // kako bi znali pritisnut datum na kalendaru za periodicno zauzece
 
     let datum = zauzece.datum;
-
     mjesec = trenutniMjesec + 1;
     let trenutnaGodina = new Date().getFullYear();
 
@@ -85,10 +83,9 @@ function upisiUBazu(zauzece, trenutniMjesec) {
 
             console.log("status", this.status);
             
-
             JSONzauzeca = JSON.parse(ajax.responseText);
 
-            console.log(JSONzauzeca)
+            console.log("json zauzeca", JSONzauzeca)
 
             Kalendar.ucitajPodatke(JSONzauzeca.periodicna, JSONzauzeca.vanredna);
             Kalendar.iscrtajKalendar(document.getElementById("kalendar"), trenutniMjesec);
@@ -97,19 +94,16 @@ function upisiUBazu(zauzece, trenutniMjesec) {
 
             switch (this.status) {
                 case 270:
-                    alert("Salu za navedeni termin je već rezervisao " + this.responseText);
+                    alert("Salu za navedeni termin je već rezervisao " + JSONzauzeca.predavac);
                     //  ucitajImpl("/json/zauzeca.json");
                     break;
 
                 case 250:
 
                 
-                    alert("Salu za navedeni termin je već rezervisao " + this.responseText);
+                    alert("Salu za navedeni termin je već rezervisao " + JSONzauzeca.predavac);
                     //     ucitajImpl("/json/zauzeca.json");
-                    break;
-
-                
-                    
+                    break;                      
                    
             }
         };
