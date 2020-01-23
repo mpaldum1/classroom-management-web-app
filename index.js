@@ -18,51 +18,50 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 db.sequelize.sync({ force: true }).then(function () {
      inicializacija().then(function () {
-         console.log("Gotovo kreiranje tabela i ubacivanje pocetnih podataka!");
-         
+          console.log("Gotovo kreiranje tabela i ubacivanje pocetnih podataka!");
      });
- });
- 
- function inicializacija() {
- 
+});
+
+function inicializacija() {
      var osobljeListaPromisea = [];
      var terminListaPromisea = [];
      var rezervacijaListaPromisea = [];
      var salaListaPromisea = [];
- 
+
      return new Promise(function (resolve, reject) {
- 
-         osobljeListaPromisea.push(db.osoblje.create({ ime: 'Neko', prezime: 'Nekić', uloga: 'profesor' }));
-         osobljeListaPromisea.push(db.osoblje.create({ ime: 'Drugi', prezime: 'Neko', uloga: 'asistent' }));
-         osobljeListaPromisea.push(db.osoblje.create({ ime: 'Test', prezime: 'Test', uloga: 'asistent' }));
- 
-         Promise.all(osobljeListaPromisea).then(function (osoblje) {
- 
-             salaListaPromisea.push(db.sala.create({ naziv: '1-11', zaduzenaOsoba:1}));
-             salaListaPromisea.push(db.sala.create({ naziv: '1-15', zaduzenaOsoba:2}));
- 
- 
-             Promise.all(salaListaPromisea).then(function (sale) {
- 
-                 terminListaPromisea.push(db.termin.create({ redovni: 'false', dan: null, datum: '01.01.2020', semestar: null, pocetak: '12:00', kraj: '13:00' }));
-                 terminListaPromisea.push(db.termin.create({ redovni: 'true', dan: 0, datum: null, semestar: 'zimski', pocetak: '13:00', kraj: '14:00' }));
- 
-                 Promise.all(terminListaPromisea).then(function (termini) {
- 
-                     rezervacijaListaPromisea.push(db.rezervacija.create({ termin: 1, sala: 1, osoba: 1 }));
-                     rezervacijaListaPromisea.push(db.rezervacija.create({ termin: 2, sala: 1, osoba: 3 }));
-                     
- 
-                     Promise.all(rezervacijaListaPromisea).then(function (b) { resolve(b); }).catch(function (err) { console.log("Rezervacija greska " + err); });
- 
-                 }).catch(function (err) { console.log("Termini greska " + err); });
- 
-             }).catch(function (err) { console.log("Sale greska " + err); });
- 
-         }).catch(function (err) { console.log("Osoblje greska " + err); });
- 
+
+          osobljeListaPromisea.push(db.osoblje.create({ ime: 'Neko', prezime: 'Nekić', uloga: 'profesor' }));
+          osobljeListaPromisea.push(db.osoblje.create({ ime: 'Drugi', prezime: 'Neko', uloga: 'asistent' }));
+          osobljeListaPromisea.push(db.osoblje.create({ ime: 'Test', prezime: 'Test', uloga: 'asistent' }));
+
+          Promise.all(osobljeListaPromisea).then(function (osoblje) {
+
+               salaListaPromisea.push(db.sala.create({ naziv: '1-11', zaduzenaOsoba: 1 }));
+               salaListaPromisea.push(db.sala.create({ naziv: '1-15', zaduzenaOsoba: 2 }));
+
+
+               Promise.all(salaListaPromisea).then(function (sale) {
+
+                    terminListaPromisea.push(db.termin.create({ redovni: 'false', dan: null, datum: '01.01.2020', semestar: null, pocetak: '12:00', kraj: '13:00' }));
+                    terminListaPromisea.push(db.termin.create({ redovni: 'true', dan: 0, datum: null, semestar: 'zimski', pocetak: '13:00', kraj: '14:00' }));
+
+                    Promise.all(terminListaPromisea).then(function (termini) {
+
+                         rezervacijaListaPromisea.push(db.rezervacija.create({ termin: 1, sala: 1, osoba: 1 }));
+                         rezervacijaListaPromisea.push(db.rezervacija.create({ termin: 2, sala: 1, osoba: 3 }));
+
+
+                         Promise.all(rezervacijaListaPromisea).then(function (b) { resolve(b); }).catch(function (err) { console.log("Rezervacija greska " + err); });
+
+                    }).catch(function (err) { console.log("Termini greska " + err); });
+
+               }).catch(function (err) { console.log("Sale greska " + err); });
+
+          }).catch(function (err) { console.log("Osoblje greska " + err); });
+
      });
- }
+
+}
 
 
 app.get('/html/osoblje', function (req, res) {
@@ -75,7 +74,18 @@ app.get('/html/osoblje', function (req, res) {
      })
 });
 
-app.get('/html/ucitajIzBaze', function (req, res) {    
+
+app.get('/html/sale', function (req, res) {
+
+     db.sala.findAll({
+          attributes: ['naziv'], raw: true
+     }).then(function (sale) {
+
+          res.send((JSON.stringify(sale)));
+     })
+});
+
+app.get('/html/ucitajIzBaze', function (req, res) {
 
      db.rezervacija.findAll({
 
@@ -85,7 +95,7 @@ app.get('/html/ucitajIzBaze', function (req, res) {
           ]
 
      }).then(function (zauzeca) {
-          console.log(zauzeca);
+
           zauzeca = nastimajZauzeca(zauzeca);
           res.send(JSON.stringify(zauzeca));
      });
@@ -108,9 +118,6 @@ app.post('/html/upisiUBazu', function (req, res) {
           var objekti = nastimajZauzeca(zauzeca);
           let flag = false; // bool vrijednost - da li je doslo do preklapanja ili ne?
 
-          console.log("objekti", objekti);
-          console.log("novo zauceze", novoZauzece);
-
           if (novoZauzece.dan != null) {
                // periodicno zauzece
 
@@ -123,7 +130,7 @@ app.post('/html/upisiUBazu', function (req, res) {
                          // preklapanje!
 
                          res.statusCode = 250;
-                         objekti = ({periodicna: objekti.periodicna, vanredna: objekti.vanredna, predavac: objekti.periodicna[i].predavac });
+                         objekti = ({ periodicna: objekti.periodicna, vanredna: objekti.vanredna, predavac: objekti.periodicna[i].predavac });
                          break;
 
                     }
@@ -145,22 +152,15 @@ app.post('/html/upisiUBazu', function (req, res) {
 
                          let semestar = getSemestar(mjesec);
 
-                         console.log(objekti.vanredna[i].naziv == novoZauzece.naziv, prviDan == novoZauzece.dan,
-                              semestar == novoZauzece.semestar, objekti.vanredna[i].pocetak < novoZauzece.kra,
-                              novoZauzece.pocetak < objekti.vanredna[i].kraj);
-
-                         console.log("prvidan", prviDan);
-                         console.log("semestar", semestar);
-
                          if (objekti.vanredna[i].naziv == novoZauzece.naziv && prviDan == novoZauzece.dan && semestar == novoZauzece.semestar &&
                               objekti.vanredna[i].pocetak < novoZauzece.kraj && novoZauzece.pocetak < objekti.vanredna[i].kraj) {
                               flag = true;
 
                               // preklapanje!
-                              console.log("poklapanje u drugom");
+                             // console.log("poklapanje u drugom");
 
                               res.statusCode = 250;
-                              objekti = ({periodicna: objekti.periodicna, vanredna: objekti.vanredna, predavac: objekti.vanredna[i].predavac });
+                              objekti = ({ periodicna: objekti.periodicna, vanredna: objekti.vanredna, predavac: objekti.vanredna[i].predavac });
                               break;
                          }
                     }
@@ -181,7 +181,7 @@ app.post('/html/upisiUBazu', function (req, res) {
                          flag = true;
                          // preklapanje!
                          res.statusCode = 270;
-                         objekti = ({periodicna: objekti.periodicna, vanredna: objekti.vanredna, predavac: objekti.vanredna[i].predavac });
+                         objekti = ({ periodicna: objekti.periodicna, vanredna: objekti.vanredna, predavac: objekti.vanredna[i].predavac });
                          break;
                     }
                }
@@ -206,11 +206,11 @@ app.post('/html/upisiUBazu', function (req, res) {
                               && objekti.periodicna[i].pocetak < novoZauzece.kraj && novoZauzece.pocetak < objekti.periodicna[i].kraj) {
                               // preklapanje!
 
-                              console.log("preklop");
+                             // console.log("preklop");
                               flag = true;
                               res.statusCode = 270;
 
-                              objekti = ({periodicna: objekti.periodicna, vanredna: objekti.vanredna,predavac: objekti.periodicna[i].predavac });
+                              objekti = ({ periodicna: objekti.periodicna, vanredna: objekti.vanredna, predavac: objekti.periodicna[i].predavac });
                               break;
                          }
                     }
@@ -236,6 +236,7 @@ app.post('/html/upisiUBazu', function (req, res) {
                     semestar: novoZauzece.semestar,
                     pocetak: novoZauzece.pocetak,
                     kraj: novoZauzece.kraj
+
 
                }).then(function (termin) {
 
@@ -311,7 +312,7 @@ app.post("/http://localhost:8080/html/rezervacija.html", function (req, res) {
                          && porediVrijeme(objekti.periodicna[i].pocetak, novoZauzece.kraj) <= 0 && porediVrijeme(novoZauzece.pocetak, objekti.periodicna[i].kraj) <= 0) {
                          flag = true;
                          // preklapanje!
-                         console.log("poklapanje u prvom");
+                      //   console.log("poklapanje u prvom");
                          res.statusCode = 250;
                          break;
                     }
@@ -337,7 +338,7 @@ app.post("/http://localhost:8080/html/rezervacija.html", function (req, res) {
                               flag = true;
 
                               // preklapanje!
-                              console.log("poklapanje u drugom");
+                           //   console.log("poklapanje u drugom");
                               res.statusCode = 250;
                               break;
                          }
@@ -382,7 +383,7 @@ app.post("/http://localhost:8080/html/rezervacija.html", function (req, res) {
                               && objekti.periodicna[i].pocetak <= novoZauzece.kraj && novoZauzece.pocetak <= objekti.periodicna[i].kraj) {
                               // preklapanje!
 
-                              console.log("preklop");
+                      //        console.log("preklop");
                               flag = true;
                               res.statusCode = 270;
                               break;
@@ -543,7 +544,7 @@ app.get('/html/ucitajOsobe', function (req, res) {
 
           }).then(function (osoblje) {
                zauzeca = nastimajZauzeca(zauzeca);
-             
+
                let result = { zauzeca: zauzeca, osoblje: osoblje }
                res.send(JSON.stringify(result));
           });
