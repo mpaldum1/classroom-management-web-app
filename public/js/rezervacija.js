@@ -1,5 +1,6 @@
 const mjeseci = ["Januar", "Februar", "Mart", "April", "Maj", "Juni", "Juli", "August", "Septembar", "Oktobar", "Novembar", "Decembar"];
 var selectOsoblje = document.getElementById("osoblje");
+var selectSale = document.getElementById("sala");
 
 function ucitajOsoblja() {
 
@@ -24,6 +25,30 @@ function ucitajOsoblja() {
     xhttp.open("GET", "osoblje", true);
     xhttp.send();
 }
+
+function ucitajSale() {
+    let xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+
+        if (this.readyState == 4 && this.status == 200) {
+            sale = JSON.parse(xhttp.responseText);
+
+            for (let i = 0; i < sale.length; i++) {
+
+                var opcija = document.createElement("option");
+                let text = sale[i].naziv;
+                opcija.text = text;
+                selectSale.add(opcija, selectSale[i])
+
+            }
+        }
+    };
+
+    xhttp.open("GET", "sale", true);
+    xhttp.send();
+}
+
 
 function ucitajZauzecaIzBaze() {
 
@@ -128,6 +153,7 @@ function upisiUBazu(zauzece, trenutniMjesec) {
 
 }
 
+ucitajSale();
 ucitajOsoblja();
 ucitajZauzecaIzBaze();
 
