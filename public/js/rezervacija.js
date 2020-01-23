@@ -59,7 +59,7 @@ function ucitajZauzecaIzBaze() {
 
             JSONzauzeca = JSON.parse(ajax.responseText);
             Kalendar.ucitajPodatke(JSONzauzeca.periodicna, JSONzauzeca.vanredna);
-              
+
         }
     };
 
@@ -75,6 +75,7 @@ function upisiUBazu(zauzece, trenutniMjesec) {
     mjesec = trenutniMjesec + 1;
     let trenutnaGodina = new Date().getFullYear();
 
+
     let stringMjeseca = String(mjesec);
     if (mjesec < 10) {
         stringMjeseca = "0" + stringMjeseca;
@@ -83,7 +84,9 @@ function upisiUBazu(zauzece, trenutniMjesec) {
     if (datum != undefined && datum != null) {
 
         let pripremaDatum = datum.split(".");
-        zauzece.datum = pripremaDatum[0] + ".0" + (parseInt(pripremaDatum[1])) + "." + pripremaDatum[2];
+        
+        if (parseInt(pripremaDatum[1]) < 10)
+            zauzece.datum = pripremaDatum[0] + ".0" + (parseInt(pripremaDatum[1])) + "." + pripremaDatum[2];
         // vanredno zauzece , ali trazi se drugi format datuma
 
         let tempNiz = datum.split(".");
@@ -107,7 +110,7 @@ function upisiUBazu(zauzece, trenutniMjesec) {
         if (this.readyState == 4 && (this.status == 200 || this.status == 250 || this.status == 270)) {
 
             console.log("status", this.status);
-            
+
             JSONzauzeca = JSON.parse(ajax.responseText);
 
             console.log("json zauzeca", JSONzauzeca)
@@ -115,7 +118,7 @@ function upisiUBazu(zauzece, trenutniMjesec) {
             Kalendar.ucitajPodatke(JSONzauzeca.periodicna, JSONzauzeca.vanredna);
             Kalendar.iscrtajKalendar(document.getElementById("kalendar"), trenutniMjesec);
             Kalendar.obojiZauzeca(htmlRef, trenutniMjesec, sala, pocetak, kraj);
-      
+
 
             switch (this.status) {
                 case 270:
@@ -125,11 +128,11 @@ function upisiUBazu(zauzece, trenutniMjesec) {
 
                 case 250:
 
-                
+
                     alert("Salu za navedeni termin je već rezervisao " + JSONzauzeca.predavac);
                     //     ucitajImpl("/json/zauzeca.json");
-                    break;                      
-                   
+                    break;
+
             }
         };
 
@@ -221,7 +224,7 @@ window.onclick = e => {
                     let periodicnoZauzece = { "dan": dan, "semestar": semestar, "pocetak": pocetak, "kraj": kraj, "naziv": sala, "predavac": predavac };
                     //        Pozivi.rezervisi(periodicnoZauzece, brojMjeseca);
                     upisiUBazu(periodicnoZauzece, brojMjeseca);
-                  
+
                 }
 
                 else {
@@ -240,10 +243,10 @@ window.onclick = e => {
                     let datum = stringDana + "." + stringMjeseca + "." + String(godina) + ".";
                     let vanrednoZauzece = { "datum": datum, "pocetak": pocetak, "kraj": kraj, "naziv": sala, "predavac": predavac };
 
-                 
+
                     upisiUBazu(vanrednoZauzece, brojMjeseca);
 
-                 
+
                     //    Pozivi.rezervisi(vanrednoZauzece, brojMjeseca);
                 }
             }

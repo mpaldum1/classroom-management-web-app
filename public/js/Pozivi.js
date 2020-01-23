@@ -26,7 +26,7 @@ let Pozivi = (function () {
             xhttp.send();
         }
 
-        
+
         function rezervisiImpl(zauzece, trenutniMjesec) {
 
             // kako bi znali pritisnut datum na kalendaru za periodicno zauzece
@@ -137,65 +137,77 @@ let Pozivi = (function () {
 
         var index = 1;
         var maxIndex = 10
+        var brojacSlika = 0;
 
         function dobaviSliku(nizElemenataSlika) {
 
             var url = '/http://localhost:8080/html/pocetna.html';
 
-            $.ajax({
-                url: url,
-                type: "POST",
-                data: { lista: nizElemenataSlika },
-                dataType: "json",
+            if (brojacSlika <= maxIndex) {
 
-                success: function (response_data_json) {
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    data: { lista: nizElemenataSlika },
+                    dataType: "json",
 
-                    // pokupili smo potrebne slike
-                    view_data = response_data_json;
-
-                    nizElemenataSlika.push(view_data[0], view_data[1], view_data[2]);
-                    console.log(view_data);
-                    if (view_data.lenght > 3)
-                        maxIndex = view_data[3];
-
-                    index += 3;
-                  
-
-                    document.getElementById("prethodni").disabled = false;
+                    success: function (response_data_json) {
 
 
-                    let djecaGalerije = document.querySelector(".galerija").children
 
-                    if (index > maxIndex)
-                        index = maxIndex;
+                        nizElemenataSlika.filter(element => undefined);
 
-                    
-                    for (let i = 0; i < 3; i++) {   
-                    
-                        djecaGalerije[i].src = "/Galerija/" + nizElemenataSlika[index + i - 1];
-                        console.log("/Galerija/" + nizElemenataSlika[index + i - 1]);
+                        // pokupili smo potrebne slike
+                        view_data = response_data_json;
 
-                        djecaGalerije[i].alt = "slika" + String(index + i);
-                        if (i + index == maxIndex) {
-                            document.getElementById("sljedeci").disabled = true;
+                        nizElemenataSlika.push(view_data[0], view_data[1], view_data[2]);
+                        console.log(view_data);
+                        if (view_data.lenght > 3)
+                            maxIndex = view_data[3];
+
+                        index += 3;
+                        if(brojacSlika == maxIndex)
+                        brojacSlika  -= 3;
+
+                        document.getElementById("prethodni").disabled = false;
+
+
+                        let djecaGalerije = document.querySelector(".galerija").children
+
+                        if (index > maxIndex)
+                            index = maxIndex;
+
+
+                        for (let i = 0; i < 3; i++) {
+
+                            djecaGalerije[i].src = "/Galerija/" + nizElemenataSlika[index + i - 1];
+                            console.log("/Galerija/" + nizElemenataSlika[index + i - 1]);
+
+                            djecaGalerije[i].alt = "slika" + String(index + i);
+                            if (i + index == maxIndex) {
+                                document.getElementById("sljedeci").disabled = true;
+                            }
                         }
-                    }
-                    console.log("slike", nizElemenataSlika);
+                        console.log("slike", nizElemenataSlika);
 
-                    console.log("maxIndex", maxIndex);
+                        console.log("INDEX", index);
+                        console.log("maxIndex", maxIndex);
 
-                    if (view_data.includes("kraj") && index > maxIndex) {
-                        document.getElementById("sljedeci").disabled = true;
-                        //  trenutniIndexZandnjePrikazaneSlike += view_data.length - 1;
+                        if (view_data.includes("kraj") && index > maxIndex) {
+                            document.getElementById("sljedeci").disabled = true;
+                            //  trenutniIndexZandnjePrikazaneSlike += view_data.length - 1;
+                        }
+                        console.log(view_data);
+                        //   prikaziSlike(view_data); //Proslijedimo podatke funkciji
+                    },
+
+                    failure: function (response_data_json) {
+                          index += 3;
                     }
-                    console.log(view_data);
-                    //   prikaziSlike(view_data); //Proslijedimo podatke funkciji
-                },
-                
-                failure: function(response_data_json) {
-                    index += 3;
-                }
-            });
+                });
+            }
+
+
         }
 
         function pritisnutPrethodni() {
@@ -209,7 +221,10 @@ let Pozivi = (function () {
                 index = 4;
             }
 
+            console.log(index);
+
             for (let i = 0; i < 3; i++) {
+
 
                 djecaGalerije[i].src = "/Galerija/slika" + String(index - 3 + i) + ".jpg";
                 djecaGalerije[i].alt = "slika" + String(index - 3 + i);
@@ -224,7 +239,7 @@ let Pozivi = (function () {
         }
 
 
-        
+
 
         // funckija pronalaska semestra
         function getSemestar(mjesec) {

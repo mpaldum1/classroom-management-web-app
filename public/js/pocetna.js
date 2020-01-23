@@ -27,6 +27,6 @@ function eventPrethodni() {
 function eventSljedeci() {
 
     Pozivi.dobaviSliku(nizElemenataSlika);
-   console.log(index);
+    console.log(index);
 
 }

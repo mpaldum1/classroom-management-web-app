@@ -431,9 +431,10 @@ app.post("/http://localhost:8080/html/pocetna.html", function (req, res) {
                }
           }
 
-          if (brojSlika - tijeloZahtjeva.lista.length <= 3) {
-               response.push("kraj");
+      /*    if(response.length < 3) {
+               response = -["slika1.jpg", "slika2.jpg", "slika3.jpg", brojSlika];
           }
+          */
 
           response.push(String(brojSlika));
           res.json(response);
