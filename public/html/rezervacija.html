@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale = 1.0">
     <link rel="stylesheet" href="/css/sale.css">
     <link rel="stylesheet" href="/css/rezervacija.css">
-
+    <style>
+        td {
+            border: 1px solid black;
+            height: 20px;
+            width: 20px;
+        }
+    </style>
     <title>rezervacija
     </title>
 </head>
@@ -15,11 +21,11 @@
     <div class="frame">
         <div class="meni">
             <ul id="lista">
-                <li> <a href="/html/pocetna.html" >Početna </a></li>
-                <li> <a href="/html/sale.html" > Sale </a> </li>
-                <li> <a href="/html/unos.html" > Unos </a> </li>
-                <li> <a href="/html/rezervacija.html" > Rezervacije</a> </li>
-                <li> <a href="/html/rezervacija.html" > Osobe</a> </li>
+                <li> <a href="/html/pocetna.html">Početna </a></li>
+                <li> <a href="/html/sale.html"> Sale </a> </li>
+                <li> <a href="/html/unos.html"> Unos </a> </li>
+                <li> <a href="/html/rezervacija.html"> Rezervacije</a> </li>
+                <li> <a href="/html/osoblje.html"> Osobe</a> </li>
             </ul>
             <div class="logo">
                 <img id="slikaLogo" src="/Galerija/logo.jpg" alt="logo">
@@ -31,32 +37,36 @@
             <form class="forma">
                 <label for="sala">Sala</label>
                 <select name="sala" id="sala" onchange="eventSala(this.value)">
-                    <option value="0-01">0-01</option>
-                    <option value="EE1">EE1</option>
+                    <option value="1-11">1-11</option>
+                    <option value="1-15">1-15</option>
+
                 </select>
                 <label for="periodicna">Periodična</label>
                 <input type="checkbox" name="periodicna" id="periodicna" onchange="eventPeriodicna(this.checked)"> <br>
                 <label for="pocetak">Početak</label>
                 <input type="time" name="pocetak" id="pocetak" value="09:00" onchange="eventPocetak(this.value)"> <br>
                 <label for="kraj">Kraj</label>
-                <input type="time" name="kraj" id="kraj" value="13:00" onchange="eventKraj(this.value)">
+                <input type="time" name="kraj" id="kraj" value="13:00" onchange="eventKraj(this.value)"> <br>
+                <label for="osoblje">Osoblje</label>
+                <select name="osoblje" id="osoblje">
+                </select>
 
             </form>
-            <div class="kalendar" id = "kalendar">
-                
-            </div>          
+            <div class="kalendar" id="kalendar">
+
+            </div>
             <div class="prethodni">
-                <button type="button" id = "prethodni" onclick=" eventPrethodni()">Prethodni</button>
+                <button type="button" id="prethodni" onclick=" eventPrethodni()">Prethodni</button>
             </div>
             <div class="sljedeci">
-                <button type="button" id = "sljedeci" onclick="eventSljedeci()">Sljedeći</button>
+                <button type="button" id="sljedeci" onclick="eventSljedeci()">Sljedeći</button>
             </div>
         </div>
-        </div>
+    </div>
 
-        <script src="/js/kalendar.js"></script>
-        <script src="/js/Pozivi.js"></script>
-        <script src="/js/rezervacija.js"></script>
+    <script src="/js/kalendar.js"></script>
+    <script src="/js/Pozivi.js"></script>
+    <script src="/js/rezervacija.js"></script>
 </body>
 
 </html>
