@@ -1,5 +1,5 @@
 const Sequelize = require("sequelize");
-const sequelize = new Sequelize("DBWT19","root","root",{host:"127.0.0.1",dialect:"mariadb",logging:false});
+const sequelize = new Sequelize("DBWT19","root","",{host:"127.0.0.1",dialect:"mariadb",logging:false});
 // mysql -> mariadb
 
 const db={};
